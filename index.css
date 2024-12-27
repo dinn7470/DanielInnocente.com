@@ -1,0 +1,95 @@
+/* Style for the heading */
+.about-heading {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    text-align: center;
+    top:25px;
+
+}
+/* Paragraph styling */
+.about-paragraph {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 20px; /* Adds space above each paragraph */
+    margin-bottom: 20px; /* Adds space below each paragraph */
+    position: relative; /* Necessary for top and left to work */
+    top: 200px; /* Moves the paragraph 175px up from its normal position */
+    left: 990px; /* Moves the paragraph 600px from the left */
+}
+
+/* Styling the image */
+.dan-headshot {
+    float: left; /* Makes the image float to the left of the content */
+    margin-right: 20px; /* Adds space between the image and text */
+    margin-top: 20px; /* Adds space above the image */
+    margin-bottom: 20px; /* Adds space below the image */
+    position: relative; /* Necessary for top and left to work */
+    top: 200px; /* Moves the paragraph 175px up from its normal position */
+    left: 450px; /* Moves the paragraph 600px from the left */
+}
+
+/* Optional: Clear the float to avoid overlap */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* General Reset */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Removes bullets */
+    text-decoration: none; /* Removes underline */
+    background: linear-gradient(135deg, #10ddf8, #14ea57);
+}
+
+
+/* Navbar styles */
+.navbar {
+    position: fixed; /* Keeps navbar at the top of the screen */
+    top: 0; /* Aligns to the top */
+    right: 100px; /* Aligns to the right */
+    padding: 10px;
+    z-index: 1000; /* Ensures it's above other content */
+    background: none; /* Transparent background */
+}
+
+/* Style for the list of links */
+.nav-links {
+    display: flex;
+    justify-content: flex-end; /* Aligns the links to the right */
+    gap: 20px; /* Space between links */
+}
+
+.nav-links li a {
+    color: #333; /* Text color */
+    font-size: 25px;
+    position: relative; /* Needed for the ::after pseudo-element */
+    padding-bottom: 4px; /* Space for the underline */
+}
+
+/* Animated underline effect */
+.nav-links li a::after {
+    content: ''; /* Adds an empty content */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially, the underline has no width */
+    height: 2px; /* Thickness of the underline */
+    background-color: #ffffff; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition for the width */
+}
+
+/* On hover, expand the underline */
+.nav-links li a:hover::after {
+    width: 100%; /* Expands to the full width of the link */
+}
+.dan-headshot {
+    top: -175px; /* 50px from the top of the container */
+    left: 275px; /* 100px from the left of the container */
+    position: relative;
+}
