@@ -1,0 +1,521 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Banner Styling */
+
+/* Banner Content Layout */
+.banner-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Banner Text - Centered */
+.banner-text {
+    text-align: center;
+    flex: 1;
+}
+
+.banner-text h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Banner Illustration - Right Side */
+.lifestyle{
+    max-width: 300px; /* Original size */
+    height: auto;
+    position: absolute;
+    right: 200px;
+    top:350px;
+    transform: translateY(-50%) scale(0.5); /* Combine translateY and scale */
+}
+
+.banner {
+    background-color: #c5ecc2;
+    height: 500px; /* Fixed height for the banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.positivity{
+    max-width: 300px; /* Original size */
+    height: auto;
+    position: absolute;
+    left: 25px;
+    top:150px;
+    transform: translateY(-50%) scale(40%); /* Combine translateY and scale */
+}
+
+.mindmap-description {
+    position: absolute;
+    text-align: center;
+    top: 525px; /* Keep the top position as you want */
+    left: 50%; /* Move it to the center of the screen */
+    transform: translateX(-50%); /* Adjust it by 50% of its own width to truly center it */
+    font-size: 1.2rem;
+    color: #000000;
+    max-width: 800px;
+}
+
+
+.problem-title {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+    left: 400px;
+    top:625px;
+    position: absolute;
+}
+
+.problem-description {
+    font-size: 1.2rem;
+    color: #666;
+    position: absolute;
+    max-width: 800px;
+    left: 400px;
+    top:650px;
+    margin-top: 20px; /* Adds space between the problem title and description */
+    line-height: 25px; /* Tighten line spacing around <br> */
+    display: block;
+}
+.tools-title {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 400px;
+    top: 900px; /* Adjust to place it correctly */
+    position: absolute;
+}
+
+.tools-list {
+    list-style-type: disc; /* Default bullet points */
+    padding-left: 20px;
+    left: 400px;
+    top: 950px; /* Adjust this to control the vertical position of the list */
+    position: absolute;
+    margin-top: 10px; /* Adds space between the team title and team members */
+}
+.tools-list li {
+    margin-bottom: 15px; /* Adds space between each list item */
+    font-size: 18px;
+    color: #333;
+}
+
+.roles-title {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 700px;
+    top: 900px; /* Adjust to place it correctly */
+    position: absolute;
+}
+
+
+.role-list {
+    list-style-type: disc; /* Default bullet points */
+    padding-left: 20px;
+    left: 700px;
+    top: 950px; /* Adjust this to control the vertical position of the list */
+    position: absolute;
+    margin-top: 10px; /* Adds space between the team title and team members */
+}
+.roles-list li {
+    margin-bottom: 15px; /* Adds space between each list item */
+    font-size: 18px;
+    color: #333;
+}
+
+
+
+
+.solution-title{
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+    left: 1000px;
+    top:625px;
+    position: absolute;
+}
+
+.solution-description {
+    font-size: 1.2rem;
+    color: #666;
+    position: absolute;
+    max-width: 600px;
+    left: 1000px;
+    top:650px;
+    margin-top: 20px; /* Adds space between the problem title and description */
+    line-height: 25px; /* Tighten line spacing around <br> */
+    display: block;
+}
+
+
+
+.team-title {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 1000px;
+    top: 900px; /* Adjust to place it correctly */
+    position: absolute;
+}
+
+.team-members {
+    list-style-type: disc; /* Default bullet points */
+    padding-left: 20px;
+    left: 1000px;
+    top: 950px; /* Adjust this to control the vertical position of the list */
+    position: absolute;
+    margin-top: 10px; /* Adds space between the team title and team members */
+}
+.team-members li {
+    margin-bottom: 15px; /* Adds space between each list item */
+    font-size: 18px;
+    color: #333;
+}
+
+.timeline-title {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 1300px;
+    top: 900px; /* Adjust to place it correctly */
+    position: absolute;
+}
+
+.timeline-list {
+    list-style-type: disc; /* Default bullet points */
+    padding-left: 20px;
+    left: 1300px;
+    top: 950px; /* Adjust this to control the vertical position of the list */
+    position: absolute;
+    margin-top: 10px; /* Adds space between the team title and team members */
+}
+.timeline-list li {
+    margin-bottom: 15px; /* Adds space between each list item */
+    font-size: 18px;
+    color: #333;
+}
+
+.home-screen{
+    transform: scale(0.75); /* Combine translateY and scale */
+    left: 300px;
+    top: 1050px; /* Adjust to place it correctly */
+    position: absolute;
+}
+
+.chat-screen{
+    transform: scale(0.75); /* Combine translateY and scale */
+    left: 725px;
+    top: 1050px; /* Adjust to place it correctly */
+    position: absolute;
+}
+
+.help-screen{
+    transform: scale(0.75); /* Combine translateY and scale */
+    left: 1200px;
+    top: 1050px; /* Adjust to place it correctly */
+    position: absolute;
+}
+.journal-screen{
+    transform: scale(0.75); /* Combine translateY and scale */
+    left: 285px;
+    top: 1700px; /* Adjust to place it correctly */
+    position: absolute;
+}
+.compass-screen{
+    transform: scale(0.75); /* Combine translateY and scale */
+    left: 762px;
+    top: 1700px; /* Adjust to place it correctly */
+    position: absolute;
+}
+.help-screen{
+    transform: scale(0.75); /* Combine translateY and scale */
+    left: 1200px;
+    top: 1050px; /* Adjust to place it correctly */
+    position: absolute;
+}
+.meditation-screen{
+    transform: scale(0.75); /* Combine translateY and scale */
+    left: 1180px;
+    top: 1700px; /* Adjust to place it correctly */
+    position: absolute;
+}
+.exploring-title{
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 400px;
+    top: 2450px; /* Adjust to place it correctly */
+    position: absolute;
+}
+.video-ethnography-title{
+    color: #000000;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 400px;
+    top: 2500px; /* Adjust to place it correctly */
+    position: absolute;
+}
+.video-ethnography-description{
+    font-size: 1.2rem;
+    color: #666;
+    position: absolute;
+    max-width: 800px;
+    left: 400px;
+    top:2525px;
+    margin-top: 20px; /* Adds space between the problem title and description */
+    line-height: 25px; /* Tighten line spacing around <br> */
+    display: block;
+}
+.video-findings {
+    padding-left: 20px;
+    left: 400px;
+    top: 2700px; /* Adjust this to control the vertical position of the list */
+    position: absolute;
+}
+.video-findings li {
+    max-width: 800px;
+    margin-bottom: 15px; /* Adds space between each list item */
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+.depression-thumbnail{
+    max-width: 300px; /* Original size */
+    height: auto;
+    position: absolute;
+    left: 1200px;
+    top:2700px;
+    transform: translateY(-50%) scale(75%); /* Combine translateY and scale */
+}
+
+
+
+.research-title{
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 400px;
+    top: 3025px; /* Adjust to place it correctly */
+    position: absolute;
+}
+.user-study-title{
+    color: #000000;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 400px;
+    top: 3075px; /* Adjust to place it correctly */
+    position: absolute;
+}
+.study-description1{
+    font-size: 1.2rem;
+    color: #666;
+    position: absolute;
+    max-width: 800px;
+    left: 400px;
+    top:3100px;
+    margin-top: 20px; /* Adds space between the problem title and description */
+    line-height: 25px; /* Tighten line spacing around <br> */
+    display: block;
+}
+.study-description2{
+    font-size: 1.2rem;
+    color: #666;
+    position: absolute;
+    max-width: 800px;
+    left: 400px;
+    top:3250px;
+    margin-top: 20px; /* Adds space between the problem title and description */
+    line-height: 25px; /* Tighten line spacing around <br> */
+    display: block;
+}
+
+.resource-stats{
+    max-width: 300px; /* Original size */
+    height: auto;
+    position: absolute;
+    left: 400px;
+    top:3575px;
+    transform: translateY(-50%) scale(70%); /* Combine translateY and scale */
+}
+.activities-responses{
+    max-width: 300px; /* Original size */
+    height: auto;
+    position: absolute;
+    left: 400px;
+    top:3900px;
+    transform: translateY(-50%) scale(70%); /* Combine translateY and scale */
+}
+
+
+.study-description3{
+    font-size: 1.2rem;
+    color: #666;
+    position: absolute;
+    max-width: 800px;
+    left: 400px;
+    top:4125px;
+    margin-top: 20px; /* Adds space between the problem title and description */
+    line-height: 25px; /* Tighten line spacing around <br> */
+    display: block;
+}
+
+
+
+.ideation-title{
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 400px;
+    top: 4450px; /* Adjust to place it correctly */
+    position: absolute;
+}
+.ufm-title{
+    color: #000000;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 400px;
+    top: 4500px; /* Adjust to place it correctly */
+    position: absolute;
+}
+.ufm-description{
+    font-size: 1.2rem;
+    color: #666;
+    position: absolute;
+    max-width: 800px;
+    left: 400px;
+    top:4525px;
+    margin-top: 20px; /* Adds space between the problem title and description */
+    line-height: 25px; /* Tighten line spacing around <br> */
+    display: block;
+}
+.model-list {
+    padding-left: 20px;
+    left: 400px;
+    top: 4715px; /* Adjust this to control the vertical position of the list */
+    position: absolute;
+}
+.model-list li {
+    max-width: 800px;
+    margin-bottom: 15px; /* Adds space between each list item */
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+.use-case-diagram{
+    max-width: 300px; /* Original size */
+    height: auto;
+    position: absolute;
+    left: 1275px;
+    top:4525px;
+
+}
+.design-title{
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 400px;
+    top: 5125px; /* Adjust to place it correctly */
+    position: absolute;
+}
+.style-guide-title{
+    color: #000000;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 400px;
+    top: 5175px; /* Adjust to place it correctly */
+    position: absolute;
+}
+.style-paragraph{
+    font-size: 1.2rem;
+    color: #666;
+    position: absolute;
+    max-width: 800px;
+    left: 400px;
+    top:5200px;
+    margin-top: 20px; /* Adds space between the problem title and description */
+    line-height: 25px; /* Tighten line spacing around <br> */
+    display: block;
+}
+.style-guide-img{
+    height: auto;
+    position: absolute;
+    left: 1215px;
+    top:5350px;
+    transform: translateY(-50%) scale(80%); /* Combine translateY and scale */
+    width: 500px;
+}
+
+
+
+
+.navbar {
+    position: absolute; /* Keeps navbar at the top of the screen */
+    top: 0; /* Aligns to the top */
+    right: 100px; /* Aligns to the right */
+    padding: 10px;
+    z-index: 1000; /* Ensures it's above other content */
+    background: none; /* Transparent background */
+}
+
+/* Style for the list of links */
+.nav-links {
+    display: flex;
+    justify-content: flex-end; /* Aligns the links to the right */
+    gap: 20px; /* Space between links */
+    list-style-type: none; /* Removes the bullet points */
+}
+
+.nav-links li a {
+    color: #333; /* Text color */
+    font-size: 25px;
+    position: relative; /* Needed for the ::after pseudo-element */
+    padding-bottom: 4px; /* Space for the underline */
+    text-decoration: none; /* Removes the default underline */
+}
+
+/* Animated underline effect */
+.nav-links li a::after {
+    content: ''; /* Adds an empty content */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially, the underline has no width */
+    height: 2px; /* Thickness of the underline */
+    background-color: #ffffff; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition for the width */
+}
+
+/* On hover, expand the underline */
+.nav-links li a:hover::after {
+    width: 100%; /* Expands to the full width of the link */
+}
+
+

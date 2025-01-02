@@ -18,118 +18,209 @@
 
 
 /* Make the entire container clickable */
-.preview-link {
+.preview-link1 {
     text-decoration: none; /* Remove underline */
     color: inherit; /* Use default text color */
     display: block; /* Ensure it behaves like a block element */
 }
 
+.preview-link2 {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use default text color */
+    display: block; /* Ensure it behaves like a block element */
+}
+
+.preview-link3 {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use default text color */
+    display: block; /* Ensure it behaves like a block element */
+}
+
+
 /* Container Styling */
-.preview-container {
+.mindmap-container {
     display: flex;
+    flex-direction: column-reverse;
     gap: 20px;
-color: #d0d9e7;
+    color: #d0d9e7;
     border-radius: 15px;
     padding: 20px;
     align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    flex-direction: row; /* Stack content vertically */
-    width: 600px; /* Skinnier width */
-    height: 250px; /* Taller height */
-    margin: 0 auto; /* Center horizontally */
-    position: relative;
-    top: 150px; /* Moves it 50px down */
-    left: -600px; /* Moves it 30px to the right */
+    width: 300px;
+    height: 500px;
+    margin: 0 auto;
+    top: 45px; /* Shifts the element down */
+    left: -600px; /* Shifts it left */
 }
 
-.preview-container:hover {
+.mindmap-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skillsync-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    color: #d0d9e7;
+    border-radius: 15px;
+    padding: 20px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 300px;
+    height: 500px;
+    margin: 0 auto;
+    top: -496px; /* Shifts the element up */
+    left: 0px; /* No horizontal shift */
+    text-decoration: none;
+}
+
+
+.mycloset-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    color: #d0d9e7;
+    border-radius: 15px;
+    padding: 20px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 300px;
+    height: 500px;
+    margin: 0 auto;
+    top: -1037px; /* Shifts the element up even further */
+    left: 600px; /* Shifts it right */
+    text-decoration: none;
+}
+
+
+/* Wrapper Container */
+.wrapper-container {
+    display: flex; /* Enables flexbox */
+    justify-content: space-evenly; /* Distributes equal space between items and edges */
+    align-items: center; /* Vertically aligns items */
+    padding: 0 20px; /* Optional padding for extra spacing from screen edges */
+    margin: 0 auto; /* Centers the wrapper */
+    width: 100%; /* Ensure it spans the full width of the viewport */
+    max-width: 1200px; /* Optional max-width for better layout control */
+}
+
+
+
+
+.skillsync-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mycloset-container:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 
+
+
+
+
 /* Content Styling */
-.preview-content {
+.preview-content1, .preview-content2, .preview-content3 {
     flex: 1;
     color: #333;
     text-align: center;
 }
 
-.preview-title {
+.preview-title1, .preview-title2 {
     font-size: 1.8rem;
     font-weight: bold;
     margin: 0;
 }
 
-.preview-subtitle {
+.preview-subtitle1, .preview-subtitle2, .preview-subtitle3 {
     font-size: 1.2rem;
     margin: 5px 0 10px;
     color: #555;
 }
 
-.preview-role {
+.preview-role1, .preview-role2, .preview-role3 {
     font-size: 0.9rem;
     margin-bottom: 10px;
     color: #777;
 }
 
-.tags {
+.tags1, .tags2, .tags3 {
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
-    justify-content: center; //needed
-
+    justify-content: center;
 }
-.tags span { /* Assuming each tag is wrapped in a <span> element */
-    padding: 5px 10px; /* Add some padding inside the border */
-    border: 2px solid #0affff; /* Border around each tag */
-    border-radius: 12px; /* Optional: adds rounded corners to the border */
-    font-weight: bold; /* Optional: makes the text bold */
-    color: #261010; /* Text color inside the tag */
-    background-color: #0afdfd; /* Optional: gives a background color to the tag */
 
-
-    /* Description Styling */
-
-    .preview-description {
-        font-size: 0.9rem;
-        line-height: 1.4;
-        margin-bottom: 15px;
-    }
-
-    /* Icon Styling */
-
-    .preview-icons {
-        display: flex;
-        gap: 15px;
-    }
-
-    .icon {
-        font-size: 1.5rem;
-        color: #555;
-        transition: color 0.3s ease;
-    }
-
-    .icon:hover {
-        color: #ffffff;
-    }
-
-    /* Image Styling */
-
-    .preview-image-container {
-        flex-shrink: 0;
-        width: 300px; /* Skinnier width */
-    }
-
-    .preview-image {
-        width: 200px;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+.tags1 .tag1, .tags2 .tag2, .tags3 .tag3  {
+    padding: 5px 10px;
+    border: 2px solid #0affff;
+    border-radius: 12px;
+    font-weight: bold;
+    color: #261010;
+    background-color: #0afdfd;
 }
+
+/* Description Styling */
+.preview-description1, .preview-description2, .preview-description3 {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+/* Image Container Styling */
+.preview-image-container1, .preview-image-container2 , .preview-image-container3{
+    flex-shrink: 0; /* Prevent shrinking */
+    width: 300px;
+    display: flex; /* Enables flexible positioning */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    height: 200px; /* Add a fixed height for better alignment */
+}
+
+/* Image Styling */
+.preview-image1, .preview-image2 , .preview-image3 {
+    width: 200px; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Ensures the image fits nicely */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .navbar {
     position: fixed; /* Keeps navbar at the top of the screen */
@@ -173,3 +264,20 @@ color: #d0d9e7;
     width: 100%; /* Expands to the full width of the link */
 }
 
+.wrapper-container {
+    display: flex; /* Ensure flexbox is applied */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center; /* Align vertically */
+    position: relative; /* Ensure proper layout context */
+    width: 100%; /* Full width */
+}
+
+.mindmap-container, .skillsync-container, .mycloset-container {
+    position: relative; /* Ensure they stay in the flow */
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
