@@ -326,20 +326,38 @@ body, html {
 
 .interview-container summary {
     margin-top: 20px;
+    max-width: 800px;
 }
 
 .interview-container summary h2 {
     font-size: 1.5em;
     margin-bottom: 20px; /* Increased margin to add more space below headings */
+    max-width: 800px;
 }
 
 .interview-container .insight {
-    margin-bottom: 25px; /* Increased margin for more space between insights */
+    margin-bottom: 50px; /* Increased margin for more space between insights */
+    max-width: 800px;
 }
 
 .interview-container .insight p {
     margin: 10px 0; /* Increased margin to add more space between paragraphs */
 }
+
+.int-img1{
+    top: 3200px;
+    left: 1400px;
+    position:absolute;
+    transform: translateY(-50%) scale(75%); /* Combine translateY and scale */
+}
+.int-img2{
+    top: 3550px;
+    left: 1400px;
+    position:absolute;
+    transform: translateY(-50%) scale(75%); /* Combine translateY and scale */
+}
+
+
 .themes-title{
     top:3700px;
     left:400px;
@@ -430,6 +448,115 @@ body, html {
     line-height: 25px; /* Tighten line spacing around <br> */
     display: block;
 }
+.sketch-1{
+    max-width: 300px; /* Original size */
+    height: auto;
+    position: absolute;
+    left: 400px;
+    top:5250px;
+    transform: translateY(-50%) scale(100%); /* Combine translateY and scale */
+}
+.sketch-2{
+    max-width: 300px; /* Original size */
+    height: auto;
+    position: absolute;
+    left: 1050px;
+    top:5245px;
+    transform: translateY(-50%) scale(110%); /* Combine translateY and scale */
+}
+.arrow-2 {
+    font-size: 24px; /* Adjust size */
+    color: black;   /* Arrow color */
+    transform: translateY(-50%) scale(300%);
+    position: absolute;
+    left: 1225px;
+    top:5500px;
+}
+.arrow-1 {
+    font-size: 24px; /* Adjust size */
+    color: black;   /* Arrow color */
+    transform: translateY(-50%) scale(300%);
+    position: absolute;
+    left: 575px;
+    top:5500px;
+}
+.design-1{
+    max-width: 300px; /* Original size */
+    position: absolute;
+    left: 430px;
+    top:5815px;
+    transform: translateY(-50%) scale(75%); /* Combine translateY and scale */
+}
+.design-2{
+    max-width: 300px; /* Original size */
+    position: absolute;
+    left: 1100px;
+    top:5815px;
+    transform: translateY(-50%) scale(97%); /* Combine translateY and scale */
+}
+.testing-title{
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 400px;
+    top: 6175px; /* Adjust to place it correctly */
+    position: absolute;
+}
+.walkthrough-results{
+    font-size: 1.2rem;
+    color: #666;
+    position: absolute;
+    max-width: 900px;
+    left: 400px;
+    top:6210px;
+    margin-top: 20px; /* Adds space between the problem title and description */
+    line-height: 30px; /* Tighten line spacing around <br> */
+    display: block;
+}
+.positive{
+    max-width: 300px; /* Original size */
+    height: auto;
+    position: absolute;
+    left: 370px;
+    top:6550px;
+    transform: translateY(-50%) scale(100%); /* Combine translateY and scale */
+}
+.negative{
+    max-width: 300px; /* Original size */
+    height: auto;
+    position: absolute;
+    left: 1020px;
+    top:6550px;
+    transform: translateY(-50%) scale(100%); /* Combine translateY and scale */
+}
+.final-design-paragraph{
+    font-size: 1.2rem;
+    color: #666;
+    position: absolute;
+    max-width: 800px;
+    left: 400px;
+    top:6725px;
+    margin-top: 20px; /* Adds space between the problem title and description */
+    line-height: 25px; /* Tighten line spacing around <br> */
+    display: block;
+}
+.figma-container{
+    height: 600px; /* Adjust the height as needed */
+    left: 400px;
+    top:6800px;
+    position:absolute;
+}
+.border{
+    left: 400px;
+    top:7460px;
+    position:absolute;;
+    width:1000px;
+    align-self: center;
+    border: 3px solid black; /* The border style */
+    background-color: white;
+}
+
+
 
 
 
