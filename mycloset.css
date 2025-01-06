@@ -1,0 +1,298 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+
+}
+body, html {
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Banner Styling */
+
+/* Banner Content Layout */
+.banner-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Banner Text - Centered */
+.banner-text {
+    text-align: center;
+    flex: 1;
+}
+
+.banner-text h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+/* Banner Illustration - Right Side */
+.shopping1{
+    max-width: 300px; /* Original size */
+    height: auto;
+    position: absolute;
+    left: 25px;
+    top:150px;
+    transform: translateY(-50%) scale(30%); /* Combine translateY and scale */
+}
+
+.banner {
+    background-color: #ADD8E6;
+    height: 500px; /* Fixed height for the banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.shopping2{
+    max-width: 300px; /* Original size */
+    height: auto;
+    position: absolute;
+    right: 250px;
+    top:350px;
+    transform: translateY(-50%) scale(30%); /* Combine translateY and scale */
+}
+
+
+.mindmap-description {
+    position: absolute;
+    text-align: center;
+    top: 525px; /* Keep the top position as you want */
+    left: 50%; /* Move it to the center of the screen */
+    transform: translateX(-50%); /* Adjust it by 50% of its own width to truly center it */
+    font-size: 1.2rem;
+    color: #000000;
+    max-width: 800px;
+}
+
+
+.problem-title {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+    left: 400px;
+    max-width: 800px;
+    top:625px;
+    position: absolute;
+}
+
+.problem-description {
+    font-size: 1.2rem;
+    color: #666;
+    position: absolute;
+    max-width: 550px;
+    left: 400px;
+    top:650px;
+    margin-top: 20px; /* Adds space between the problem title and description */
+    line-height: 25px; /* Tighten line spacing around <br> */
+    display: block;
+}
+.tools-title {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 400px;
+    top: 900px; /* Adjust to place it correctly */
+    position: absolute;
+}
+
+.tools-list {
+    list-style-type: disc; /* Default bullet points */
+    padding-left: 20px;
+    left: 400px;
+    top: 950px; /* Adjust this to control the vertical position of the list */
+    position: absolute;
+    margin-top: 10px; /* Adds space between the team title and team members */
+}
+.tools-list li {
+    margin-bottom: 15px; /* Adds space between each list item */
+    font-size: 18px;
+    color: #333;
+}
+
+.roles-title {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 700px;
+    top: 900px; /* Adjust to place it correctly */
+    position: absolute;
+}
+
+
+.role-list {
+    list-style-type: disc; /* Default bullet points */
+    padding-left: 20px;
+    left: 700px;
+    top: 950px; /* Adjust this to control the vertical position of the list */
+    position: absolute;
+    margin-top: 10px; /* Adds space between the team title and team members */
+}
+.roles-list li {
+    margin-bottom: 15px; /* Adds space between each list item */
+    font-size: 18px;
+    color: #333;
+}
+
+
+
+
+.solution-title{
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+    left: 1000px;
+    top:625px;
+    position: absolute;
+}
+
+.solution-description {
+    font-size: 1.2rem;
+    color: #666;
+    position: absolute;
+    max-width: 600px;
+    left: 1000px;
+    top:650px;
+    margin-top: 20px; /* Adds space between the problem title and description */
+    line-height: 25px; /* Tighten line spacing around <br> */
+    display: block;
+}
+
+
+
+.team-title {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 1000px;
+    top: 900px; /* Adjust to place it correctly */
+    position: absolute;
+}
+
+.team-members {
+    list-style-type: disc; /* Default bullet points */
+    padding-left: 20px;
+    left: 1000px;
+    top: 950px; /* Adjust this to control the vertical position of the list */
+    position: absolute;
+    margin-top: 10px; /* Adds space between the team title and team members */
+}
+.team-members li {
+    margin-bottom: 15px; /* Adds space between each list item */
+    font-size: 18px;
+    color: #333;
+}
+
+.timeline-title {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px; /* Ensures space at the bottom of the title */
+    left: 1300px;
+    top: 900px; /* Adjust to place it correctly */
+    position: absolute;
+}
+
+.timeline-list {
+    list-style-type: disc; /* Default bullet points */
+    padding-left: 20px;
+    left: 1300px;
+    top: 950px; /* Adjust this to control the vertical position of the list */
+    position: absolute;
+    margin-top: 10px; /* Adds space between the team title and team members */
+}
+.timeline-list li {
+    margin-bottom: 15px; /* Adds space between each list item */
+    font-size: 18px;
+    color: #333;
+}
+
+.video{
+    position:absolute;
+    left:600px;
+    top:1250px;
+
+}
+.border{
+    left: 400px;
+    top:7460px;
+    position:absolute;;
+    width:1000px;
+    align-self: center;
+    border: 3px solid black; /* The border style */
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+.navbar {
+    position: absolute; /* Keeps navbar at the top of the screen */
+    top: 0; /* Aligns to the top */
+    right: 100px; /* Aligns to the right */
+    padding: 10px;
+    z-index: 1000; /* Ensures it's above other content */
+    background: none; /* Transparent background */
+}
+
+/* Style for the list of links */
+.nav-links {
+    display: flex;
+    justify-content: flex-end; /* Aligns the links to the right */
+    gap: 20px; /* Space between links */
+    list-style-type: none; /* Removes the bullet points */
+}
+
+.nav-links li a {
+    color: #333; /* Text color */
+    font-size: 25px;
+    position: relative; /* Needed for the ::after pseudo-element */
+    padding-bottom: 4px; /* Space for the underline */
+    text-decoration: none; /* Removes the default underline */
+}
+
+/* Animated underline effect */
+.nav-links li a::after {
+    content: ''; /* Adds an empty content */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially, the underline has no width */
+    height: 2px; /* Thickness of the underline */
+    background-color: #ffffff; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition for the width */
+}
+
+/* On hover, expand the underline */
+.nav-links li a:hover::after {
+    width: 100%; /* Expands to the full width of the link */
+}

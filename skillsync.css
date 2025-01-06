@@ -546,15 +546,6 @@ body, html {
     top:6800px;
     position:absolute;
 }
-.border{
-    left: 400px;
-    top:7460px;
-    position:absolute;;
-    width:1000px;
-    align-self: center;
-    border: 3px solid black; /* The border style */
-    background-color: white;
-}
 
 
 
@@ -565,7 +556,7 @@ body, html {
 
 
 
-.navbar {
+.navbar1 {
     position: absolute; /* Keeps navbar at the top of the screen */
     top: 0; /* Aligns to the top */
     right: 100px; /* Aligns to the right */
@@ -605,6 +596,15 @@ body, html {
 /* On hover, expand the underline */
 .nav-links li a:hover::after {
     width: 100%; /* Expands to the full width of the link */
+}
+.navbar2 {
+    position: absolute; /* Keeps navbar at the top of the screen */
+    bottom: 0; /* Aligns to the top */
+    top:7460px;
+    left: 100px; /* Aligns to the right */
+    padding: 10px;
+    z-index: 1000; /* Ensures it's above other content */
+    background: none; /* Transparent background */
 }
 
 
