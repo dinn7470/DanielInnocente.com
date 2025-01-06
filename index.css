@@ -155,7 +155,7 @@ body, ul, li, a {
     display: inline-block;
     font-weight: bold;
     font-size: 3rem;
-    color: #333;
+    color: #ffffff;
     animation: blink 1s step-end infinite;
 }
 
