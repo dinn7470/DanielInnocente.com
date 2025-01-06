@@ -556,14 +556,15 @@ body, html {
 
 
 
-.navbar1 {
-    position: absolute; /* Keeps navbar at the top of the screen */
-    top: 0; /* Aligns to the top */
-    right: 100px; /* Aligns to the right */
-    padding: 10px;
-    z-index: 1000; /* Ensures it's above other content */
-    background: none; /* Transparent background */
-}
+    .navbar1 {
+        position: fixed; /* Keeps navbar at the top of the screen */
+        top: 0; /* Aligns to the top */
+        right: 100px; /* Aligns to the right */
+        padding: 10px;
+        z-index: 1000; /* Ensures it's above other content */
+        background: none; /* Transparent background */
+    }
+
 
 /* Style for the list of links */
 .nav-links {
