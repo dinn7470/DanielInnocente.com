@@ -164,11 +164,11 @@
 
 .tags1 .tag1, .tags2 .tag2, .tags3 .tag3  {
     padding: 5px 10px;
-    border: 2px solid #0affff;
+    border: 2px solid #4A90E2;
     border-radius: 12px;
     font-weight: bold;
-    color: #261010;
-    background-color: #0afdfd;
+    color: #ffffff;
+    background-color: #4A90E2;
 }
 
 /* Description Styling */
@@ -241,7 +241,7 @@
 }
 
 .nav-links li a {
-    color: #333; /* Text color */
+    color: #ffffff; /* Text color */
     font-size: 25px;
     position: relative; /* Needed for the ::after pseudo-element */
     padding-bottom: 4px; /* Space for the underline */
