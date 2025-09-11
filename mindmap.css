@@ -552,7 +552,7 @@ body, html {
 .border{
     left: 400px;
     top:7660px;
-    position:absolute;;
+    position:absolute;
     width:1000px;
     align-self: center;
     border: 3px solid black; /* The border style */
@@ -603,5 +603,6 @@ body, html {
 .nav-links li a:hover::after {
     width: 100%; /* Expands to the full width of the link */
 }
+
 
 

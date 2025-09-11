@@ -26,3 +26,5 @@ window.onload = () => {
     typeEffect();
     stopBlinkingCursor();
 };
+
+

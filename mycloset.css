@@ -296,3 +296,5 @@ body, html {
 .nav-links li a:hover::after {
     width: 100%; /* Expands to the full width of the link */
 }
+
+
