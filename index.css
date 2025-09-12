@@ -1,174 +1,125 @@
-body, html {
+/* =============================
+   Global Reset & Base Styles
+   ============================= */
+html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-
-/* Style for the heading */
-.about-heading {
-    font-size: 2em;
-    font-weight: bold;
-    color: #333;
-    position: relative;
-    text-align: center;
-    top:25px;
-
-}
-/* Paragraph styling */
-.about-paragraph {
-    font-size: 1.2em;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
     line-height: 1.6;
-    color: #ffffff;
-    margin-top: 20px; /* Adds space above each paragraph */
-    margin-bottom: 20px; /* Adds space below each paragraph */
-    position: relative; /* Necessary for top and left to work */
-    top: 200px; /* Moves the paragraph 175px up from its normal position */
-    left: 990px; /* Moves the paragraph 600px from the left */
 }
 
+/* Reset links and lists */
+ul, li { list-style: none; margin: 0; padding: 0; }
+a { text-decoration: none; color: #7aa2ff; }
+a:hover { color: #5277f5; }
 
-.email {
-    display: inline-block;
-    padding: 10px 20px;
-    color: white;
-    background-color: blue;
-    text-decoration: none;
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    text-align: center;
-    cursor: pointer;
-    position:absolute;
-    top:625px;
-    left:990px;
-}
-
-.email:hover {
-    background-color: darkblue;
-}
-.linkedin {
-    display: inline-block;
-    padding: 10px 20px;
-    color: white;
-    background-color: blue;
-    text-decoration: none;
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    text-align: center;
-    cursor: pointer;
-    position:absolute;
-    top:625px;
-    left:1150px;
-}
-
-.email:hover {
-    background-color: darkblue;
-}
-
-/* Styling the image */
-.dan-headshot {
-    float: left; /* Makes the image float to the left of the content */
-    margin-right: 20px; /* Adds space between the image and text */
-    margin-top: 20px; /* Adds space above the image */
-    margin-bottom: 20px; /* Adds space below the image */
-    position: relative; /* Necessary for top and left to work */
-    top: 200px; /* Moves the paragraph 175px up from its normal position */
-    left: 450px; /* Moves the paragraph 600px from the left */
-}
-
-/* Optional: Clear the float to avoid overlap */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/* General Reset */
-body, ul, li, a {
-    margin: 0;
-    padding: 0;
-    list-style: none; /* Removes bullets */
-    text-decoration: none; /* Removes underline */
-    background-color: #000000;
-}
-
-
-/* Navbar styles */
+/* =============================
+   Navbar
+   ============================= */
 .navbar {
-    position: fixed; /* Keeps navbar at the top of the screen */
-    top: 0; /* Aligns to the top */
-    right: 100px; /* Aligns to the right */
-    padding: 10px;
-    z-index: 1000; /* Ensures it's above other content */
-    background: none; /* Transparent background */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.6));
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
 }
-
-/* Style for the list of links */
 .nav-links {
     display: flex;
-    justify-content: flex-end; /* Aligns the links to the right */
-    gap: 20px; /* Space between links */
+    justify-content: flex-end;
+    gap: 24px;
+    padding: 12px 20px;
 }
-
-.nav-links li a {
-    color: #ffffff; /* Text color */
-    font-size: 25px;
-    position: relative; /* Needed for the ::after pseudo-element */
-    padding-bottom: 4px; /* Space for the underline */
-}
-
-/* Animated underline effect */
-.nav-links li a::after {
-    content: ''; /* Adds an empty content */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0; /* Initially, the underline has no width */
-    height: 2px; /* Thickness of the underline */
-    background-color: #ffffff; /* Color of the underline */
-    transition: width 0.3s ease; /* Smooth transition for the width */
-}
-
-/* On hover, expand the underline */
-.nav-links li a:hover::after {
-    width: 100%; /* Expands to the full width of the link */
-}
-.dan-headshot {
-    top: -175px; /* 50px from the top of the container */
-    left: 275px; /* 100px from the left of the container */
+.nav-links a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
     position: relative;
 }
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: #fff;
+    transition: width 0.25s ease;
+}
+.nav-links a:hover::after { width: 100%; }
+
+/* =============================
+   Header / Typewriter
+   ============================= */
 .header-container {
     display: flex;
     align-items: center;
-    font-size: 20px;
-    color: #ffffff;
-    top:40px;
-    left:800px;
-    position:absolute;
-}
-
-/* Cursor styles */
-.cursor {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 3rem;
-    color: #ffffff;
-    animation: blink 1s step-end infinite;
-}
-
-/* Blinking animation */
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
+    justify-content: center;
+    margin-top: 80px;
+    gap: 10px;
 }
 #typewriter {
-    font-family: Arial, sans-serif;
-    font-size: 4rem;
-    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif !important;
+    color: #fff;
+}
+.cursor {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #7aa2ff;
+    animation: blink 1s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* =============================
+   About Section
+   ============================= */
+.about-paragraph {
+    font-size: 1.1rem;
+    color: #c9c9c9;
+    margin: 20px 0;
+}
+
+/* =============================
+   Image
+   ============================= */
+.dan-headshot {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    display: block;
+    margin: 20px auto;
+}
+
+/* =============================
+   Buttons
+   ============================= */
+.email, .linkedin {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #7aa2ff;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px 5px 0 0;
+    transition: background 0.2s ease;
+}
+.email:hover, .linkedin:hover { background-color: #5277f5; }
+
+/* =============================
+   Responsive
+   ============================= */
+@media (max-width: 768px) {
+    .header-container { flex-direction: column; margin-top: 40px; }
+    #typewriter, .cursor { font-size: 2rem; }
+    .nav-links { justify-content: center; }
 }
 
 
