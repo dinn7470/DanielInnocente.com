@@ -1,126 +1,91 @@
-/* =============================
-   Global Reset & Base Styles
-   ============================= */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #000;
-    color: #fff;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-    line-height: 1.6;
+/* =====================================
+   Base / Theme — clean, professional
+   ===================================== */
+:root{
+    --bg: #ffffff;
+    --text: #0f172a;            /* slate-900 */
+    --muted: #475569;           /* slate-600 */
+    --line: #e5e7eb;            /* gray-200 */
+    --primary: #1f55ff;         /* refined blue */
+    --primary-600: #1641d8;
+    --chip-bg: rgba(15, 23, 42, 0.04);
 }
 
-/* Reset links and lists */
-ul, li { list-style: none; margin: 0; padding: 0; }
-a { text-decoration: none; color: #7aa2ff; }
-a:hover { color: #5277f5; }
+*{box-sizing:border-box}
+html, body{height:100%}
+body{
+    margin:0; background:var(--bg); color:var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+a{color:var(--primary); text-decoration:none}
+a:hover{color:var(--primary-600)}
 
-/* =============================
-   Navbar
-   ============================= */
-.navbar {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.6));
-    backdrop-filter: blur(6px);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-.nav-links {
-    display: flex;
-    justify-content: flex-end;
-    gap: 24px;
-    padding: 12px 20px;
-}
-.nav-links a {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #fff;
-    position: relative;
-}
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    height: 2px;
-    width: 0;
-    background: #fff;
-    transition: width 0.25s ease;
-}
-.nav-links a:hover::after { width: 100%; }
+.container{max-width:1100px; margin:0 auto; padding:0 24px}
+.stack-24{display:flex; flex-direction:column; gap:24px}
 
-/* =============================
-   Header / Typewriter
-   ============================= */
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 80px;
-    gap: 10px;
+/* =====================================
+   Navbar — fixed, upper-right
+   ===================================== */
+.navbar{position:fixed; top:18px; right:22px; z-index:1000}
+.nav{
+    display:flex; gap:18px; align-items:center;
+    background:var(--chip-bg); border:1px solid var(--line);
+    padding:10px 14px; border-radius:999px; backdrop-filter:saturate(1.2) blur(6px)
 }
-#typewriter {
-    font-size: 3rem;
-    font-weight: 800;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif !important;
-    color: #fff;
-}
-.cursor {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #7aa2ff;
-    animation: blink 1s step-end infinite;
-}
-@keyframes blink { 50% { opacity: 0; } }
+.nav a{color:var(--text); font-weight:600; font-size:.95rem; opacity:.85}
+.nav a:hover{opacity:1}
 
-/* =============================
-   About Section
-   ============================= */
-.about-paragraph {
-    font-size: 1.1rem;
-    color: #c9c9c9;
-    margin: 20px 0;
+/* =====================================
+   Hero — centered heading
+   ===================================== */
+header.hero{padding-top:110px; padding-bottom:36px}
+.hero-inner{
+    display:flex; align-items:center; justify-content:center; gap:8px; text-align:center
 }
+#typewriter{font-size:clamp(28px, 5vw, 44px); font-weight:800; letter-spacing:-0.01em}
+.cursor{font-size:clamp(28px, 5vw, 44px); font-weight:800; color:var(--primary); animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
 
-/* =============================
-   Image
-   ============================= */
-.dan-headshot {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-    display: block;
-    margin: 20px auto;
+/* =====================================
+   About — photo below hero, copy to the side
+   ===================================== */
+section.about{padding: 12px 0 64px}
+.about-grid{
+    display:grid; grid-template-columns: 1fr 1fr; gap:40px; align-items:center
 }
-
-/* =============================
-   Buttons
-   ============================= */
-.email, .linkedin {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #7aa2ff;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 10px 5px 0 0;
-    transition: background 0.2s ease;
+.dan-headshot{
+    width:100%; max-width:480px; height:auto; display:block;
+    border-radius:16px; border:1px solid var(--line);
+    box-shadow:0 8px 30px rgba(2, 6, 23, 0.06);
+    justify-self:center
 }
-.email:hover, .linkedin:hover { background-color: #5277f5; }
+.about-text{max-width:62ch}
+.about-text p{margin:0 0 14px; color:var(--muted)}
 
-/* =============================
+/* CTAs */
+.cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:8px}
+.btn{
+    display:inline-block; padding:10px 16px; border-radius:10px; font-weight:600; font-size:0.98rem
+}
+.btn-primary{background:var(--primary); color:#fff; border:1px solid var(--primary)}
+.btn-primary:hover{background:var(--primary-600); border-color:var(--primary-600)}
+.btn-ghost{background:#fff; color:var(--text); border:1px solid var(--line)}
+.btn-ghost:hover{border-color:#cbd5e1}
+
+/* =====================================
+   Footer spacing helper on tiny screens
+   ===================================== */
+.spacer{height:18px}
+
+/* =====================================
    Responsive
-   ============================= */
-@media (max-width: 768px) {
-    .header-container { flex-direction: column; margin-top: 40px; }
-    #typewriter, .cursor { font-size: 2rem; }
-    .nav-links { justify-content: center; }
+   ===================================== */
+@media (max-width: 900px){
+    .about-grid{grid-template-columns: 1fr; gap:24px}
+    .about-text{justify-self:center}
 }
-
-
-
+@media (max-width: 560px){
+    .nav{gap:12px; padding:8px 12px}
+}
