@@ -254,47 +254,69 @@ body, html {
 
 
 
-
-.navbar {
-    position: absolute; /* Keeps navbar at the top of the screen */
-    top: 0; /* Aligns to the top */
-    right: 100px; /* Aligns to the right */
-    padding: 10px;
-    z-index: 1000; /* Ensures it's above other content */
-    background: none; /* Transparent background */
+:root{
+    --nav-text: #000;  /* black links for white background */
+    --underline: #000;
+    --nav-gap: 20px;
+    --nav-pad-y: 10px;
+    --nav-pad-x: 14px;
 }
 
-/* Style for the list of links */
-.nav-links {
+/* Fixed, upper-right pill */
+.site-navbar{
+    position: fixed;
+    top: 12px;
+    right: 24px;
+    z-index: 1000;
+    background: rgba(255,255,255,0.8);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    border: 1px solid #e5e7eb; /* gray-200 */
+    border-radius: 999px;
+    padding: var(--nav-pad-y) var(--nav-pad-x);
+}
+
+/* Horizontal links */
+.site-nav-links{
     display: flex;
-    justify-content: flex-end; /* Aligns the links to the right */
-    gap: 20px; /* Space between links */
-    list-style-type: none; /* Removes the bullet points */
+    gap: var(--nav-gap);
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.nav-links li a {
-    color: #333; /* Text color */
-    font-size: 25px;
-    position: relative; /* Needed for the ::after pseudo-element */
-    padding-bottom: 4px; /* Space for the underline */
-    text-decoration: none; /* Removes the default underline */
+/* Link style + animated underline */
+.site-nav-links a{
+    color: var(--nav-text);
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px; /* space for underline */
 }
 
-/* Animated underline effect */
-.nav-links li a::after {
-    content: ''; /* Adds an empty content */
+.site-nav-links a::after{
+    content: "";
     position: absolute;
-    bottom: 0;
     left: 0;
-    width: 0; /* Initially, the underline has no width */
-    height: 2px; /* Thickness of the underline */
-    background-color: #ffffff; /* Color of the underline */
-    transition: width 0.3s ease; /* Smooth transition for the width */
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: var(--underline);
+    transition: width .25s ease;
 }
 
-/* On hover, expand the underline */
-.nav-links li a:hover::after {
-    width: 100%; /* Expands to the full width of the link */
+.site-nav-links a:hover::after{ width: 100%; }
+
+/* Small screens: slightly tighter */
+@media (max-width: 560px){
+    :root{ --nav-gap: 14px; }
+    .site-navbar{ right: 16px; top: 10px; }
+    .site-nav-links a{ font-size: 18px; }
 }
 
+/* Respect motion preferences */
+@media (prefers-reduced-motion: reduce){
+    .site-nav-links a::after{ transition: none; }
+}
 

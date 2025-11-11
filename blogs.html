@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Posts</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        /* Page title */
+        .page-title {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            text-align: center;
+            margin-top: 80px;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            color: #111827;
+            letter-spacing: -0.02em;
+        }
+
+        /* Blog preview containers (mirroring your portfolio card style) */
+        .blog-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            max-width: 960px;
+            margin: 0 auto 24px auto;
+        }
+
+        .blog-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            padding: 20px 24px;
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+            gap: 18px;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(15,23,42,0.12);
+        }
+
+        .blog-content {
+            flex: 1.8;
+        }
+
+        .blog-title {
+            font-size: 1.4rem;
+            margin: 0 0 6px 0;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: #111827;
+        }
+
+        .blog-subtitle {
+            font-size: 0.98rem;
+            margin: 0 0 10px 0;
+            color: #6b7280;
+            font-weight: 400;
+        }
+
+        .blog-meta {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            margin-bottom: 8px;
+        }
+
+        .blog-tags {
+            margin: 6px 0 10px 0;
+        }
+
+        .blog-tag {
+            display: inline-block;
+            padding: 3px 9px;
+            margin-right: 6px;
+            margin-bottom: 4px;
+            border-radius: 999px;
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .blog-description {
+            font-size: 0.95rem;
+            color: #374151;
+            margin: 0;
+        }
+
+        .blog-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: #9ca3af;
+            margin-bottom: 4px;
+        }
+
+        /* Optional right-side accent block (no image, just a subtle label) */
+        .blog-side {
+            flex: 0.6;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            font-size: 0.8rem;
+            color: #9ca3af;
+            text-align: right;
+        }
+
+        /* Navbar (matches style you asked to insert) */
+        nav.navbar {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #ffffffcc;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e7eb;
+            padding: 12px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+
+        .nav {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            gap: 18px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .blog-card {
+                flex-direction: column;
+            }
+            .blog-side {
+                justify-content: flex-start;
+                text-align: left;
+            }
+            .nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar" aria-label="Primary">
+    <div class="nav">
+        <a href="https://dinn7470.github.io/DanielInnocente.com/">Home</a>
+        <a href="https://dinn7470.github.io/DanielInnocente.com/portfolio">Portfolio</a>
+        <a href="https://drive.google.com/file/d/1UJ044hJu0KQN5b0jU0n3b_HiMa2iUQxt/view?usp=sharing">Resume</a>
+        <a href="https://dinn7470.github.io/DanielInnocente.com/blog">Written Work</a>
+    </div>
+</nav>
+
+<h1 class="page-title">Blog Posts</h1>
+
+<!-- Blog Post 1 -->
+<a href="healthcare-interfaces.html" class="blog-link">
+    <div class="blog-card">
+        <div class="blog-content">
+            <div class="blog-label">Blog Post</div>
+            <h2 class="blog-title">Why Healthcare Interfaces Are Failing — and Why It Matters More Than Ever</h2>
+            <h3 class="blog-subtitle">Examining the gap between modern design standards and the realities of patient-facing healthcare systems.</h3>
+            <p class="blog-meta">Category: Healthcare UX • Human-Centered Design</p>
+            <div class="blog-tags">
+                <span class="blog-tag">Healthcare UX</span>
+                <span class="blog-tag">Patient Portals</span>
+                <span class="blog-tag">Product Thinking</span>
+            </div>
+            <p class="blog-description">
+                A look at why many medical interfaces lag behind other industries, the risks this creates for patients and providers,
+                and how empathetic design can close the gap.
+            </p>
+        </div>
+        <div class="blog-side">
+            Read article →
+        </div>
+    </div>
+</a>
+
+<!-- Blog Post 2 -->
+<a href="when-design-hurts.html" class="blog-link">
+    <div class="blog-card">
+        <div class="blog-content">
+            <div class="blog-label">Blog Post</div>
+            <h2 class="blog-title">When Design Hurts: How Poor UX in Healthcare Increases Cognitive Load for Clinicians</h2>
+            <h3 class="blog-subtitle">How cluttered EHRs and endless alerts drain mental energy and impact safety.</h3>
+            <p class="blog-meta">Category: Healthcare UX • Cognitive Ergonomics</p>
+            <div class="blog-tags">
+                <span class="blog-tag">EHR Design</span>
+                <span class="blog-tag">Cognitive Load</span>
+                <span class="blog-tag">Alert Fatigue</span>
+            </div>
+            <p class="blog-description">
+                Explores the hidden cognitive cost of poorly designed clinical interfaces and offers practical principles
+                for creating safer, calmer tools for clinicians.
+            </p>
+        </div>
+        <div class="blog-side">
+            Read article →
+        </div>
+    </div>
+</a>
+
+<!-- Blog Post 3 -->
+<a href="hcdd.html" class="blog-link">
+    <div class="blog-card">
+        <div class="blog-content">
+            <div class="blog-label">Blog Post</div>
+            <h2 class="blog-title">What is Human-Centered Design and Development?</h2>
+            <h3 class="blog-subtitle">A personal look at HCDD at Penn State and why designing for people matters.</h3>
+            <p class="blog-meta">Category: HCD • Education • Career Journey</p>
+            <div class="blog-tags">
+                <span class="blog-tag">Human-Centered Design</span>
+                <span class="blog-tag">UX Career</span>
+                <span class="blog-tag">Accessibility</span>
+            </div>
+            <p class="blog-description">
+                Reflects on the HCDD program, design thinking, and a career goal of improving medical technology
+                through thoughtful, inclusive design.
+            </p>
+        </div>
+        <div class="blog-side">
+            Read article →
+        </div>
+    </div>
+</a>
+
+</body>
+</html>
