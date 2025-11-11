@@ -51,13 +51,49 @@
     </style>
 </head>
 <body>
+<style>
+    /* Minimal navbar fallback in case portfolio.css doesn't handle it */
+    .navbar {
+        position: fixed;
+        top: 24px;
+        right: 24px;
+        background: #ffffff;
+        border-radius: 999px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        padding: 8px 20px;
+        z-index: 1000;
+    }
+
+    .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #374151;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+        color: #2563eb;
+    }
+</style>
+</head>
+
+<body>
+<!-- Primary Navigation -->
 <nav class="navbar" aria-label="Primary">
-    <div class="nav">
-        <a href="https://dinn7470.github.io/DanielInnocente.com/">Home</a>
-        <a href="https://dinn7470.github.io/DanielInnocente.com/portfolio">Portfolio</a>
-        <a href="https://drive.google.com/file/d/1UJ044hJu0KQN5b0jU0n3b_HiMa2iUQxt/view?usp=sharing">Resume</a>
-        <a href="https://dinn7470.github.io/DanielInnocente.com/blogs">Written Work</a>
-    </div>
+    <ul class="nav-links">
+        <li><a href="https://dinn7470.github.io/DanielInnocente.com/">Home</a></li>
+        <li><a href="https://dinn7470.github.io/DanielInnocente.com/portfolio">Portfolio</a></li>
+        <li><a href="https://drive.google.com/file/d/1UJ044hJu0KQN5b0jU0n3b_HiMa2iUQxt/view?usp=sharing">Resume</a></li>
+        <li><a href="https://dinn7470.github.io/DanielInnocente.com/blogs">Written Work</a></li>
+    </ul>
 </nav>
 <main class="page">
     <h1>When Design Hurts: How Poor UX in Healthcare Increases Cognitive Load for Clinicians</h1>
