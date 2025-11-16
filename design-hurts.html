@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>When Design Hurts: How Poor UX in Healthcare Increases Cognitive Load for Clinicians</title>
+
     <style>
+        /* GLOBAL */
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             margin: 0;
@@ -13,80 +15,110 @@
             background: #f5f5f7;
             color: #111827;
         }
-        .page {
-            max-width: 760px;
-            margin: 40px auto;
-            padding: 32px 24px;
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 24px;
+            right: 24px;
             background: #ffffff;
+            border-radius: 999px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            padding: 8px 20px;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* FULL PAGE WRAPPER */
+        .page-container {
+            width: 100%;
+            padding: 60px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* WHITE CONTENT BLOCK */
+        .page {
+            width: 100%;
+            max-width: 1200px;
+            background: #ffffff;
+            padding: 48px 64px;
             border-radius: 18px;
             box-shadow: 0 10px 30px rgba(15,23,42,0.08);
         }
+
         h1 {
-            font-size: 2rem;
+            font-size: 2.4rem;
             margin-bottom: 0.5rem;
             letter-spacing: -0.01em;
         }
+
         h2 {
-            font-size: 1.25rem;
-            margin-top: 1.8rem;
+            font-size: 1.6rem;
+            margin-top: 2.4rem;
             margin-bottom: 0.4rem;
+            letter-spacing: -0.01em;
         }
+
         p {
-            margin: 0.5rem 0 0.9rem;
+            margin: 0.5rem 0 1.2rem;
         }
+
         .meta {
             font-size: 0.9rem;
             color: #6b7280;
             margin-bottom: 1.5rem;
         }
-        @media (max-width: 600px) {
+
+        /* IMAGE HANDLING */
+        .page img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 20px 0 8px;
+            display: block;
+            object-fit: cover;
+        }
+
+        @media (max-width: 900px) {
             .page {
-                margin: 16px;
-                padding: 20px 16px;
+                padding: 32px 24px;
             }
             h1 {
-                font-size: 1.6rem;
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
-<style>
-    /* Minimal navbar fallback in case portfolio.css doesn't handle it */
-    .navbar {
-        position: fixed;
-        top: 24px;
-        right: 24px;
-        background: #ffffff;
-        border-radius: 999px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-        padding: 8px 20px;
-        z-index: 1000;
-    }
 
-    .nav-links {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 20px;
-    }
-
-    .nav-links a {
-        text-decoration: none;
-        color: #374151;
-        font-weight: 500;
-        transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-        color: #2563eb;
-    }
-</style>
-</head>
-
-<body>
-<!-- Primary Navigation -->
+<!-- Navigation -->
 <nav class="navbar" aria-label="Primary">
     <ul class="nav-links">
         <li><a href="https://dinn7470.github.io/DanielInnocente.com/">Home</a></li>
@@ -95,27 +127,46 @@
         <li><a href="https://dinn7470.github.io/DanielInnocente.com/blogs">Written Work</a></li>
     </ul>
 </nav>
-<main class="page">
-    <h1>When Design Hurts: How Poor UX in Healthcare Increases Cognitive Load for Clinicians</h1>
-    <div class="meta">By Daniel Innocente</div>
 
-    <p>Every day, clinicians juggle multiple systems, re-enter data, and sift through floods of alerts. Many now spend more time interacting with software than with patients. What was meant to improve care has become a major source of stress — and it’s largely a design problem.</p>
+<div class="page-container">
+    <main class="page">
 
-    <h2>The Hidden Weight of Bad Design</h2>
-    <p>Electronic Health Records (EHRs) were meant to streamline care. Instead, many are cluttered, confusing, and slow. Poor layouts, redundant clicks, and buried information force clinicians to think about the interface instead of the patient. In design terms, this is cognitive overload — when mental effort exceeds capacity. In healthcare, that overload doesn’t just waste time; it risks safety.</p>
+        <h1>When Design Hurts: How Poor UX in Healthcare Increases Cognitive Load for Clinicians</h1>
+        <div class="meta">By Daniel Innocente</div>
 
-    <h2>The Science of Cognitive Ergonomics</h2>
-    <p>Cognitive ergonomics is about designing tools that match how humans think and work. But most clinical systems ignore it. Each poorly labeled button or unnecessary popup transfers complexity from the system to the user. Over time, that extra mental effort adds up to fatigue, mistakes, and burnout.</p>
+        <h2>The Everyday Strain of Clinical Software</h2>
+        <p>
+            Every day, clinicians juggle multiple systems, re-enter data, and sift through floods of alerts. Many now spend more time interacting with software than with patients. What was meant to improve care has become a major source of stress — and it’s largely a design problem.
+        </p>
+        <p>
+            Electronic Health Records (EHRs) were meant to streamline care. Instead, many are cluttered, confusing, and slow. Poor layouts, redundant clicks, and buried information force clinicians to think about the interface instead of the patient. In design terms, this is cognitive overload — when mental effort exceeds capacity. In healthcare, that overload doesn’t just waste time; it risks safety.
+        </p>
 
-    <h2>Alert Fatigue: When Everything Feels Urgent</h2>
-    <p>EHRs often bombard clinicians with nonstop notifications. Most are irrelevant, but all demand attention. This constant noise causes alert fatigue — users start ignoring alerts altogether. It’s not apathy; it’s survival. When everything looks urgent, nothing truly stands out.</p>
+        <h2>Cognitive Load and Cognitive Ergonomics</h2>
+        <p>
+            Cognitive ergonomics focuses on designing systems that fit how humans think and process information. Unfortunately, many clinical interfaces do the opposite. Poor labeling, confusing navigation, and unnecessary popups shift mental effort from the system to the clinician. Over time, this contributes to frustration, slower workflows, and burnout.
+        </p>
+        <p>
+            On top of that, clinicians are overwhelmed with notifications. Most are irrelevant, but all demand attention. This leads to alert fatigue — when users become desensitized and begin ignoring warnings because the noise never stops. When everything appears urgent, nothing truly stands out.
+        </p>
 
-    <h2>From Frustration to Fix</h2>
-    <p>Bad healthcare design isn’t just inefficient — it’s unsafe. But it doesn’t have to be this way. Better design can lighten cognitive load and restore focus.</p>
-    <p>Streamline workflows to fit real clinical tasks. Cut redundant steps and clicks. Prioritize alerts by urgency. Involve clinicians directly in the design process. These are not cosmetic tweaks; they’re safety improvements.</p>
+        <img src="Doctors-screens.jpg" alt="Doctors reviewing patient data on multiple screens">
+        <p>Doctors reviewing information on a patient portal.</p>
 
-    <h2>Design That Heals</h2>
-    <p>Healthcare technology must serve people, not policies. Every pixel and workflow choice should make care simpler, faster, and safer. Because when design hurts, clinicians and patients both suffer. And when design helps, everyone heals a little faster.</p>
-</main>
+        <h2>Designing Systems That Actually Help</h2>
+        <p>
+            Bad healthcare design isn’t just inefficient — it’s unsafe. But thoughtful design can lighten cognitive load and restore focus during clinical tasks. Streamlining workflows, reducing redundant clicks, improving hierarchy of information, and ensuring that urgent alerts actually stand out all contribute to safer, more effective care.
+        </p>
+        <p>
+            These aren’t cosmetic improvements — they’re safety interventions. Healthcare technology should support clinicians, not overwhelm them. Every interaction, every button, and every alert should move clinicians closer to understanding the patient, not further away.
+        </p>
+        <p>
+            When design hurts, clinicians and patients suffer. When design helps, everyone heals a little faster.
+        </p>
+
+    </main>
+</div>
+
 </body>
 </html>
+

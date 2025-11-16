@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What is Human-Centered Design and Development?</title>
+
     <style>
+        /* GLOBAL */
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             margin: 0;
@@ -13,51 +15,8 @@
             background: #f5f5f7;
             color: #111827;
         }
-        .page {
-            max-width: 760px;
-            margin: 40px auto;
-            padding: 32px 24px;
-            background: #ffffff;
-            border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(15,23,42,0.08);
-        }
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.01em;
-        }
-        h2 {
-            font-size: 1.25rem;
-            margin-top: 1.8rem;
-            margin-bottom: 0.4rem;
-        }
-        p {
-            margin: 0.5rem 0 0.9rem;
-        }
-        ul {
-            margin-left: 1.2rem;
-        }
-        .meta {
-            font-size: 0.9rem;
-            color: #6b7280;
-            margin-bottom: 1.5rem;
-        }
-        @media (max-width: 600px) {
-            .page {
-                margin: 16px;
-                padding: 20px 16px;
-            }
-            h1 {
-                font-size: 1.6rem;
-            }
-        }
-    </style>
-</head>
-<body>
-<main class="page">
 
-    <style>
-        /* Minimal navbar fallback in case portfolio.css doesn't handle it */
+        /* NAVBAR */
         .navbar {
             position: fixed;
             top: 24px;
@@ -87,52 +46,135 @@
         .nav-links a:hover {
             color: #2563eb;
         }
+
+        /* PAGE LAYOUT */
+        .page-container {
+            width: 100%;
+            padding: 60px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 1200px;
+            background: #ffffff;
+            padding: 48px 64px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-top: 2.4rem;
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.01em;
+        }
+
+        p {
+            margin: 0.5rem 0 1.2rem;
+        }
+
+        ul {
+            margin-left: 1.4rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .meta {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .page {
+                padding: 32px 24px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
     </style>
-    </head>
+</head>
+<body>
 
-    <body>
-    <!-- Primary Navigation -->
-    <nav class="navbar" aria-label="Primary">
-        <ul class="nav-links">
-            <li><a href="https://dinn7470.github.io/DanielInnocente.com/">Home</a></li>
-            <li><a href="https://dinn7470.github.io/DanielInnocente.com/portfolio">Portfolio</a></li>
-            <li><a href="https://drive.google.com/file/d/1UJ044hJu0KQN5b0jU0n3b_HiMa2iUQxt/view?usp=sharing">Resume</a></li>
-            <li><a href="https://dinn7470.github.io/DanielInnocente.com/blogs">Written Work</a></li>
-        </ul>
-    </nav>
-    <h1>What is Human-Centered Design and Development?</h1>
-    <div class="meta">By Daniel Innocente</div>
-
-    <p>I’m currently completing my final year of my degree in Human-Centered Design and Development in the College of Information Sciences and Technology at Penn State University. What a mouthful! I know. Whether I’m at a career fair, a party, or a family function – I always have the same routine prepared to explain just what it is that I’ve decided to dedicate my four years of college and possibly career to.</p>
-
-    <p>“App design and development”<br>“Human-Computer Interaction”</p>
-
-    <p>These are two names I often go with that I find to be more aptly titled than what my college officially decided upon. I choose one of these because they at least gear the person I’m talking to toward technology. However beyond technology, I’ll admit that those two titles definitely describe separate aspects of what I would consider a pretty broad major. The first focuses more on applications while the second focuses on how people interact with those applications.</p>
-
-    <p>On Penn State’s College of Information Sciences and Technology website HCDD is described as combining technology with art, design, psychology, and programming, helping you bridge the gap between front-end design and back-end tech.</p>
-
-    <p>This program could be a great fit if you want to:</p>
-    <ul>
-        <li>Design, build, and evaluate web, mobile, and other software applications</li>
-        <li>Research users to understand how people live and how technology fits into their lives</li>
-        <li>Embrace uncertainty and change on the path to getting things right</li>
+<!-- NAVIGATION -->
+<nav class="navbar" aria-label="Primary">
+    <ul class="nav-links">
+        <li><a href="https://dinn7470.github.io/DanielInnocente.com/">Home</a></li>
+        <li><a href="https://dinn7470.github.io/DanielInnocente.com/portfolio">Portfolio</a></li>
+        <li><a href="https://drive.google.com/file/d/1UJ044hJu0KQN5b0jU0n3b_HiMa2iUQxt/view?usp=sharing">Resume</a></li>
+        <li><a href="https://dinn7470.github.io/DanielInnocente.com/blogs">Written Work</a></li>
     </ul>
+</nav>
 
-    <p>Many call it a “poor man’s Computer Science.” I’ve heard this often, as many students switch from Computer Science to this program or default to it if they can’t get into Engineering. The CS degree requires more intensive math and science classes, while HCDD focuses on front-end implementation and user experience.</p>
+<div class="page-container">
+    <main class="page">
 
-    <p>Living in a world dominated by technology — and one that constantly evolves — has made me deeply interested in how our tools are used by diverse groups of people. Whether by age, ability, or background, I want to design software that’s easy and meaningful for anyone to use.</p>
+        <h1>What is Human-Centered Design and Development?</h1>
+        <div class="meta">By Daniel Innocente</div>
 
-    <p>That concept is a key facet of Human-Centered Design, explored through the Design Thinking method: Empathize, Define, Ideate, Prototype, and Test.</p>
+        <h2>My Major</h2>
+        <p>
+            I’m currently completing my final year of my degree in Human-Centered Design and Development in the College of Information Sciences and Technology at Penn State University. What a mouthful! I know. Whether I’m at a career fair, a party, or a family function – I always have the same routine prepared to explain just what it is that I’ve decided to dedicate my four years of college and possibly career to.
+        </p>
+        <p>
+            Sometimes I describe it as “App design and development” or “Human-Computer Interaction.” These phrases get people closer to what the major actually covers, even though each one describes a slightly different piece of the larger picture.
+        </p>
 
-    <p>Working on projects that use this process — while also refining my front-end development skills — has made me passionate about pursuing a career in Human-Centered Design.</p>
+        <h2>What HCDD Really Means</h2>
+        <p>
+            Human-Centered Design and Development sits at the intersection of technology, design, psychology, and programming. It bridges the gap between understanding people and building the tools they rely on. Penn State describes the major as one that combines creativity with technical skill — helping students learn how to design digital products that actually work for the people who use them.
+        </p>
+        <p>
+            The field is broad: part application development, part research, part design thinking. The first half focuses more on building applications, while the second half explores how people interact with them and what makes technology intuitive or frustrating.
+        </p>
 
-    <p>Roles built around design and research are often called “User Experience Designer” or “Product Designer.” These exist across industries, but the one I’m most drawn to is healthcare — where design can directly affect lives.</p>
+        <h2>Who the Program Fits</h2>
+        <p>This program could be a great fit if you want to:</p>
+        <ul>
+            <li>Design, build, and evaluate web, mobile, and other software applications</li>
+            <li>Research users to understand how people live and how technology fits into their lives</li>
+            <li>Embrace uncertainty and change on the path to getting things right</li>
+        </ul>
+        <p>
+            Many people jokingly call it a “poor man’s Computer Science,” mostly because students often switch into it from Computer Science or Engineering. While CS is heavier on math and theory, HCDD focuses on front-end implementation, usability, human behavior, and design systems — all equally essential in today’s tech landscape.
+        </p>
 
-    <p>Healthcare and medical interfaces, on both the provider and patient sides, are known for being designed poorly. I find this ironic, considering these systems handle sensitive data that should be presented clearly and intuitively.</p>
+        <h2>Why This Field Matters to Me</h2>
+        <p>
+            Living in a world dominated by technology has made me deeply curious about how people of different ages, abilities, and backgrounds use — or struggle to use — the tools around them. Designing software that is genuinely accessible and meaningful is something that motivates me every day.
+        </p>
+        <p>
+            My coursework revolves around the Design Thinking process: Empathize, Define, Ideate, Prototype, and Test. Working on projects that follow this framework has helped me strengthen both my design and front-end development skills, and has made me passionate about pursuing a career grounded in Human-Centered Design.
+        </p>
 
-    <p>My goal is to eventually work at Epic Systems, which develops large-scale electronic health record platforms. I’m especially interested in how their designers collaborate with hospital staff to understand how their products are used in real settings.</p>
+        <h2>My Goals Moving Forward</h2>
+        <p>
+            Roles in this field are often labeled “User Experience Designer,” “Product Designer,” or “UX Researcher.” They exist in nearly every industry, but the one I’m most drawn to is healthcare — where good design can genuinely impact someone’s life.
+        </p>
+        <p>
+            Healthcare interfaces, both for providers and patients, are notoriously difficult to use. It’s ironic, considering these systems manage some of the most sensitive information a person has. My goal is to work at Epic Systems, a major electronic health record platform, where designers collaborate directly with clinicians to understand how their tools are used in real medical settings.
+        </p>
+        <p>
+            As graduation approaches, the landscape of UX is shifting due to AI, but I remain flexible and optimistic. My hope is to contribute to medical technology that supports both providers and patients — and ultimately helps make healthcare a little more human.
+        </p>
 
-    <p>As I approach graduation, AI seems to be reshaping entry-level UX roles. Still, I remain flexible and hopeful — committed to designing medical technology that helps providers and patients alike.</p>
-</main>
+    </main>
+</div>
+
 </body>
 </html>
