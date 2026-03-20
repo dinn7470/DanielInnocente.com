@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SupportMe</title>
+    <link rel="stylesheet" href="supportMe.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+<!-- NAV -->
+<nav class="site-navbar" aria-label="Primary">
+    <ul class="site-nav-links">
+        <li><a href="https://dinn7470.github.io/DanielInnocente.com/">Home</a></li>
+        <li><a href="https://dinn7470.github.io/DanielInnocente.com/portfolio">Portfolio</a></li>
+        <li><a href="https://drive.google.com/file/d/1UJ044hJu0KQN5b0jU0n3b_HiMa2iUQxt/view?usp=sharing">Resume</a></li>
+    </ul>
+</nav>
+
+<!-- HERO / BANNER -->
+<header class="hero">
+    <div class="hero-inner">
+        <div class="hero-text">
+            <h1 class="hero-title">SupportMe</h1>
+            <p class="hero-subtitle">A Community That Shows Up</p>
+
+
+        <div class="hero-visuals" aria-hidden="true">
+            <img class="hero-visual" src="undraw_healthy-lifestyle_8zpg%20(1).svg" alt="" />
+
+
+            <img class="hero-visual" src="undraw_positive-attitude_xx3v.svg" alt="" />
+        </div>
+    </div>
+</header>
+
+<main class="case-study">
+    <!-- OVERVIEW -->
+    <section class="section" id="overview">
+        <p class="lede">
+            SupportMe was developed during the summer and fall of 2025 as a research paper and Figma prototype with Penn State
+            University’s ReSENSE Research Lab.
+        </p>
+
+        <div class="overview-grid">
+            <article class="card">
+                <h2 class="card-title">Problem</h2>
+                <p>
+                    In a digital landscape where online fundraising platforms are expanding but older adults remain disproportionately
+                    excluded, there is a growing need for equitable, accessible systems of support. For many seniors facing illness,
+                    financial strain, and social isolation, navigating existing crowdfunding tools can be overwhelming, unclear, and
+                    structurally disadvantageous, leaving them uncertain about how to seek meaningful assistance.
+                </p>
+            </article>
+
+            <article class="card">
+                <h2 class="card-title">Solution</h2>
+                <p>
+                    SupportMe is a proposed mobile and web platform designed to connect older adults with both emotional and financial
+                    support in one accessible space. It integrates peer support forums, an equity-focused crowdfunding model, a
+                    subscription-based Community Fund for micro-assistance, and accessibility-first interface features tailored to
+                    seniors. By combining mutual aid with human-centered design, SupportMe aims to reduce social isolation, address
+                    financial gaps, and create a more dignified and equitable experience for seniors seeking support.
+                </p>
+            </article>
+        </div>
+
+        <div class="meta-grid">
+            <div class="meta card">
+                <h3 class="meta-title">Team</h3>
+                <ul class="meta-list">
+                    <li>Daniel Innocente</li>
+                    <li>Dr. Dhananjay Singh</li>
+                </ul>
+            </div>
+
+            <div class="meta card">
+                <h3 class="meta-title">Tools</h3>
+                <ul class="meta-list">
+                    <li>Figma</li>
+                    <li>React.js</li>
+                </ul>
+            </div>
+
+            <div class="meta card">
+                <h3 class="meta-title">My Role</h3>
+                <ul class="meta-list">
+                    <li>Lead UX Researcher</li>
+                </ul>
+            </div>
+
+            <div class="meta card">
+                <h3 class="meta-title">Timeline</h3>
+                <ul class="meta-list">
+                    <li>Overall: 7 months</li>
+                    <li>Research: 2 months</li>
+                    <li>Designing: 2 months</li>
+                    <li>Writing + synthesis: 3 months</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="section" id="research">
+        <h2 class="section-title">Research</h2>
+        <p class="section-subtitle">Literature Review + Crowdfunding Platform Analysis</p>
+
+        <p>
+            To ground the development of SupportMe in evidence rather than assumption, I conducted an extensive review of peer-reviewed
+            research examining social isolation in older adults, financial precarity among seniors, digital exclusion and accessibility
+            barriers, and documented algorithmic bias within crowdfunding platforms. This review was complemented by an analysis of how
+            existing crowdfunding systems function in practice, including their reliance on engagement-based visibility, narrative framing
+            and storytelling privilege, and heavy dependence on social media reach for campaign success. Together, these sources provided a
+            structural understanding of why seniors are disproportionately disadvantaged within current digital fundraising ecosystems.
+        </p>
+
+        <h3 class="subsection-title">Key Results</h3>
+        <ol class="results-list">
+            <li>
+                <strong>Engagement-Based Visibility:</strong> Existing crowdfunding platforms prioritize campaigns that already receive high engagement,
+                which amplifies visibility for popular posts and makes it harder for seniors with smaller networks to be seen.
+            </li>
+            <li>
+                <strong>Storytelling Privilege:</strong> Campaign success is often tied to emotionally compelling narratives, which pressures users to
+                overshare personal hardship and disadvantages those who are uncomfortable, less fluent, or unable to craft “ideal” stories.
+            </li>
+            <li>
+                <strong>Reliance on Social Media Reach:</strong> Because sharing on social platforms is a primary driver of donations and traffic, seniors
+                who use social media less frequently or lack digital confidence face reduced exposure and lower fundraising outcomes.
+            </li>
+        </ol>
+    </section>
+
+    <!-- DESIGN IMPLICATIONS -->
+    <section class="section" id="design-implications">
+        <h2 class="section-title">Design Implications</h2>
+
+        <p>
+            The findings suggested seniors are not excluded because they lack need, but because platforms are structured in ways that privilege
+            visibility, narrative fluency, and social reach. Rather than treating these barriers as user limitations, this project reframed them as
+            system design flaws. Each inequity directly informed a corresponding design decision within SupportMe.
+        </p>
+
+        <ul class="bullets">
+            <li><strong>Visibility should not be determined by engagement metrics.</strong> SupportMe avoids popularity-based ranking.</li>
+            <li><strong>Need should not be overshadowed by storytelling performance.</strong> The platform supports needs-focused requests and reduces pressure to overshare.</li>
+            <li><strong>Support should not depend on external social media reach.</strong> Discovery is designed to work inside the platform itself.</li>
+            <li><strong>Accessibility must be proactive and easy to find.</strong> Key controls are surfaced directly in the experience.</li>
+            <li><strong>Privacy should be the default.</strong> The design prioritizes trust for users sharing sensitive health and financial information.</li>
+        </ul>
+    </section>
+
+    <!-- IDEATION -->
+    <section class="section" id="ideation">
+        <h2 class="section-title">Ideation</h2>
+        <p>
+            The ideation phase focused on translating research patterns into concrete platform requirements. Instead of optimizing for engagement,
+            SupportMe prioritizes fairness, dignity, and low-barrier participation. The platform concept combines peer-based emotional support with
+            a more equitable approach to financial assistance.
+        </p>
+
+        <div class="feature-grid">
+            <article class="card">
+                <h3 class="card-title">Equity-First Discovery</h3>
+                <p>
+                    Campaign visibility is randomized or rotated rather than boosted by likes, comments, or shares. This helps prevent “rich get richer”
+                    dynamics where already-successful campaigns dominate attention.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">Peer Support Communities</h3>
+                <p>
+                    Forums are designed for shared experience, encouragement, and connection. The intent is emotional and informational support, not medical advice.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">Community Fund Micro-Assistance</h3>
+                <p>
+                    An optional subscription-based Community Fund supports small, urgent needs like prescriptions, copays, groceries, or rides to appointments,
+                    reducing reliance on public storytelling.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">Accessibility + Privacy by Design</h3>
+                <p>
+                    The concept foregrounds readability, simplified navigation, and clear privacy protections so seniors can participate with confidence.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- DESIGN -->
+    <section class="section" id="design">
+        <h2 class="section-title">Design</h2>
+
+        <div class="feature-grid">
+            <article class="card">
+                <h3 class="card-title">Mutual Aid Tab</h3>
+                <p>
+                    A dedicated browsing view supports equitable discovery and makes it easy to find campaigns by urgency, duration, funding status, or need type.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">Campaign Creation Without Narrative Pressure</h3>
+                <p>
+                    Campaign creation encourages needs-focused descriptions and supports anonymous or pseudonymous requests for safety and destigmatization.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">Accessibility Controls (“Fit Me”)</h3>
+                <p>
+                    Front-facing controls for font size, contrast, motion sensitivity, screen reader compatibility, and optional voice navigation are part of the design.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">Transparency + Trust</h3>
+                <p>
+                    The Community Fund includes clear reporting and user-first transparency to help reduce skepticism and fear around digital financial tools.
+                </p>
+            </article>
+        </div>
+
+
+        <div class="media-grid">
+            <!-- Replace src paths with your exported SupportMe screens -->
+            <figure class="media">
+                <img src="images/Todd_Chavez_Profile.png" alt="SupportMe screen placeholder 1" />
+                <figcaption>C</figcaption>
+            </figure>
+
+            <figure class="media">
+                <img src="images/Community_Stories.png" alt="SupportMe screen placeholder 2" />
+                <figcaption>Campaign creation flow (placeholder)</figcaption>
+            </figure>
+
+            <figure class="media">
+                <img src="images/Brain_Cancer_Community.png" alt="SupportMe screen placeholder 3" />
+                <figcaption>Community forum (placeholder)</figcaption>
+            </figure>
+
+            <figure class="media">
+                <img src="images/CreatePost.png" alt="SupportMe screen placeholder 4" />
+                <figcaption>Accessibility controls (“Fit Me”) (placeholder)</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- EVALUATION -->
+    <section class="section" id="evaluation">
+        <h2 class="section-title">Proposed Evaluation</h2>
+        <p>
+            This project did not include primary app testing. The next step would be to complete the prototype and conduct a pilot study designed to evaluate usability, accessibility,
+            perceived fairness, and emotional impact across seniors with varying levels of digital literacy.
+        </p>
+
+        <div class="two-col">
+            <article class="card">
+                <h3 class="card-title">Pilot Structure</h3>
+                <ul class="bullets">
+                    <li><strong>Population:</strong> Older adults aged 65+ across diverse socioeconomic backgrounds</li>
+                    <li><strong>Process:</strong> onboarding, forum participation, campaign creation, Community Fund request flow</li>
+                    <li><strong>Methods:</strong> mixed-method usability testing, surveys, and interviews</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">Key Metrics</h3>
+                <ul class="bullets">
+                    <li><strong>Accessibility:</strong> ease of configuring “Fit Me” controls and navigating core tasks</li>
+                    <li><strong>Equity:</strong> visibility distribution and funding outcomes across user groups</li>
+                    <li><strong>Emotional impact:</strong> perceived social support and reduced isolation markers</li>
+                    <li><strong>Trust:</strong> privacy confidence and comfort sharing sensitive information</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
