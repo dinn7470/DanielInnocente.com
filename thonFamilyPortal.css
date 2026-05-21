@@ -360,6 +360,74 @@ a {
     border-top: 6px solid var(--coral);
 }
 
+/* ─── Before / After deep dive ─── */
+
+.ba-block {
+    margin-top: 40px;
+}
+
+.ba-after-block {
+    margin-top: 52px;
+}
+
+.ba-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.ba-header h3 {
+    margin: 0;
+    font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+    line-height: 1.1;
+}
+
+.ba-badge {
+    flex-shrink: 0;
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.ba-before {
+    background: #fde8e8;
+    color: #9b1111;
+}
+
+.ba-after {
+    background: var(--mint);
+    color: #0a5c40;
+}
+
+.ba-observations {
+    margin: 14px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+}
+
+.ba-observations li {
+    padding: 14px 16px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.ba-observations li strong {
+    color: var(--ink);
+}
+
+/* ─── */
+
 .footer {
     padding: 52px 0 64px;
 }
