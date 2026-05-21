@@ -90,7 +90,8 @@ a {
 
 .page-header h1 {
     font-size: clamp(4rem, 10vw, 8rem);
-    line-height: 0.88;
+    line-height: 1;
+    padding-bottom: 0.1em;
     font-weight: 900;
     letter-spacing: -0.03em;
     background: linear-gradient(135deg, var(--arbiter-from) 0%, var(--arbiter-to) 40%, var(--support-from) 100%);
@@ -156,37 +157,40 @@ a {
     pointer-events: none;
 }
 
-/* Logo inside a floating white pill */
-.card-logo-wrap {
-    background: var(--white);
-    border-radius: 14px;
-    padding: 14px 22px;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-}
-
+/* Logos fill the accent area */
 .card-logo {
-    max-width: 100px;
-    max-height: 64px;
-    width: auto;
+    width: 62%;
+    max-width: 280px;
     height: auto;
     object-fit: contain;
     display: block;
-}
-
-/* THON wordmark */
-.card-wordmark {
-    font-size: 3.8rem;
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    color: var(--thon-accent);
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     position: relative;
     z-index: 1;
+}
+
+/* Arbiter: light bg so original logo colors show through */
+.arbiter-card .card-accent {
+    background: linear-gradient(135deg, #dce8ff, #ede0ff);
+}
+
+.arbiter-card .card-logo {
+    mix-blend-mode: multiply;
+}
+
+/* SupportMe: white logo on dark teal gradient */
+.support-card .card-logo {
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+/* THON: yellow background, original logo colors */
+.thon-card .card-accent {
+    background: var(--thon-accent);
+}
+
+.thon-card .card-logo {
+    mix-blend-mode: darken;
+    width: 68%;
 }
 
 /* ─── Card body ─── */

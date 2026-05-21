@@ -311,16 +311,14 @@ a {
 }
 
 .image-frame {
-    height: 520px;
     background: #f3f5f8;
     border-bottom: 1px solid var(--line);
-    overflow: auto;
+    overflow: hidden;
 }
 
 .image-frame img {
     display: block;
     width: 100%;
-    min-width: 720px;
     height: auto;
 }
 
