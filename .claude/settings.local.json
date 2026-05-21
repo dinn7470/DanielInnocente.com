@@ -9,7 +9,10 @@
       "Bash(git push *)",
       "Bash(gh pr create --title 'Portfolio page redesign: correct cards, fix scroll, visual refresh' --body ' *)",
       "Bash(where gh *)",
-      "Bash(winget list *)"
+      "Bash(winget list *)",
+      "Bash(powershell -Command \"Expand-Archive -Path 'C:/Users/dinno/Downloads/Family Portal \\(1\\).zip' -DestinationPath 'C:/Users/dinno/Downloads/family-portal-unzipped' -Force\")",
+      "Read(//c/Users/dinno/Downloads/**)",
+      "Bash(powershell -Command \"Expand-Archive -Path 'C:/Users/dinno/Downloads/Family Portal \\(1\\).zip' -DestinationPath 'C:/Users/dinno/Downloads/fp-unzipped' -Force; Get-ChildItem 'C:/Users/dinno/Downloads/fp-unzipped' -Recurse | Select-Object FullName\")"
     ]
   }
 }
