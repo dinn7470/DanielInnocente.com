@@ -232,8 +232,13 @@ a {
     margin-bottom: 24px;
 }
 
+.section-head p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
 .section-head p:last-child {
-    font-size: 1.08rem;
+    font-size: 1.1rem;
 }
 
 .card-grid,
@@ -242,6 +247,108 @@ a {
 .solution-grid {
     display: grid;
     gap: 16px;
+}
+
+.card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.card,
+.research-card,
+.solution-grid article,
+.screen-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.card,
+.research-card,
+.solution-grid article {
+    padding: 20px;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+}
+
+.card p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
+.research-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+}
+
+.research-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.research-card p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
+.research-card span {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--blue);
+    font-size: 0.78rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.document-link {
+    border-top: 6px solid var(--green);
+}
+
+.document-link strong {
+    display: inline-flex;
+    margin-top: 14px;
+    color: var(--blue);
+    font-size: 1rem;
+}
+
+.pdf-preview {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 20px 0 4px;
+    padding: 16px;
+    background: var(--blue-soft);
+    border-radius: 8px;
+    border: 1px solid var(--line);
+}
+
+.pdf-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pdf-label {
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+}
+
+.pdf-name {
+    font-size: 0.9rem;
+    color: var(--ink);
+    font-weight: 500;
 }
 
 .screen-card {
@@ -262,6 +369,16 @@ a {
     height: auto;
 }
 
+.screen-card figcaption {
+    display: grid;
+    gap: 6px;
+    padding: 16px 18px 18px;
+}
+
+.screen-card strong {
+    font-size: 1.05rem;
+}
+
 /* Before screens — single column, full readable width */
 .before-after .screen-grid.three {
     grid-template-columns: 1fr;
@@ -280,36 +397,9 @@ a {
     font-size: 1rem;
 }
 
-.screen-card figcaption {
-    display: grid;
-    gap: 6px;
-    padding: 16px 18px 18px;
-}
-
-.screen-card strong {
-    font-size: 1.05rem;
-}
-
 .after-grid {
     grid-template-columns: 1.25fr 0.75fr;
     align-items: start;
-}
-.featured {
-    border-top: 6px solid var(--green);
-}
-
-.screen-card figcaption {
-    display: grid;
-    gap: 6px;
-    padding: 16px 18px 18px;
-}
-
-.screen-card strong {
-    font-size: 1.05rem;
-}
-
-.after-grid {
-    grid-template-columns: 1.25fr 0.75fr;
 }
 
 .featured {
@@ -318,6 +408,15 @@ a {
 
 .solution-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.solution-grid h3 {
+    margin: 0 0 8px;
+    font-size: 1.15rem;
+}
+
+.solution-grid p {
+    margin: 0;
 }
 
 .solution-grid article:nth-child(1) {
