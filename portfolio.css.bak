@@ -1,0 +1,316 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow: hidden !important;
+}
+
+.page-title {
+    font-size: 30px; /* Adjusts the size of the font */
+    position:relative;
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Centers the title */
+    color: #333; /* Adjust the text color */
+    margin-top: 50px; /* Adds space at the top */
+    margin-bottom: 20px; /* Adds space below the title */
+    text-transform: uppercase; /* Makes the text uppercase */
+    letter-spacing: 2px; /* Adds spacing between letters */
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+
+/* Make the entire container clickable */
+.preview-link1 {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use default text color */
+    display: block; /* Ensure it behaves like a block element */
+}
+
+.preview-link2 {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use default text color */
+    display: block; /* Ensure it behaves like a block element */
+}
+
+.preview-link3 {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use default text color */
+    display: block; /* Ensure it behaves like a block element */
+}
+
+
+/* Container Styling */
+.mindmap-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    color: #d0d9e7;
+    border-radius: 15px;
+    padding: 20px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 300px;
+    height: 500px;
+    margin: 0 auto;
+    top: 45px; /* Shifts the element down */
+    left: -600px; /* Shifts it left */
+}
+
+.mindmap-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skillsync-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    color: #d0d9e7;
+    border-radius: 15px;
+    padding: 20px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 300px;
+    height: 500px;
+    margin: 0 auto;
+    top: -496px; /* Shifts the element up */
+    left: 0px; /* No horizontal shift */
+    text-decoration: none;
+}
+
+
+.mycloset-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    color: #0064ff;
+    border-radius: 15px;
+    padding: 20px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 300px;
+    height: 500px;
+    margin: 0 auto;
+    top: -1037px; /* Shifts the element up even further */
+    left: 600px; /* Shifts it right */
+    text-decoration: none;
+}
+
+
+/* Wrapper Container */
+.wrapper-container {
+    display: flex; /* Enables flexbox */
+    justify-content: space-evenly; /* Distributes equal space between items and edges */
+    align-items: center; /* Vertically aligns items */
+    padding: 0 20px; /* Optional padding for extra spacing from screen edges */
+    margin: 0 auto; /* Centers the wrapper */
+    width: 100%; /* Ensure it spans the full width of the viewport */
+    max-width: 1200px; /* Optional max-width for better layout control */
+}
+
+
+
+
+.skillsync-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mycloset-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+/* Content Styling */
+.preview-content1, .preview-content2, .preview-content3 {
+    flex: 1;
+    color: #333;
+    text-align: center;
+}
+
+.preview-title1, .preview-title2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.preview-subtitle1, .preview-subtitle2, .preview-subtitle3 {
+    font-size: 1.2rem;
+    margin: 5px 0 10px;
+    color: #555;
+}
+
+.preview-role1, .preview-role2, .preview-role3 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #777;
+}
+
+.tags1, .tags2, .tags3 {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.tags1 .tag1, .tags2 .tag2, .tags3 .tag3  {
+    padding: 5px 10px;
+    border: 2px solid #4A90E2;
+    border-radius: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4A90E2;
+}
+
+/* Description Styling */
+.preview-description1, .preview-description2, .preview-description3 {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+/* Image Container Styling */
+.preview-image-container1, .preview-image-container2 , .preview-image-container3{
+    flex-shrink: 0; /* Prevent shrinking */
+    width: 300px;
+    display: flex; /* Enables flexible positioning */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    height: 200px; /* Add a fixed height for better alignment */
+}
+
+/* Image Styling */
+.preview-image1, .preview-image2 , .preview-image3 {
+    width: 200px; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Ensures the image fits nicely */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root{
+    --nav-text: #000;  /* black links for white background */
+    --underline: #000;
+    --nav-gap: 20px;
+    --nav-pad-y: 10px;
+    --nav-pad-x: 14px;
+}
+
+/* Fixed, upper-right pill */
+.site-navbar{
+    position: fixed;
+    top: 12px;
+    right: 24px;
+    z-index: 1000;
+    background: rgba(255,255,255,0.8);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    border: 1px solid #e5e7eb; /* gray-200 */
+    border-radius: 999px;
+    padding: var(--nav-pad-y) var(--nav-pad-x);
+}
+
+/* Horizontal links */
+.site-nav-links{
+    display: flex;
+    gap: var(--nav-gap);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Link style + animated underline */
+.site-nav-links a{
+    color: var(--nav-text);
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px; /* space for underline */
+}
+
+.site-nav-links a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: var(--underline);
+    transition: width .25s ease;
+}
+
+.site-nav-links a:hover::after{ width: 100%; }
+
+/* Small screens: slightly tighter */
+@media (max-width: 560px){
+    :root{ --nav-gap: 14px; }
+    .site-navbar{ right: 16px; top: 10px; }
+    .site-nav-links a{ font-size: 18px; }
+}
+
+/* Respect motion preferences */
+@media (prefers-reduced-motion: reduce){
+    .site-nav-links a::after{ transition: none; }
+}
+
+
+.wrapper-container {
+    display: flex; /* Ensure flexbox is applied */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center; /* Align vertically */
+    position: relative; /* Ensure proper layout context */
+    width: 100%; /* Full width */
+}
+
+.mindmap-container, .skillsync-container, .mycloset-container {
+    position: relative; /* Ensure they stay in the flow */
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
