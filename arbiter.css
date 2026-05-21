@@ -244,63 +244,6 @@ a {
     gap: 16px;
 }
 
-.card-grid,
-.three {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.card,
-.research-card,
-.solution-grid article,
-.screen-card {
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-}
-
-.card,
-.research-card,
-.solution-grid article {
-    padding: 20px;
-}
-
-.card h3,
-.research-card h3,
-.solution-grid h3 {
-    margin: 0 0 8px;
-    font-size: 1.15rem;
-}
-
-.card p,
-.research-card p,
-.solution-grid p {
-    margin: 0;
-}
-
-.research-grid {
-    grid-template-columns: 1.1fr 0.9fr;
-}
-
-.research-card span {
-    display: block;
-    margin-bottom: 10px;
-    color: var(--blue);
-    font-size: 0.78rem;
-    font-weight: 850;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.document-link {
-    border-top: 6px solid var(--green);
-}
-
-.document-link strong {
-    display: inline-flex;
-    margin-top: 18px;
-    color: var(--blue);
-}
-
 .screen-card {
     margin: 0;
     overflow: hidden;
@@ -317,6 +260,42 @@ a {
     display: block;
     width: 100%;
     height: auto;
+}
+
+/* Before screens — single column, full readable width */
+.before-after .screen-grid.three {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+}
+
+.before-after .screen-card figcaption {
+    padding: 20px 24px 24px;
+}
+
+.before-after .screen-card strong {
+    font-size: 1.15rem;
+}
+
+.before-after .screen-card span {
+    font-size: 1rem;
+}
+
+.screen-card figcaption {
+    display: grid;
+    gap: 6px;
+    padding: 16px 18px 18px;
+}
+
+.screen-card strong {
+    font-size: 1.05rem;
+}
+
+.after-grid {
+    grid-template-columns: 1.25fr 0.75fr;
+    align-items: start;
+}
+.featured {
+    border-top: 6px solid var(--green);
 }
 
 .screen-card figcaption {
