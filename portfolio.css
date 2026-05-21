@@ -132,65 +132,18 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     overflow: hidden;
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
 }
 
-.arbiter-card .card-accent {
-    background: linear-gradient(135deg, var(--arbiter-from), var(--arbiter-to));
-}
-
-.thon-card .card-accent {
-    background: linear-gradient(135deg, var(--thon-from), var(--thon-to));
-}
-
-.support-card .card-accent {
-    background: linear-gradient(135deg, var(--support-from), var(--support-to));
-}
-
-/* Subtle sheen on the accent band */
-.card-accent::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 30% 30%, rgba(255, 255, 255, 0.18) 0%, transparent 65%);
-    pointer-events: none;
-}
-
-/* Logos fill the accent area */
+/* Logos on white — no background color */
 .card-logo {
-    width: 62%;
-    max-width: 280px;
+    width: 65%;
+    max-width: 260px;
     height: auto;
     object-fit: contain;
     display: block;
-    position: relative;
-    z-index: 1;
-}
-
-/* Arbiter: light bg so original logo colors show through */
-.arbiter-card .card-accent {
-    background: linear-gradient(135deg, #dce8ff, #ede0ff);
-}
-
-.arbiter-card .card-logo {
-    mix-blend-mode: multiply;
-}
-
-/* SupportMe: white logo on dark teal gradient */
-.support-card .card-logo {
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
-}
-
-/* THON: yellow background, original logo colors */
-.thon-card .card-accent {
-    background: var(--thon-accent);
-}
-
-.thon-card .card-logo {
-    mix-blend-mode: darken;
-    width: 68%;
 }
 
 /* ─── Card body ─── */
