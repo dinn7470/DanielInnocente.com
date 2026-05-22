@@ -101,9 +101,6 @@ a {
 }
 
 .hero-type {
-    display: flex;
-    align-items: center;
-    gap: 8px;
     min-height: clamp(68px, 10vw, 112px);
 }
 
@@ -117,9 +114,16 @@ a {
 
 .cursor {
     color: var(--primary);
-    font-size: clamp(3.2rem, 9vw, 7rem);
+    font-size: inherit;
     font-weight: 900;
+    line-height: 0.9;
+    margin-left: 2px;
     animation: blink 1s step-end infinite;
+}
+
+.typewriter-wrap {
+    display: inline-flex;
+    align-items: baseline;
 }
 
 @keyframes blink {
@@ -301,11 +305,7 @@ a {
     color: var(--muted);
 }
 
-.supportme-card {
-    background:
-        linear-gradient(135deg, rgba(0, 205, 168, 0.16), rgba(255, 209, 102, 0.2)),
-        var(--surface);
-}
+
 
 .principles,
 .skill-groups {
