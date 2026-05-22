@@ -105,6 +105,7 @@ a {
 }
 
 #typewriter {
+    display: inline;
     margin: 0;
     font-size: clamp(3.5rem, 10vw, 7.6rem);
     font-weight: 900;
@@ -113,8 +114,9 @@ a {
 }
 
 .cursor {
+    display: inline;
     color: var(--primary);
-    font-size: inherit;
+    font-size: clamp(3.5rem, 10vw, 7.6rem);
     font-weight: 900;
     line-height: 0.9;
     margin-left: 2px;
@@ -122,8 +124,7 @@ a {
 }
 
 .typewriter-wrap {
-    display: inline-flex;
-    align-items: baseline;
+    display: block;
 }
 
 @keyframes blink {
