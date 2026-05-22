@@ -370,6 +370,16 @@ a {
     margin-top: 20px;
 }
 
+.ba-after-block .image-frame {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.ba-after-block .image-frame img {
+    object-fit: cover;
+    object-position: top center;
+}
+
 .ba-header {
     display: flex;
     align-items: center;
