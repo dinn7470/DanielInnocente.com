@@ -325,7 +325,7 @@ a {
 .screenshot-card figcaption {
     display: grid;
     gap: 6px;
-    padding: 16px 18px 18px;
+    padding: 10px 10px 10px;
 }
 
 .screenshot-card strong {
@@ -363,11 +363,11 @@ a {
 /* ─── Before / After deep dive ─── */
 
 .ba-block {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .ba-after-block {
-    margin-top: 52px;
+    margin-top: 20px;
 }
 
 .ba-header {
