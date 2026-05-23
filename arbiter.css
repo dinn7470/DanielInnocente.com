@@ -200,7 +200,7 @@ a {
 
 .split {
     display: grid;
-    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
     gap: clamp(28px, 5vw, 72px);
     align-items: start;
 }
@@ -219,8 +219,13 @@ a {
 .solution-grid p,
 .screen-card span,
 .footer p {
+    font-size: 30px;
+}
+
+
+.footer p {
     color: var(--muted);
-    font-size: 1rem;
+    font-size: 20px;
 }
 
 .copy-stack p:first-child {
