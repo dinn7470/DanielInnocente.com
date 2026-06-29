@@ -457,6 +457,18 @@ body {
   margin-top: 0;
 }
 
+.split > div:last-child,
+.copy-stack {
+  align-self: stretch;
+}
+
+.split > div:last-child p,
+.copy-stack p {
+  color: var(--muted);
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  line-height: 1.38;
+}
+
 .section-head {
   max-width: 760px;
   margin-bottom: 24px;
@@ -667,6 +679,11 @@ body {
 
   .move {
     grid-template-columns: 1fr;
+  }
+
+  .split > div:last-child p,
+  .copy-stack p {
+    font-size: clamp(1.28rem, 6vw, 1.6rem);
   }
 }
 `;
