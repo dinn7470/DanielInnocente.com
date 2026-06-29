@@ -235,7 +235,7 @@ export default function SupportMeCaseStudy() {
 const styles = `
 :root {
   --ink: #14213d;
-  --muted: #546179;
+  --muted: #4f5f73;
   --line: #dce4ec;
   --paper: #fbfcf8;
   --mint: #00cda8;
@@ -322,8 +322,8 @@ body {
 .hero h1 {
   margin: 0;
   color: var(--white);
-  font-size: clamp(4rem, 11vw, 8.5rem);
-  line-height: 0.88;
+  font-size: clamp(3.8rem, 8vw, 7.2rem);
+  line-height: 0.9;
   letter-spacing: 0;
 }
 
@@ -331,7 +331,8 @@ body {
   max-width: 680px;
   margin: 28px 0 0;
   color: #102237;
-  font-size: clamp(1.18rem, 2vw, 1.65rem);
+  font-size: clamp(1.15rem, 1.8vw, 1.42rem);
+  line-height: 1.45;
   font-weight: 700;
 }
 
@@ -438,8 +439,8 @@ body {
 .section h2,
 .designer-note h2 {
   margin: 0;
-  font-size: clamp(2rem, 5vw, 4rem);
-  line-height: 0.98;
+  font-size: clamp(1.85rem, 3.7vw, 3rem);
+  line-height: 1.08;
   letter-spacing: 0;
 }
 
@@ -465,8 +466,9 @@ body {
 .split > div:last-child p,
 .copy-stack p {
   color: var(--muted);
-  font-size: clamp(1.45rem, 2.4vw, 2rem);
-  line-height: 1.38;
+  max-width: 68ch;
+  font-size: clamp(1.12rem, 1.45vw, 1.3rem);
+  line-height: 1.62;
 }
 
 .section-head {
@@ -475,7 +477,9 @@ body {
 }
 
 .section-head p:last-child {
-  font-size: 1.08rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .card-grid,
@@ -501,7 +505,17 @@ body {
 .move h3,
 .concept h3 {
   margin: 0 0 8px;
-  font-size: 1.15rem;
+  font-size: 1.12rem;
+  line-height: 1.25;
+}
+
+.card p,
+.move p,
+.concept p,
+.metric-list li,
+.designer-note p {
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .card p,
@@ -683,7 +697,7 @@ body {
 
   .split > div:last-child p,
   .copy-stack p {
-    font-size: clamp(1.28rem, 6vw, 1.6rem);
+    font-size: clamp(1.08rem, 4.8vw, 1.22rem);
   }
 }
 `;

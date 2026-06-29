@@ -137,7 +137,8 @@ a {
     max-width: 720px;
     margin: 18px 0 0;
     color: var(--text);
-    font-size: clamp(1.18rem, 2vw, 1.55rem);
+    font-size: clamp(1.15rem, 1.8vw, 1.42rem);
+    line-height: 1.45;
     font-weight: 700;
 }
 
@@ -161,6 +162,8 @@ a {
 .hero-note p {
     margin: 0;
     color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.65;
 }
 
 .cta-row {
@@ -235,8 +238,8 @@ a {
 .toolkit h2,
 .connect h2 {
     margin: 0;
-    font-size: clamp(2rem, 5vw, 3.7rem);
-    line-height: 1;
+    font-size: clamp(2rem, 4.4vw, 3.35rem);
+    line-height: 1.04;
     letter-spacing: 0;
 }
 
@@ -251,11 +254,18 @@ a {
 
 .about-text p:not(.eyebrow) {
     max-width: 68ch;
+    font-size: clamp(1.06rem, 1.25vw, 1.18rem);
+    line-height: 1.68;
 }
 
 .section-head {
     max-width: 760px;
     margin-bottom: 24px;
+}
+
+.section-head p {
+    font-size: 1.08rem;
+    line-height: 1.65;
 }
 
 .work-grid {
@@ -298,12 +308,15 @@ a {
 .principles strong,
 .skill-groups h3 {
     margin: 8px 0;
-    font-size: 1.35rem;
+    font-size: 1.18rem;
+    line-height: 1.25;
 }
 
 .work-card p {
     margin: 0;
     color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.62;
 }
 
 
@@ -329,6 +342,8 @@ a {
 .principles p,
 .skill-groups p {
     margin: 0;
+    font-size: 1rem;
+    line-height: 1.62;
 }
 
 .skill-groups {

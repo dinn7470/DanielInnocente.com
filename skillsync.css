@@ -91,7 +91,7 @@ body, html {
 
 
 .problem-title {
-    font-size: 30px;
+    font-size: 1.5rem;
     color: #333;
     margin-bottom: 20px;
     left: 400px;
@@ -112,7 +112,7 @@ body, html {
     display: block;
 }
 .tools-title {
-    font-size: 30px;
+    font-size: 1.5rem;
     color: #333;
     margin-bottom: 20px; /* Ensures space at the bottom of the title */
     left: 400px;
@@ -135,7 +135,7 @@ body, html {
 }
 
 .roles-title {
-    font-size: 30px;
+    font-size: 1.5rem;
     color: #333;
     margin-bottom: 20px; /* Ensures space at the bottom of the title */
     left: 700px;
@@ -162,7 +162,7 @@ body, html {
 
 
 .solution-title{
-    font-size: 30px;
+    font-size: 1.5rem;
     color: #333;
     margin-bottom: 20px;
     left: 1000px;
@@ -185,7 +185,7 @@ body, html {
 
 
 .team-title {
-    font-size: 30px;
+    font-size: 1.5rem;
     color: #333;
     margin-bottom: 20px; /* Ensures space at the bottom of the title */
     left: 1000px;
@@ -208,7 +208,7 @@ body, html {
 }
 
 .timeline-title {
-    font-size: 30px;
+    font-size: 1.5rem;
     color: #333;
     margin-bottom: 20px; /* Ensures space at the bottom of the title */
     left: 1300px;
