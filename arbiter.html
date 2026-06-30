@@ -149,68 +149,141 @@
 
     <section class="section before-after" id="before-after">
         <div class="section-head">
-            <p class="eyebrow">Before</p>
-            <h2>The current experience showed the system working, but not always what mattered most.</h2>
+            <p class="eyebrow">Before / after</p>
+            <h2>I made the scan flow easier to steer and easier to act on.</h2>
+            <p>
+                The original product already had a strong technical idea. My redesign focused the experience around
+                the decisions users needed to make: what constraints matter, what level they are, and what to do next.
+            </p>
         </div>
-        <div class="screen-grid three">
-            <figure class="screen-card">
-                <div class="image-frame">
-                    <img src="images/arbiter/before-upload-home.png" alt="Current Arbiter upload home screen" />
+        <div class="comparison-grid arbiter-comparison">
+            <article class="comparison-card before-card">
+                <div class="ba-header">
+                    <span class="ba-badge ba-before">Before</span>
+                    <h3>Personalization came too late.</h3>
                 </div>
-                <figcaption>
-                    <strong>Resume upload entry</strong>
-                    <span>Clear upload mechanics, but limited support for personalization before analysis.</span>
-                </figcaption>
-            </figure>
+                <figure class="screen-card">
+                    <div class="image-frame">
+                        <img src="images/arbiter/before-upload-home.png" alt="Current Arbiter upload home screen" />
+                    </div>
+                    <figcaption>
+                        <strong>Resume upload entry</strong>
+                        <span>The upload path was simple, but users had little control before the AI began analyzing their resume.</span>
+                    </figcaption>
+                </figure>
+                <ul class="decision-list">
+                    <li><strong>Issue:</strong> Real constraints like location, compensation, and role type were not part of setup.</li>
+                    <li><strong>Effect:</strong> Users had to wait for results before seeing whether recommendations matched their situation.</li>
+                </ul>
+            </article>
+
+            <article class="comparison-card after-card">
+                <div class="ba-header">
+                    <span class="ba-badge ba-after">After</span>
+                    <h3>Filters moved before the scan.</h3>
+                </div>
+                <figure class="screen-card featured">
+                    <div class="image-frame">
+                        <img src="images/arbiter/after-refined-upload.png" alt="Figma redesign of Arbiter upload screen with custom filters" />
+                    </div>
+                    <figcaption>
+                        <strong>Refined upload + filter entry</strong>
+                        <span>Personalization becomes an upfront part of the task, not a correction users make after the system responds.</span>
+                    </figcaption>
+                </figure>
+                <ul class="decision-list">
+                    <li><strong>Choice:</strong> Add plain-language filters before analysis so users can shape recommendations around real limits.</li>
+                    <li><strong>Why:</strong> Earlier control makes the AI feel more useful, predictable, and accountable.</li>
+                </ul>
+            </article>
+
+            <article class="comparison-card before-card">
+                <div class="ba-header">
+                    <span class="ba-badge ba-before">Before</span>
+                    <h3>Results competed with the next step.</h3>
+                </div>
+                <figure class="screen-card">
+                    <div class="image-frame">
+                        <img src="images/arbiter/before-results-analysis.png" alt="Current Arbiter results and resume analysis screen" />
+                    </div>
+                    <figcaption>
+                        <strong>Results analysis</strong>
+                        <span>Career level, agent output, and job matches were all valuable, but the hierarchy made action harder to find.</span>
+                    </figcaption>
+                </figure>
+                <ul class="decision-list">
+                    <li><strong>Issue:</strong> The interface presented a lot of signal at once without clearly prioritizing user decisions.</li>
+                    <li><strong>Effect:</strong> Refinement felt secondary, even though it was central to improving match quality.</li>
+                </ul>
+            </article>
+
+            <article class="comparison-card after-card">
+                <div class="ba-header">
+                    <span class="ba-badge ba-after">After</span>
+                    <h3>Refinement became a control surface.</h3>
+                </div>
+                <figure class="screen-card featured">
+                    <div class="image-frame">
+                        <img src="images/arbiter/after-refine-control.png" alt="Figma redesign of Arbiter refine controls" />
+                    </div>
+                    <figcaption>
+                        <strong>Refine controls</strong>
+                        <span>Users can adjust experience level, employment type, compensation, location, and other criteria directly.</span>
+                    </figcaption>
+                </figure>
+                <ul class="decision-list">
+                    <li><strong>Choice:</strong> Turn vague feedback into visible controls that map to job-search decisions.</li>
+                    <li><strong>Why:</strong> The AI output becomes something users can steer instead of something they only receive.</li>
+                </ul>
+            </article>
+        </div>
+
+        <div class="process-callout">
             <figure class="screen-card">
                 <div class="image-frame">
                     <img src="images/arbiter/before-agent-pipeline.png" alt="Current Arbiter agent pipeline screen" />
                 </div>
                 <figcaption>
-                    <strong>Agent pipeline</strong>
-                    <span>Interesting AI transparency, but the live debate can become text heavy quickly.</span>
+                    <strong>AI transparency</strong>
+                    <span>The agent debate was useful evidence, but it needed a quieter role in the overall journey.</span>
                 </figcaption>
             </figure>
-            <figure class="screen-card">
-                <div class="image-frame">
-                    <img src="images/arbiter/before-results-analysis.png" alt="Current Arbiter results and resume analysis screen" />
-                </div>
-                <figcaption>
-                    <strong>Results analysis</strong>
-                    <span>Useful career data, but the hierarchy makes it hard to identify the next best action.</span>
-                </figcaption>
-            </figure>
+            <div class="process-copy">
+                <p class="eyebrow">Process detail</p>
+                <h3>Keep transparency visible, but do not let it overpower the user's goal.</h3>
+                <p>
+                    I treated the agent pipeline as supporting context: helpful for trust, but less important than the
+                    user's level, fit, and next action. That framing keeps the AI explainable without making the page
+                    feel like a technical log.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section class="section" id="after">
+    <section class="section compact-showcase" id="after">
         <div class="section-head">
-            <p class="eyebrow">After</p>
-            <h2>The redesign gives users more control before and after the resume scan.</h2>
+            <p class="eyebrow">Career pathway</p>
+            <h2>The redesign also reframes recommendations as forward motion.</h2>
             <p>
-                Figma explorations focused on clearer input paths, stronger filtering, and career-path
-                framing so users could understand not only which jobs fit, but how to move toward the roles they want.
+                Beyond improving the scan flow, I explored how Arbiter could help users understand how their current
+                level connects to the roles they want next.
             </p>
         </div>
-        <div class="screen-grid after-grid">
+        <div class="showcase-row">
             <figure class="screen-card featured">
                 <div class="image-frame">
-                    <img src="images/arbiter/after-refined-upload.png" alt="Figma redesign of Arbiter upload screen with custom filters" />
+                    <img src="images/arbiter/after-career-pathway.png" alt="Figma redesign showing Arbiter career pathway framing" />
                 </div>
                 <figcaption>
-                    <strong>Refined upload + filter entry</strong>
-                    <span>Moves personalization earlier with custom filters and plain-language prompts.</span>
+                    <strong>Career pathway framing</strong>
+                    <span>Connects recommendations to progression, helping users see the path from current fit to future roles.</span>
                 </figcaption>
             </figure>
-            <figure class="screen-card">
-                <div class="image-frame">
-                    <img src="images/arbiter/after-refine-control.png" alt="Figma redesign of Arbiter refine controls" />
-                </div>
-                <figcaption>
-                    <strong>Refine controls</strong>
-                    <span>Turns vague feedback into specific controls: experience level, employment type, compensation, and more.</span>
-                </figcaption>
-            </figure>
+            <ul class="decision-list">
+                <li><strong>Choice:</strong> Shift from a static score to a clearer view of where the user stands.</li>
+                <li><strong>Why:</strong> Recruiters and job seekers both need the product to communicate growth, not just classification.</li>
+                <li><strong>Result:</strong> The concept supports a more guided career-planning experience without adding more noise to the scan page.</li>
+            </ul>
         </div>
     </section>
 
