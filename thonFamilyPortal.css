@@ -319,6 +319,66 @@ a {
     align-items: start;
 }
 
+.calendar-comparison {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+.comparison-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-comparison .screenshot-card,
+.events-feature .screenshot-card {
+    flex: 1;
+}
+
+.calendar-comparison .image-frame,
+.events-feature .image-frame {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 14px;
+}
+
+.calendar-comparison .image-frame img {
+    max-height: 620px;
+    object-fit: contain;
+}
+
+.events-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+    gap: 16px 20px;
+    align-items: start;
+    margin-top: 32px;
+}
+
+.events-feature .ba-header {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+.events-feature .screenshot-card {
+    max-width: none;
+}
+
+.events-feature .image-frame img {
+    max-height: 320px;
+    object-fit: contain;
+}
+
+.events-feature .ba-observations {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+}
+
+.legacy-ba {
+    display: none;
+}
+
 .screenshot-card {
     margin: 0;
     overflow: hidden;
@@ -467,6 +527,8 @@ a {
 @media (max-width: 980px) {
     .hero,
     .split,
+    .calendar-comparison,
+    .events-feature,
     .comparison-grid {
         grid-template-columns: 1fr;
     }
@@ -498,7 +560,8 @@ a {
 
     .fact-strip,
     .card-grid,
-    .solution-grid {
+    .solution-grid,
+    .events-feature .ba-observations {
         grid-template-columns: 1fr;
     }
 
@@ -508,6 +571,11 @@ a {
 
     .image-frame {
         height: 420px;
+    }
+
+    .calendar-comparison .image-frame,
+    .events-feature .image-frame {
+        height: auto;
     }
 
     .copy-stack p {
