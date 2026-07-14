@@ -15,26 +15,13 @@
 
 <header class="hero">
     <div class="hero-copy">
-        <p class="eyebrow">THON Technology / UI/UX coordination / Portal redesign</p>
-        <h1>THON Family Portal</h1>
+        <p class="eyebrow">THON Family Portal / THON Technology / UI/UX coordination</p>
+        <h1>Turning a family portal into a clearer event-planning hub.</h1>
         <p class="hero-lede">
-            Redesigning a family facing portal so THON families could onboard, update information,
-            track events, and feel more connected to the THON community.
+            I helped redesign a family-facing portal so THON families could understand upcoming events,
+            take action, and feel more connected to the THON community.
         </p>
-        <div class="hero-actions">
-            <a href="#before-after">View before and after</a>
-            <a href="#solution">See the redesign strategy</a>
-        </div>
     </div>
-
-    <aside class="hero-panel" aria-label="Project snapshot">
-        <p class="panel-kicker">The brief</p>
-        <h2>Turn an administrative portal into a clearer, warmer family hub.</h2>
-        <p>
-            The Family Relations Director asked THON Technology to rethink how families receive
-            updates, complete onboarding, and stay connected throughout the year.
-        </p>
-    </aside>
 </header>
 
 <main>
@@ -48,6 +35,10 @@
             <strong>Aiden Coleman</strong>
         </article>
         <article>
+            <span>Date</span>
+            <strong>Spring 2026</strong>
+        </article>
+        <article>
             <span>Stakeholder</span>
             <strong>THON Family Relations Director, THON Families</strong>
         </article>
@@ -57,88 +48,65 @@
         </article>
     </section>
 
-    <section class="section split" id="overview">
-        <div>
+    <section class="section overview-section" id="overview">
+        <div class="section-head">
             <p class="eyebrow">Overview</p>
             <h2>A portal for families needed to feel less like paperwork.</h2>
+            <p>
+                The Family Relations Director asked THON Technology to rethink how families receive
+                updates, complete onboarding, and stay connected throughout the year.
+            </p>
         </div>
-        <div class="copy-stack">
-            <p>
-                THON's Family Portal helps new and existing THON families complete onboarding,
-                upload and update family information, and stay informed about upcoming THON events.
-            </p>
-            <p>
-                The experience was also paired with a weekly email that carried a lot of information
-                at once. Families needed a more concise, approachable place to understand what mattered
-                now, what actions they needed to take, and how to stay connected to their paired
-                organization.
-            </p>
+        <div class="overview-grid">
+            <article>
+                <h3>Product context</h3>
+                <p>The portal helps THON families complete onboarding, update information, and keep track of events.</p>
+            </article>
+            <article>
+                <h3>UX focus</h3>
+                <p>Families needed a calmer place to understand what mattered now, not another dense update channel.</p>
+            </article>
+            <article>
+                <h3>Design outcome</h3>
+                <p>The redesign prioritizes event planning, clearer next steps, and a warmer connection to THON.</p>
+            </article>
         </div>
     </section>
 
     <section class="section" id="problem">
         <div class="section-head">
             <p class="eyebrow">Problem</p>
-            <h2>The old experience made families work too hard to stay in the loop.</h2>
-        </div>
-
-        <div class="card-grid">
-            <article class="card">
-                <h3>Important actions were buried</h3>
-                <p>
-                    Updating information, registering for events, and managing THON Weekend details
-                    were presented as separate tasks instead of a clear family journey.
-                </p>
-            </article>
-            <article class="card">
-                <h3>The tone felt administrative</h3>
-                <p>
-                    The portal handled sensitive family information, but the interface felt more like
-                    a database form than a welcoming community touchpoint.
-                </p>
-            </article>
-            <article class="card">
-                <h3>Weekly updates were verbose</h3>
-                <p>
-                    Families had to parse long email updates to understand what was coming up, which
-                    made it easier to miss relevant events, deadlines, or opportunities to connect.
-                </p>
-            </article>
-        </div>
-    </section>
-
-    <section class="section" id="research">
-        <div class="section-head">
-            <p class="eyebrow">Research</p>
-            <h2>We grounded the redesign in how Family Relations teams actually support families.</h2>
+            <h2>The old experience made families work too hard to know what mattered next.</h2>
             <p>
-                Aiden Coleman and I interviewed Family Relations Chairs from other organizations to
-                understand what information families ask for, where confusion tends to happen, and how
-                paired organizations start building relationships with new families.
+                The portal and weekly updates contained useful information, but the experience did not
+                consistently organize that information around family decisions.
             </p>
         </div>
 
-        <div class="insight-list">
+        <div class="problem-thread">
             <article>
                 <span>01</span>
-                <div>
-                    <h3>Families need a clear next step</h3>
-                    <p>Information is most helpful when it is tied to a visible action, deadline, or event.</p>
-                </div>
+                <h3>Find the action</h3>
+                <p>
+                    Updating information, registering for events, and managing THON Weekend details
+                    needed to feel like a clear path, not disconnected tasks.
+                </p>
             </article>
             <article>
                 <span>02</span>
-                <div>
-                    <h3>Connection starts before the first meeting</h3>
-                    <p>Optional family interests and hobbies could help paired organizations break the ice with care.</p>
-                </div>
+                <h3>Understand events</h3>
+                <p>
+                    Families needed to quickly scan event type, timing, relevance, and next steps without
+                    relying on long weekly updates.
+                </p>
             </article>
             <article>
                 <span>03</span>
-                <div>
-                    <h3>Concise beats comprehensive</h3>
-                    <p>The portal needed to summarize the weekly email experience, not recreate its density.</p>
-                </div>
+                <h3>Feel connected</h3>
+                <p>
+                    The interface needed to feel like a community touchpoint, not just a place to submit
+                    sensitive family information.
+                </p>
             </article>
         </div>
     </section>
@@ -277,6 +245,42 @@
                 <li><strong>Click to expand event detail:</strong> selecting a date opens an inline detail card with the event name, date range, and quick context, with no new page required to check what something is.</li>
                 <li><strong>Families can add personal events:</strong> the "Add New Event" button lets families layer in their own dates alongside THON events, making the calendar a genuine planning tool rather than a read-only feed.</li>
             </ul>
+        </div>
+    </section>
+
+    <section class="section" id="research">
+        <div class="section-head">
+            <p class="eyebrow">Research findings</p>
+            <h2>We grounded the redesign in how Family Relations teams actually support families.</h2>
+            <p>
+                Aiden Coleman and I interviewed Family Relations Chairs from other organizations to
+                understand what information families ask for, where confusion tends to happen, and how
+                paired organizations start building relationships with new families.
+            </p>
+        </div>
+
+        <div class="insight-list">
+            <article>
+                <span>01</span>
+                <div>
+                    <h3>Families need a clear next step</h3>
+                    <p>Information is most helpful when it is tied to a visible action, deadline, or event.</p>
+                </div>
+            </article>
+            <article>
+                <span>02</span>
+                <div>
+                    <h3>Connection starts before the first meeting</h3>
+                    <p>Optional family interests and hobbies could help paired organizations break the ice with care.</p>
+                </div>
+            </article>
+            <article>
+                <span>03</span>
+                <div>
+                    <h3>Concise beats comprehensive</h3>
+                    <p>The portal needed to summarize the weekly email experience, not recreate its density.</p>
+                </div>
+            </article>
         </div>
     </section>
 

@@ -60,19 +60,15 @@ a {
 }
 
 .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
-    gap: 28px;
-    align-items: end;
-    min-height: 76vh;
-    padding: 112px clamp(20px, 6vw, 80px) 56px;
+    min-height: 64vh;
+    padding: 124px clamp(20px, 6vw, 80px) 64px;
     background:
         linear-gradient(135deg, rgba(19, 36, 95, 0.94), rgba(19, 36, 95, 0.8)),
         radial-gradient(circle at 84% 20%, rgba(255, 210, 31, 0.62), transparent 34%);
 }
 
 .hero-copy {
-    max-width: 850px;
+    max-width: 1080px;
 }
 
 .eyebrow {
@@ -91,69 +87,19 @@ a {
 .hero h1 {
     margin: 0;
     color: var(--white);
-    font-size: clamp(3.7rem, 10vw, 8.2rem);
-    line-height: 0.9;
+    max-width: 1080px;
+    font-size: clamp(3.1rem, 6.8vw, 6.2rem);
+    line-height: 0.96;
     letter-spacing: 0;
 }
 
 .hero-lede {
-    max-width: 760px;
-    margin: 28px 0 0;
+    max-width: 840px;
+    margin: 24px 0 0;
     color: #f3f6ff;
     font-size: clamp(1.15rem, 1.8vw, 1.42rem);
-    line-height: 1.45;
-    font-weight: 700;
-}
-
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 28px;
-}
-
-.hero-actions a {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    padding: 10px 16px;
-    background: var(--white);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-    color: var(--thon-blue);
-    font-weight: 850;
-}
-
-.hero-actions a:last-child {
-    background: var(--thon-yellow);
-    border-color: var(--thon-yellow);
-}
-
-.hero-panel {
-    padding: 24px;
-    background: rgba(255, 255, 255, 0.92);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-}
-
-.panel-kicker {
-    margin: 0 0 8px;
-    color: var(--thon-blue);
-    font-size: 0.84rem;
-    font-weight: 850;
-    text-transform: uppercase;
-}
-
-.hero-panel h2 {
-    margin: 0 0 12px;
-    font-size: clamp(1.55rem, 3vw, 2.2rem);
-    line-height: 1.05;
-}
-
-.hero-panel p:last-child {
-    margin-bottom: 0;
-    color: var(--muted);
+    line-height: 1.5;
+    font-weight: 650;
 }
 
 .fact-strip,
@@ -166,7 +112,7 @@ a {
 .fact-strip {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 1px;
     margin-top: -24px;
     overflow: hidden;
@@ -216,8 +162,10 @@ a {
 .section p,
 .copy-stack p,
 .card p,
+.overview-grid p,
+.problem-thread p,
 .insight-list p,
-.solution-grid p{
+.solution-grid p {
     color: var(--muted);
     font-size: 1rem;
     line-height: 1.65;
@@ -250,6 +198,8 @@ a {
 }
 
 .card-grid,
+.overview-grid,
+.problem-thread,
 .solution-grid,
 .comparison-grid {
     display: grid;
@@ -260,7 +210,14 @@ a {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.overview-grid,
+.problem-thread {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .card,
+.overview-grid article,
+.problem-thread article,
 .solution-grid article,
 .screenshot-card {
     background: var(--white);
@@ -269,11 +226,15 @@ a {
 }
 
 .card,
+.overview-grid article,
+.problem-thread article,
 .solution-grid article {
     padding: 20px;
 }
 
 .card h3,
+.overview-grid h3,
+.problem-thread h3,
 .solution-grid h3,
 .insight-list h3 {
     margin: 0 0 8px;
@@ -282,9 +243,24 @@ a {
 }
 
 .card p,
+.overview-grid p,
+.problem-thread p,
 .solution-grid p,
 .insight-list p {
     margin: 0;
+}
+
+.problem-thread article {
+    border-top: 6px solid var(--thon-blue);
+}
+
+.problem-thread span {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--thon-blue);
+    font-size: 0.78rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
 }
 
 .insight-list {
@@ -525,8 +501,8 @@ a {
 }
 
 @media (max-width: 980px) {
-    .hero,
     .split,
+    .overview-grid,
     .calendar-comparison,
     .events-feature,
     .comparison-grid {
@@ -535,6 +511,7 @@ a {
 
     .fact-strip,
     .card-grid,
+    .problem-thread,
     .solution-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -553,13 +530,10 @@ a {
         padding: 104px 20px 42px;
     }
 
-    .hero-actions a {
-        flex: 1 1 180px;
-        justify-content: center;
-    }
-
     .fact-strip,
     .card-grid,
+    .overview-grid,
+    .problem-thread,
     .solution-grid,
     .events-feature .ba-observations {
         grid-template-columns: 1fr;
