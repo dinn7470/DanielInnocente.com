@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Daniel Innocente | UX Designer</title>
     <link rel="stylesheet" href="index.css" />
-    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -20,147 +19,137 @@
 <header class="hero">
     <div class="container hero-grid">
         <div class="hero-copy">
-            <p class="eyebrow">UX Designer/ Healthcare + Informatics</p>
-            <div class="hero-type">
-                <div class="typewriter-wrap">
-                    <h1 id="typewriter" aria-label="Hi, I'm Dan"></h1>
-                    <span class="cursor" aria-hidden="true">|</span>
-                </div>
-            </div>
+            <p class="eyebrow">UX Designer / Healthcare + Informatics</p>
+            <h1>Hi, I'm Dan. I design clear products for complex systems.</h1>
             <p class="hero-lede">
-                I design accessible, research-led digital experiences for people navigating complex systems,
-                especially in healthcare, support, and career development.
+                I turn research into accessible digital experiences for people navigating healthcare, support,
+                and career decisions.
             </p>
             <div class="cta-row">
                 <a class="btn btn-primary" href="portfolio.html">View Selected Work</a>
                 <a class="btn btn-ghost" href="mailto:dinnocente7470@gmail.com">Contact Me</a>
+                <a class="btn btn-ghost" href="https://www.linkedin.com/in/danielinnocente/">Connect on LinkedIn</a>
             </div>
         </div>
 
-        <aside class="hero-note" aria-label="Designer snapshot">
-            <span>Currently</span>
-            <p>
-                I just graduated from Penn State with a Bachelor of Science in Human-Centered Design and Development.
-                I am focused on designing technology that feel clear, usable, and trustworthy.
-            </p>
+        <aside class="hero-note" aria-label="What Daniel brings to UX teams">
+            <h2>What I bring</h2>
+            <ul>
+                <li>
+                    <h3>Research clarity</h3>
+                    <p>Turning messy systems, interviews, and constraints into focused product priorities.</p>
+                </li>
+                <li>
+                    <h3>Accessible decisions</h3>
+                    <p>Designing flows that stay readable, trustworthy, and usable in high-stakes moments.</p>
+                </li>
+                <li>
+                    <h3>Prototype fluency</h3>
+                    <p>Moving between Figma and front-end implementation so ideas are easier to test and explain.</p>
+                </li>
+            </ul>
         </aside>
     </div>
 </header>
 
 <main>
-    <section class="about">
-        <div class="container about-grid">
-            <img src="images/IST_2978%20(1).jpg" alt="Headshot of Daniel Innocente" class="dan-headshot" width="480" height="480" />
-
-            <div class="about-text">
-                <p class="eyebrow">About</p>
-                <h2>I like UX problems where clarity, trust, and accessibility really matter.</h2>
-                <p>
-                    My work sits at the intersection of research, product thinking, and front-end craft. I care about
-                    understanding what people are trying to do, where systems make that harder, and how design can make
-                    the next step feel obvious.
-                </p>
-                <p>
-                    I am especially interested in healthcare, accessibility, and tools that help people make better
-                    decisions during stressful or confusing moments.
-                </p>
-            </div>
-        </div>
-    </section>
-
     <section class="selected-work" id="selected-work">
         <div class="container">
             <div class="section-head">
                 <p class="eyebrow">Selected Work</p>
-                <h2>Projects that show how I think as a designer.</h2>
+                <h2>Case studies that show how I think, test, and make decisions.</h2>
+                <p>
+                    Each project focuses on a different kind of complexity: AI explainability, stakeholder workflows,
+                    and support systems for older adults.
+                </p>
             </div>
 
             <div class="work-grid">
                 <a class="work-card" href="arbiter.html">
-                    <span>AI product redesign + UX research</span>
-                    <h3>Arbiter</h3>
-                    <p>
-                        Making an AI-powered job matching tool easier to understand, refine, and act on for early-career users.
-                    </p>
+                    <figure>
+                        <img src="images/arbiter/after-refine-control.png" alt="Arbiter redesign showing resume refinement controls" />
+                    </figure>
+                    <div class="work-card-copy">
+                        <span>AI product redesign + UX research</span>
+                        <h3>Arbiter</h3>
+                        <p>
+                            Made an AI-powered job matching tool easier to understand, refine, and act on for early-career users.
+                        </p>
+                        <ul>
+                            <li>Clarified how users steer the AI.</li>
+                            <li>Reduced ambiguity around career level and next steps.</li>
+                        </ul>
+                    </div>
                 </a>
 
                 <a class="work-card" href="thonFamilyPortal.html">
-                    <span>Portal redesign + stakeholder research</span>
-                    <h3>THON Family Portal</h3>
-                    <p>
-                        Turning an administrative family portal into a warmer, action-oriented dashboard for THON families.
-                    </p>
+                    <figure>
+                        <img src="images/thon-family-portal/after-calendar.png" alt="THON Family Portal calendar redesign" />
+                    </figure>
+                    <div class="work-card-copy">
+                        <span>Portal redesign + stakeholder research</span>
+                        <h3>THON Family Portal</h3>
+                        <p>
+                            Turned an administrative family portal into a clearer, action-oriented tool for THON families.
+                        </p>
+                        <ul>
+                            <li>Reframed the calendar around upcoming family actions.</li>
+                            <li>Separated important event details from dashboard noise.</li>
+                        </ul>
+                    </div>
                 </a>
 
                 <a class="work-card supportme-card" href="supportMe.html">
-                    <span>Accessibility + research synthesis</span>
-                    <h3>SupportMe</h3>
-                    <p>
-                        A senior-centered support platform combining peer communities, mutual aid, and safer request flows.
-                    </p>
+                    <figure>
+                        <img src="images/supportme/support-model-landing.png" alt="SupportMe landing screen showing support model options" />
+                    </figure>
+                    <div class="work-card-copy">
+                        <span>Accessibility + research synthesis</span>
+                        <h3>SupportMe</h3>
+                        <p>
+                            Designed a senior-centered support platform for peer communities, mutual aid, and safer requests.
+                        </p>
+                        <ul>
+                            <li>Built around dignity, privacy, and trust.</li>
+                            <li>Synthesized needs from aging, access, and care research.</li>
+                        </ul>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="process">
-        <div class="container process-grid">
+    <section class="designer-fit">
+        <div class="container fit-grid">
             <div>
-                <p class="eyebrow">How I Design</p>
-                <h2>Research first, then make the interface earn its place.</h2>
+                <p class="eyebrow">Why me</p>
+                <h2>I am strongest where UX has to make complicated things feel usable.</h2>
+                <p>
+                    My work is not just about polished screens. I am interested in the structure behind the interface:
+                    what users need to understand, what they need to trust, and what the product should help them do next.
+                </p>
             </div>
 
-            <div class="principles">
+            <div class="fit-cards">
                 <article>
-                    <strong>Research deeply</strong>
-                    <p>Use interviews, literature review, and competitive analysis to separate user needs from assumptions.</p>
+                    <span>01</span>
+                    <h3>Research into priorities</h3>
+                    <p>I use interviews, usability testing, literature review, and competitive analysis to separate real needs from assumptions.</p>
                 </article>
                 <article>
-                    <strong>Design accessibly</strong>
-                    <p>Prioritize readability, navigation clarity, privacy, and confidence for users with different needs.</p>
+                    <span>02</span>
+                    <h3>Accessible systems thinking</h3>
+                    <p>I design for readability, navigation clarity, privacy, and confidence, especially when users are under stress.</p>
                 </article>
                 <article>
-                    <strong>Prototype quickly</strong>
-                    <p>Move from sketches to Figma to code so ideas can be tested, refined, and explained clearly.</p>
+                    <span>03</span>
+                    <h3>Prototypes that explain decisions</h3>
+                    <p>I can move from sketches to Figma to front-end implementation, which helps teams test and discuss ideas faster.</p>
                 </article>
             </div>
         </div>
     </section>
 
-    <section class="toolkit">
-        <div class="container toolkit-grid">
-            <div>
-                <p class="eyebrow">Toolkit</p>
-                <h2>Skills grouped by the value they create.</h2>
-            </div>
-
-            <div class="skill-groups">
-                <article>
-                    <h3>Research</h3>
-                    <p>Interviews, literature review, competitive analysis, usability testing, synthesis</p>
-                </article>
-                <article>
-                    <h3>Design</h3>
-                    <p>Wireframes, prototyping, accessibility, interaction flows, design systems</p>
-                </article>
-                <article>
-                    <h3>Build</h3>
-                    <p>HTML, CSS, JavaScript, React, responsive front-end implementation</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section class="connect">
-        <div class="container connect-inner">
-            <p class="eyebrow">Currently Exploring</p>
-            <h2>Healthcare UX, accessibility, AI-assisted career tools, and support systems for older adults.</h2>
-            <div class="cta-row">
-                <a class="btn btn-primary" href="mailto:dinnocente7470@gmail.com">Email Me</a>
-                <a class="btn btn-ghost" href="https://www.linkedin.com/in/danielinnocente/">Connect on LinkedIn</a>
-            </div>
-        </div>
-    </section>
 </main>
 
 <footer class="footer">
