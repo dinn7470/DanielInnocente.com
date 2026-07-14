@@ -15,26 +15,13 @@
 
 <header class="hero">
     <section class="hero-copy">
-        <p class="eyebrow">ConvoRecs / UX research internship / AI career tools</p>
-        <h1>Arbiter</h1>
+        <p class="eyebrow">Arbiter / ConvoRecs UX research internship / Spring 2026</p>
+        <h1>Making AI career guidance easier to understand, refine, and act on.</h1>
         <p class="hero-lede">
-            Making an AI-powered job matching tool easier to understand, refine, and act on
-            for students and early career professionals.
-        </p>
-        <div class="hero-actions">
-            <a href="#before-after">View before and after</a>
-            <a href="#research">See research</a>
-        </div>
-    </section>
-
-    <aside class="hero-panel" aria-label="Project snapshot">
-        <p class="panel-kicker">The challenge</p>
-        <h2>AI results are only useful when users know what to do next.</h2>
-        <p>
             Arbiter scans resumes, estimates career level, and recommends roles. My work focused on
-            making that information feel clearer, more actionable, and easier to trust.
+            making those outputs clearer, more actionable, and easier for early-career users to trust.
         </p>
-    </aside>
+    </section>
 </header>
 
 <main>
@@ -48,6 +35,10 @@
             <strong>ConvoRecs</strong>
         </article>
         <article>
+            <span>Date</span>
+            <strong>Spring 2026</strong>
+        </article>
+        <article>
             <span>Mentors</span>
             <strong>Brendan Whitson + Yves Agbre</strong>
         </article>
@@ -57,146 +48,86 @@
         </article>
     </section>
 
-    <section class="section split" id="overview">
-        <div>
+    <section class="section overview-section" id="overview">
+        <div class="section-head">
             <p class="eyebrow">Overview</p>
-            <h2>Arbiter helps users understand where they fit in the job market.</h2>
-        </div>
-        <div class="copy-stack">
+            <h2>Arbiter helps early-career users understand fit, level, and next steps.</h2>
             <p>
-                Arbiter is an AI powered job matching tool that analyzes a resume, identifies a user's
-                likely career level, and recommends matching roles. My goal was to understand how users
-                interpret the product's outputs, where the interface felt unclear, and how the experience
-                could better help users move forward.
+                The product already had a strong AI concept. The UX opportunity was making the result easy
+                to interpret, easy to adjust, and useful enough to guide a user's next move.
             </p>
+        </div>
+        <div class="overview-grid">
+            <article>
+                <h3>Product context</h3>
+                <p>Arbiter analyzes a resume, estimates a user's career level, and recommends roles that may fit.</p>
+            </article>
+            <article>
+                <h3>UX focus</h3>
+                <p>I studied how users interpreted the AI output, where trust broke down, and what controls they expected.</p>
+            </article>
+            <article>
+                <h3>Design outcome</h3>
+                <p>The redesign makes recommendations easier to refine and reframes results around action, not just analysis.</p>
+            </article>
         </div>
     </section>
 
     <section class="section" id="problem">
         <div class="section-head">
             <p class="eyebrow">Problem</p>
-            <h2>The product had powerful information, but users needed more guidance.</h2>
-        </div>
-        <div class="card-grid">
-            <article class="card">
-                <h3>Results felt dense</h3>
-                <p>
-                    Resume analysis, level classification, committee debate, and job matches competed
-                    for attention, making the main takeaway hard to find.
-                </p>
-            </article>
-            <article class="card">
-                <h3>Refinement wasn't central</h3>
-                <p>
-                    Users had no simple way to filter by what mattered to them: location,
-                    compensation, experience level, or role type.
-                </p>
-            </article>
-            <article class="card">
-                <h3>Career path guidance lacked framing</h3>
-                <p>
-                    The tool could identify fit, but users also needed help understanding what
-                    skills to build and which roles to pursue next.
-                </p>
-            </article>
-        </div>
-    </section>
-
-    <section class="section" id="research">
-        <div class="section-head">
-            <p class="eyebrow">Research</p>
-            <h2>I interviewed students and professionals to learn what career clarity actually means.</h2>
+            <h2>The core issue was not the AI output. It was what users could confidently do with it.</h2>
             <p>
-                I spoke with college students and people in the workforce to understand how they
-                evaluate job fit, interpret AI recommendations, and decide what career steps feel realistic.
+                Users were receiving valuable information, but the interface did not yet organize that information
+                around the decisions they needed to make.
             </p>
         </div>
-        <div class="research-grid">
-            <article class="research-card">
-                <span>Interview focus</span>
-                <h3>What users need from AI career feedback</h3>
+        <div class="problem-thread">
+            <article>
+                <span>01</span>
+                <h3>Interpret the result</h3>
                 <p>
-                    Users want context, not just output: why a role fits, what level they're placed at,
-                    and how to improve their chances. If they're placed at level 3 on their career path, they would prefer
-                    to know why they're not at level 1 and how they can get to level 3.
+                    Resume analysis, career level, agent debate, and job matches competed for attention, making
+                    the main takeaway hard to find.
                 </p>
             </article>
-            <a class="research-card document-link" href="images/arbiter/usability-testing-summary.pdf">
-                <span>Documentation</span>
-                <h3>Usability Testing Summary</h3>
+            <article>
+                <span>02</span>
+                <h3>Trust the reasoning</h3>
                 <p>
-                    Interview and usability documentation used to synthesize pain points and redesign
-                    opportunities.
+                    The system showed how it worked, but the explanation could feel more like a technical log
+                    than guidance for a job seeker.
                 </p>
-                <div class="pdf-preview">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 80" width="48" height="48">
-                        <rect width="64" height="80" rx="6" fill="#e8f1ff"/>
-                        <rect x="10" y="20" width="44" height="4" rx="2" fill="#174a91" opacity="0.3"/>
-                        <rect x="10" y="30" width="44" height="4" rx="2" fill="#174a91" opacity="0.3"/>
-                        <rect x="10" y="40" width="44" height="4" rx="2" fill="#174a91" opacity="0.3"/>
-                        <rect x="10" y="50" width="28" height="4" rx="2" fill="#174a91" opacity="0.3"/>
-                        <rect x="10" y="8" width="20" height="6" rx="2" fill="#174a91" opacity="0.6"/>
-                    </svg>
-                    <div class="pdf-meta">
-                        <span class="pdf-label">PDF</span>
-                        <span class="pdf-name">usability-testing-summary.pdf</span>
-                    </div>
-                </div>
-                <strong>Open PDF →</strong>
-            </a>
+            </article>
+            <article>
+                <span>03</span>
+                <h3>Refine the match</h3>
+                <p>
+                    Users needed obvious ways to adjust recommendations by location, compensation, experience
+                    level, role type, and other real constraints.
+                </p>
+            </article>
+            <article>
+                <span>04</span>
+                <h3>Move forward</h3>
+                <p>
+                    Career level was useful only if users could understand why they were placed there and what
+                    would help them progress.
+                </p>
+            </article>
         </div>
     </section>
 
     <section class="section before-after" id="before-after">
         <div class="section-head">
             <p class="eyebrow">Before / after</p>
-            <h2>I made the scan flow easier to steer and easier to act on.</h2>
+            <h2>The redesign turns AI output into decisions users can adjust.</h2>
             <p>
                 The original product already had a strong technical idea. My redesign focused the experience around
                 the decisions users needed to make: what constraints matter, what level they are, and what to do next.
             </p>
         </div>
         <div class="comparison-grid arbiter-comparison">
-            <article class="comparison-card before-card">
-                <div class="ba-header">
-                    <span class="ba-badge ba-before">Before</span>
-                    <h3>Personalization came too late.</h3>
-                </div>
-                <figure class="screen-card">
-                    <div class="image-frame">
-                        <img src="images/arbiter/before-upload-home.png" alt="Current Arbiter upload home screen" />
-                    </div>
-                    <figcaption>
-                        <strong>Resume upload entry</strong>
-                        <span>The upload path was simple, but users had little control before the AI began analyzing their resume.</span>
-                    </figcaption>
-                </figure>
-                <ul class="decision-list">
-                    <li><strong>Issue:</strong> Real constraints like location, compensation, and role type were not part of setup.</li>
-                    <li><strong>Effect:</strong> Users had to wait for results before seeing whether recommendations matched their situation.</li>
-                </ul>
-            </article>
-
-            <article class="comparison-card after-card">
-                <div class="ba-header">
-                    <span class="ba-badge ba-after">After</span>
-                    <h3>Filters moved before the scan.</h3>
-                </div>
-                <figure class="screen-card featured">
-                    <div class="image-frame">
-                        <img src="images/arbiter/after-refined-upload.png" alt="Figma redesign of Arbiter upload screen with custom filters" />
-                    </div>
-                    <figcaption>
-                        <strong>Refined upload + filter entry</strong>
-                        <span>Personalization becomes an upfront part of the task, not a correction users make after the system responds.</span>
-                    </figcaption>
-                </figure>
-                <ul class="decision-list">
-                    <li><strong>Choice:</strong> Add plain-language filters before analysis so users can shape recommendations around real limits.</li>
-                    <li><strong>Why:</strong> Earlier control makes the AI feel more useful, predictable, and accountable.</li>
-                </ul>
-            </article>
-
             <article class="comparison-card before-card">
                 <div class="ba-header">
                     <span class="ba-badge ba-before">Before</span>
@@ -236,6 +167,46 @@
                     <li><strong>Why:</strong> The AI output becomes something users can steer instead of something they only receive.</li>
                 </ul>
             </article>
+
+            <article class="comparison-card before-card">
+                <div class="ba-header">
+                    <span class="ba-badge ba-before">Before</span>
+                    <h3>Personalization came too late.</h3>
+                </div>
+                <figure class="screen-card">
+                    <div class="image-frame">
+                        <img src="images/arbiter/before-upload-home.png" alt="Current Arbiter upload home screen" />
+                    </div>
+                    <figcaption>
+                        <strong>Resume upload entry</strong>
+                        <span>The upload path was simple, but users had little control before the AI began analyzing their resume.</span>
+                    </figcaption>
+                </figure>
+                <ul class="decision-list">
+                    <li><strong>Issue:</strong> Real constraints like location, compensation, and role type were not part of setup.</li>
+                    <li><strong>Effect:</strong> Users had to wait for results before seeing whether recommendations matched their situation.</li>
+                </ul>
+            </article>
+
+            <article class="comparison-card after-card">
+                <div class="ba-header">
+                    <span class="ba-badge ba-after">After</span>
+                    <h3>Filters moved before the scan.</h3>
+                </div>
+                <figure class="screen-card featured">
+                    <div class="image-frame">
+                        <img src="images/arbiter/after-refined-upload.png" alt="Figma redesign of Arbiter upload screen with custom filters" />
+                    </div>
+                    <figcaption>
+                        <strong>Refined upload + filter entry</strong>
+                        <span>Personalization becomes an upfront part of the task, not a correction users make after the system responds.</span>
+                    </figcaption>
+                </figure>
+                <ul class="decision-list">
+                    <li><strong>Choice:</strong> Add plain-language filters before analysis so users can shape recommendations around real limits.</li>
+                    <li><strong>Why:</strong> Earlier control makes the AI feel more useful, predictable, and accountable.</li>
+                </ul>
+            </article>
         </div>
 
         <div class="process-callout">
@@ -257,6 +228,43 @@
                     feel like a technical log.
                 </p>
             </div>
+        </div>
+    </section>
+
+    <section class="section" id="research">
+        <div class="section-head">
+            <p class="eyebrow">Research findings</p>
+            <h2>I used interviews and usability testing to identify what career clarity actually meant.</h2>
+            <p>
+                Instead of linking out to a PDF, this section summarizes the findings that directly shaped
+                the redesign decisions.
+            </p>
+        </div>
+        <div class="research-grid">
+            <article class="research-card">
+                <span>Finding 01</span>
+                <h3>Users wanted reasons, not just recommendations.</h3>
+                <p>
+                    A job match only felt useful when users could understand why it fit, what evidence the AI used,
+                    and what tradeoffs were behind the recommendation.
+                </p>
+            </article>
+            <article class="research-card">
+                <span>Finding 02</span>
+                <h3>Career level needed context.</h3>
+                <p>
+                    A level label helped only when users could see why they were placed there and what would help
+                    them move toward stronger roles.
+                </p>
+            </article>
+            <article class="research-card">
+                <span>Finding 03</span>
+                <h3>Control changed trust.</h3>
+                <p>
+                    Users were more willing to trust AI feedback when they could adjust constraints like location,
+                    compensation, experience level, and role type.
+                </p>
+            </article>
         </div>
     </section>
 
