@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My UX Journey</title>
+
+    <style>
+        /* GLOBAL */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            color: #111827;
+            line-height: 1.7;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            background: white;
+            border-radius: 999px;
+            padding: 10px 24px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: 0.2s ease;
+        }
+
+        .nav a:hover {
+            color: #2563eb;
+        }
+
+        /* ARTICLE HERO — full-width band above the fold */
+        .article-hero {
+            width: 100%;
+            padding: 96px 24px 24px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .article-hero-inner {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        /* ARTICLE BODY — reading column, no card, no shadow */
+        .article-body {
+            width: 100%;
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 40px 24px 96px;
+        }
+
+        /* HEADINGS */
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 3.1rem);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2.6rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            margin-top: 1.8rem;
+            margin-bottom: 0.4rem;
+            color: #2563eb;
+            letter-spacing: 0.01em;
+        }
+
+        p {
+            margin: 0.5rem 0 1.2rem;
+            font-size: 1.02rem;
+        }
+
+        .meta {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+
+        /* LEAD STATEMENT LINES */
+        .lede-line {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #111827;
+            margin: 1.8rem 0 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        /* QUOTED PROBLEM STATEMENTS */
+        blockquote {
+            margin: 1rem 0 1.2rem;
+            padding: 4px 20px;
+            border-left: 3px solid #2563eb;
+            color: #374151;
+            font-style: italic;
+        }
+
+        blockquote p {
+            margin: 0.3rem 0;
+        }
+
+        ul {
+            margin: 0 0 1.2rem;
+            padding-left: 1.3rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* IMAGES THAT BLEND INTO THE PAGE (diagrams / infographics) */
+        figure.blend {
+            margin: 1.8rem 0;
+            text-align: center;
+        }
+
+        figure.blend img {
+            width: 100%;
+            max-width: 620px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* MEME */
+        figure.meme {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        figure.meme img {
+            width: 100%;
+            max-width: 340px;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* PRODUCT SCREENSHOTS (framed like evidence) */
+        figure.screenshot {
+            margin: 1.8rem 0;
+            text-align: center;
+        }
+
+        figure.screenshot img {
+            width: 100%;
+            max-width: 620px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(15,23,42,0.07);
+        }
+
+        figcaption {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            margin-top: 10px;
+        }
+
+        /* AI DISCLOSURE FOOTER */
+        .ai-disclosure {
+            margin-top: 2.6rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.85rem;
+            color: #6b7280;
+            font-style: italic;
+        }
+
+        .sources {
+            margin-top: 1.4rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .sources p {
+            font-size: 0.85rem;
+            margin: 0 0 0.5rem;
+        }
+
+        .sources ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+
+        .sources li {
+            margin-bottom: 0.35rem;
+        }
+
+        .sources a {
+            color: #2563eb;
+            text-decoration: underline;
+            word-break: break-word;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+            .article-hero {
+                padding: 88px 20px 20px;
+            }
+            .article-body {
+                padding: 32px 20px 64px;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .nav {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" aria-label="Primary">
+    <div class="nav">
+        <a href="https://dinn7470.github.io/DanielInnocente.com/">Home</a>
+        <a href="https://dinn7470.github.io/DanielInnocente.com/portfolio">Portfolio</a>
+        <a href="https://drive.google.com/file/d/1UJ044hJu0KQN5b0jU0n3b_HiMa2iUQxt/view?usp=sharing">Resume</a>
+        <a href="https://dinn7470.github.io/DanielInnocente.com/blogs">Blog</a>
+    </div>
+</nav>
+
+<!-- ARTICLE HERO -->
+<header class="article-hero">
+    <div class="article-hero-inner">
+        <h1>My UX Journey</h1>
+        <div class="meta">By Daniel Innocente</div>
+    </div>
+</header>
+
+<!-- ARTICLE -->
+<main class="article-body">
+        <p>Hi, I'm Dan and I love Healthcare UX. But four years ago, I had no idea what that meant.</p>
+
+        <p>I just graduated with a degree in Human-Centered Design and Development from Penn State University back in May. A strange name for a major, I know. Someone working in UX or Product Design might recognize what that means immediately, but even though I declared my major at the end of freshman year, I still spent much of college figuring out how to explain what my degree actually meant and what I wanted to do with it.</p>
+
+        <p>So why did I move two states away and make such a huge investment in something when I practically needed a full monologue prepared every time someone asked me, "What are you studying?"</p>
+
+        <p>It was because I knew two things very confidently.</p>
+
+        <p class="lede-line">I wanted to work in tech.</p>
+
+        <p>Technology is the forefront and centerpiece of almost every aspect of our lives. Whether it's our personal or professional lives, technology affects us all in enough different ways that you could fill a whole book just by listing them. The exciting thing about a degree in a tech-based discipline is that it can allow you to work in nearly any field you can think of.</p>
+
+        <p>It also didn't hurt that coming out of COVID, tech was often touted as the place to be if you wanted job security and a solid salary, a sentence that has clearly aged incredibly well as you're reading this. So Computer Science ended up being the top choice major attached to all of my college applications.</p>
+
+        <p>Getting rejected by Penn State's Computer Science program ended up being a blessing in disguise because it led me to Penn State's College of Information Sciences and Technology. The College of IST stood out to me as unique because all of the majors it offered would normally be included as focuses under the umbrella of a Computer Science degree at most other universities. These included Cybersecurity Analytics and Operations, Data Sciences, Enterprise Technology Integration, Human-Centered Design and Development, and Security and Risk Analysis.</p>
+
+        <p>Cybersecurity and Human-Centered Design immediately stood out to me as my top two contenders, so I decided to take entry-level courses for both during my first semester. Cyber intimidated me because I couldn't see myself dealing with such massive amounts of sensitive information at such a high level. It was a career I respected, but didn't find realistic for myself.</p>
+
+        <p>The HCDD course, however, opened my eyes to my second reason.</p>
+
+        <p class="lede-line">I wanted to work with people.</p>
+
+        <p>Obviously, nearly every job in existence involves working with people in some capacity. That's especially true for tech-based jobs, since there's always collaboration within teams and across other teams.</p>
+
+        <p>User Experience stood out to me as a unique sector of the tech world because you don't just work with the user, but also for the user. It seemed like an exciting and creative way to help solve real-world problems and help people in need through software development.</p>
+
+        <p>This was all made clear to me as I became acquainted with design thinking:</p>
+
+        <figure class="blend">
+            <img src="images/blog/ux-journey/design-thinking-cycle.jpg" alt="Design thinking cycle diagram: Empathize, Define, Ideate, Prototype, Test, looping back to Empathize" />
+        </figure>
+
+        <p>The first three stages in particular sounded more like psychological terms than technical ones. Since I was in a broad program with broad coursework intended to give us a diverse skillset, it was really up to you to decide which aspect you were most interested in. Whether it was user interface design, user experience research, front-end development, or usability testing, the steps of the design thinking method were the backbone of it all. The following is how I interpreted design thinking:</p>
+
+        <h3>Empathize:</h3>
+        <p>If you're going to start developing a new product or piece of software, you better understand the people who are going to use it. At the end of the day, you are trying to solve a problem or make an existing process easier. Whether or not it's a topic you have background or experience in, you can't go into the project with only your perspective and your own biases. You have to put yourself in the shoes of the people most affected by the problem.</p>
+
+        <h3>Define:</h3>
+        <p>Research can completely change what you think the problem is.</p>
+        <p>Maybe the initial problem is:</p>
+        <blockquote><p>"Patients are missing their appointments because there aren't enough reminders."</p></blockquote>
+        <p>But then you actually talk to patients and learn that they have no idea where to find reminders or view their appointment information.</p>
+        <p>It turns out the actual problem is:</p>
+        <blockquote><p>"Patients have difficulty understanding and preparing for what they need to do before arriving for an appointment, which contributes to missed or delayed appointments."</p></blockquote>
+        <p>Suddenly, your goals are very different.</p>
+
+        <h3>Ideate:</h3>
+        <p>Now that you know what the actual problem is, it's time to come up with potential solutions. Solutions being plural is important because I think it's necessary to come up with as many ideas as you can, no matter how good or bad they might be, especially when working with a team.</p>
+        <p>Everything you make during this phase is aided by your research, but the fun part is that none of it is final. User flows, storyboards, sketches, journey maps, prioritization matrices, and use-case brainstorming can all help explore what works and what doesn't before you commit to one direction.</p>
+
+        <h3>Prototype:</h3>
+        <p>Now you can actually make something. That frustrating healthcare portal with hidden buttons and dead ends can become a draft of a clearer, more useful solution. Sure, there hasn't been any code written yet, but you're now one step closer to helping your users and stakeholders thanks to all your research and hard work.</p>
+
+        <h3>Test:</h3>
+        <p>Actually, that's really nice and all, but we can't make any of those conclusions until we get the prototype in front of the people who would actually use it. That's the only way we'll know what's working and what isn't.</p>
+        <p>The funny thing is that testing doesn't always mean making a few small adjustments and calling it finished. It might bring us back to empathizing all over again because plot twist: design thinking is an iterative process. Whether you're making changes to an existing feature or starting from scratch, the needs of users and the realities of development are constantly changing, and it's up to you to keep up.</p>
+        <p>I think that's pretty great, because it means you're always learning throughout the process.</p>
+
+        <p>I mentioned earlier that choosing a career in tech gives you the opportunity to work in pretty much any field you can think of. UX in particular is interesting because it has several different paths within it, including UI design, UX research, product design, UX engineering, and usability testing.</p>
+
+        <p>UX can lead to work that focuses heavily on visual design and interface aesthetics. For me, however, the thing that drew me into UX and is keeping me here is the opportunity to use my skills to solve real-world problems.</p>
+
+        <p>So when you take that into account, combined with the fact that so much of UX is built around breaking something down so that it's simpler and more effective, there was no part of the industry that stood out to me more than Healthcare and Medical Technology.</p>
+
+        <figure class="meme">
+            <img src="images/blog/ux-journey/but-why-healthcare-ux.jpg" alt="Derek Zoolander meme captioned 'But why Healthcare UX?'" />
+        </figure>
+
+        <p>It's not just because this type of work is meaningful. It's also an area where the need for quality UX is particularly high.</p>
+
+        <p>Healthcare involves countless interfaces, systems, protocols, devices, and digital products. They all need an appealing visual language that's easy to understand and a user flow that allows people to accomplish important tasks quickly and efficiently.</p>
+
+        <p>A few factors show why this matters so much:</p>
+
+        <p><strong>Healthcare information is spread across a large web of systems.</strong><br>
+        According to the Office of the National Coordinator for Health Information Technology, many Americans use more than one resource for online medical records or patient portals. Those portals can come from primary care providers, insurers, laboratories, pharmacies, hospitals, and other healthcare providers.</p>
+
+        <p><strong>People are actually using these systems to manage their healthcare.</strong><br>
+        ONC Health IT has also found that many Americans use portals to make appointments, view clinical notes, check test results, and message healthcare providers.</p>
+
+        <p><strong>People using these systems have very different levels of technical and health literacy.</strong><br>
+        The CDC and AHRQ have reported that a significant portion of U.S. adults struggle with health literacy. That matters because healthcare products often ask people to understand complex medical language, follow instructions, compare information, and make decisions that can affect their health.</p>
+
+        <p><strong>The consequences are real.</strong><br>
+        A poorly designed system can affect whether someone understands their condition, follows instructions, gets appropriate care, or manages their health correctly.</p>
+
+        <figure class="blend">
+            <img src="images/blog/ux-journey/why-it-matters-cards.jpg" alt="Three cards summarizing why healthcare UX matters: Fragmented Systems, Frequent Use, Varied Health Literacy" />
+        </figure>
+
+        <p>Though I don't have the privilege of being a part of this industry myself yet, healthcare UX has become a genuine passion of mine. Until that dream becomes reality, I'm starting a blog to both document and expand on my understanding of the common strengths and pitfalls found in healthcare UX and medical-based interfaces across the board.</p>
+
+        <p>The plan is to investigate a different piece of healthcare technology each week, whether that's an online health portal, a medical interface, a digital health product, or something else that catches my attention, and discuss where it excels and where there could be room for improvement.</p>
+
+        <p>That is the entire plan going into it. I say that because I'm not going to know ahead of time whether something is pixel perfect and easy to navigate, impossible to use, or somewhere in between.</p>
+
+        <h2>How I'll evaluate each product</h2>
+
+        <p>Some of the factors I'll consider:</p>
+
+        <h3>Navigation:</h3>
+        <ul>
+            <li>Can I predict where I need to go to accomplish my task, or do I need help?</li>
+            <li>Once I'm there, is it easy to complete that task?</li>
+            <li>Does the workflow feel unnecessarily complicated for the task?</li>
+            <li>Does the system clearly communicate what happened after an action?</li>
+        </ul>
+
+        <h3>Content:</h3>
+        <ul>
+            <li>Is the information organized in a way that is relevant and consistent?</li>
+            <li>Is the information cluttered, or is it distributed appropriately across the screen?</li>
+            <li>Is the terminology understandable?</li>
+        </ul>
+
+        <h3>Accessibility:</h3>
+        <ul>
+            <li>Does the interface meet relevant accessibility standards and avoid barriers for users with disabilities?</li>
+            <li>Does the design account for people with different levels of technical comfort, health literacy, vision, mobility, or cognitive load?</li>
+        </ul>
+
+        <figure class="blend">
+            <img src="images/blog/ux-journey/evaluation-criteria-cards.jpg" alt="Three cards summarizing evaluation criteria: Navigation, Content, Accessibility" />
+        </figure>
+
+        <p>I don't want this to become a rigid rating system where every product gets reduced to a number. Every product I review will have different goals, different scopes, and different audiences. What counts as a serious problem for one product might be much less important for another.</p>
+
+        <p>For example, a patient portal's primary goal is to help patients quickly find information and complete common tasks like viewing test results, messaging their doctor, and scheduling appointments.</p>
+
+        <p>If I notice that finding test results requires navigating through four different pages and includes confusing terminology, I may decide to design a simpler workflow or redesign part of the UI.</p>
+
+        <p>A hospital website has a different purpose. Its primary goal is to provide general information about the hospital, its services, locations, physicians, and visiting policies.</p>
+
+        <p>If I notice the website takes one additional click to reach physician information compared with what I would consider ideal, that's technically an inefficiency. But it might not warrant a redesign if it's not preventing users from accomplishing their goal and isn't particularly consequential within the context of that website.</p>
+
+        <p>Instead, I want to let the products speak for themselves. If I find an interface that does something exceptionally well, I'll focus on understanding why it works. If I find a specific issue, I might explore an alternative workflow or redesign. If I uncover something more substantial, I may spend several weeks investigating it more deeply.</p>
+
+        <h2>What this might look like</h2>
+
+        <p>As a small preview, imagine I'm looking at a patient portal and trying to schedule a follow-up appointment. I wouldn't only ask whether the screen looks clean. I'd ask whether I can tell where to start, whether the system explains what information I need before booking, whether confirmation is clear, and whether a patient with less technical or medical knowledge could complete the same task without guessing.</p>
+
+        <p>If the biggest issue is the number of steps, I might map the current workflow and compare it to a simpler version. If the biggest issue is confusing language, I might focus on rewriting the content. If the biggest issue is accessibility, I might look at contrast, keyboard navigation, screen reader structure, or whether important information is being communicated only through color.</p>
+
+        <p>That's the kind of thinking I want this blog to document. Not just whether I like or dislike a design, but what the product is trying to help people do, where that experience succeeds, and where it could be clearer, simpler, or more human.</p>
+
+        <h2>Here's an example of the kind of research I'll be doing:</h2>
+
+        <p>This is an example from Quest Diagnostics, a clinical lab company that provides patients with diagnostic testing, information, and services.</p>
+
+        <p><strong>Nice work!:</strong> I've been to their offices many times whenever my primary care physician requested blood work. What I love about the home page is that it immediately recognizes that its users are coming from several different backgrounds who all use this site for completely different reasons. Rather than list all 20 of these use cases alongside each other, the user can select the description that matches them and find what they need to take care of relatively quickly.</p>
+
+        <figure class="screenshot">
+            <img src="images/blog/ux-journey/quest-role-tabs-comparison.jpg" alt="Quest Diagnostics homepage shown for four different roles: Patients, Healthcare professionals, Laboratory managers, Business leaders" />
+        </figure>
+
+        <p><strong>No Bueno:</strong> While initially the distribution of use cases seemed to be very clean, if you keep scrolling down you'll see that new ones appear at the bottom of the screen with their own icons in big square containers. The issue isn't the question of "why aren't they listed at the top as well?" but rather that it's not clear if THESE use cases aren't even different from the ones at the top. How do we know the difference between "Billing and Insurance" and "Pay my bill or update my insurance"? If I'm trying to make a payment, it's unclear to me why I should choose one over the other. Maybe they're the same, maybe they're different but the point is that I shouldn't be asking these questions. Additionally, in this particular screenshot I purposefully made the chosen user roles at the top and bottom different. If I were to re-design this screen I would make it so that one side automatically changes anytime you switch between a different role, because why would a healthcare professional need to see the information that a patient needs to make an appointment or get their results?</p>
+
+        <figure class="screenshot">
+            <img src="images/blog/ux-journey/quest-billing-dropdown.jpg" alt="Quest Diagnostics Billing & coding dropdown menu with a large green promotional box, above the 'I am a:' role selector and task icons" />
+        </figure>
+
+        <p>One other critique I'd like to make is the large green box that appears when you click the dropdown for one of the use cases at the top. In this example I understand why this particular information is what appears for "Billing and Coding". However, while my previous issue was related to the user experience, here it's the design I have a problem with. While the padding on both sides is even, I think the spacing of the links in between is a little inconsistent. I'm not sure why "Pay a Physician or hospital bill" and "Electronic billing" have their own giant boxes on the side. In fact, I think it's weird that they're separated because they have completely different functions. One of them is a direct action (paying a bill) while the other is informational just like the other links on the left. If I were to re-design this pop up, I'd make the information in those boxes links alongside the others and make the box much smaller. Especially since it's autoimmune lab test promotion seen in the previous screen examples is being blocked and I don't see why it has to be.</p>
+
+        <p>I plan on posting my first full case study next week where I will investigate further into Quest's use cases and user flows. I also plan on re-designing the home page based on my critiques above.</p>
+
+        <p>I'm still at the beginning of this journey, but that's also the point. I want to keep learning publicly, one product at a time, and use this blog to become more thoughtful about the kind of healthcare UX work I hope to do.</p>
+
+        <p class="ai-disclosure">AI Disclosure: ChatGPT was used to help identify relevant resources and evidence for this article and to create a collage from screenshots used in the analysis. All research, analysis, writing, and conclusions are my own.</p>
+
+        <div class="sources">
+            <p>Sources referenced for statistics used in this article:</p>
+            <ul>
+                <li><a href="https://healthit.gov/data/data-briefs/individuals-access-and-use-patient-portals-and-smartphone-health-apps-2024/" target="_blank" rel="noopener">ONC Health IT — Individuals' Access and Use of Patient Portals and Smartphone Health Apps, 2024</a></li>
+                <li><a href="https://www.ahrq.gov/health-literacy/improve/precautions/toolkit.html" target="_blank" rel="noopener">AHRQ Health Literacy Universal Precautions Toolkit</a></li>
+                <li><a href="https://www.ahrq.gov/health-literacy/improve/precautions/intro.html" target="_blank" rel="noopener">AHRQ — Introduction to the Health Literacy Universal Precautions Toolkit</a></li>
+                <li><a href="https://www.ahrq.gov/health-literacy/improve/precautions/tool4.html" target="_blank" rel="noopener">AHRQ — Tool 4: Assess, Select, and Create Easy-to-Understand Materials</a></li>
+            </ul>
+        </div>
+
+</main>
+
+</body>
+</html>
