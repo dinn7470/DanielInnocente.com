@@ -59,11 +59,8 @@ a {
 }
 
 .hero {
-    min-height: 64vh;
-    padding: 124px clamp(20px, 6vw, 80px) 64px;
-    background:
-            linear-gradient(135deg, rgba(23, 74, 145, 0.96), rgba(91, 53, 177, 0.82)),
-            radial-gradient(circle at 84% 20%, rgba(36, 192, 111, 0.55), transparent 34%);
+    padding: 80px clamp(20px, 6vw, 80px) 40px;
+    background: #0f172a;
 }
 
 .hero-copy {
@@ -73,21 +70,16 @@ a {
 .eyebrow {
     margin: 0 0 10px;
     color: #58657a;
-    font-size: 0.78rem;
-    font-weight: 850;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.hero .eyebrow {
-    color: #dceaff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
 }
 
 .hero h1 {
     margin: 0;
     color: var(--white);
     max-width: 1080px;
-    font-size: clamp(3.2rem, 7vw, 6.4rem);
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
     line-height: 0.96;
     letter-spacing: 0;
 }
@@ -96,7 +88,7 @@ a {
     max-width: 840px;
     margin: 24px 0 0;
     color: #f4f8ff;
-    font-size: clamp(1.15rem, 1.8vw, 1.42rem);
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
     line-height: 1.5;
     font-weight: 650;
 }
@@ -111,7 +103,7 @@ a {
 .fact-strip {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 1px;
     margin-top: -24px;
     overflow: hidden;
@@ -263,9 +255,6 @@ a {
     line-height: 1.65;
 }
 
-.problem-thread article {
-    border-top: 6px solid var(--blue);
-}
 
 .problem-thread span {
     display: block;
@@ -484,10 +473,6 @@ a {
     object-fit: contain;
 }
 
-.featured {
-    border-top: 6px solid var(--green);
-}
-
 .solution-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -500,22 +485,6 @@ a {
 
 .solution-grid p {
     margin: 0;
-}
-
-.solution-grid article:nth-child(1) {
-    border-top: 6px solid var(--blue);
-}
-
-.solution-grid article:nth-child(2) {
-    border-top: 6px solid var(--purple);
-}
-
-.solution-grid article:nth-child(3) {
-    border-top: 6px solid var(--green);
-}
-
-.solution-grid article:nth-child(4) {
-    border-top: 6px solid var(--amber);
 }
 
 /* ─── FAQ SECTION ─── */
@@ -569,7 +538,6 @@ a {
     overflow: hidden;
     border: 1px solid var(--line);
     box-shadow: var(--shadow);
-    border-top: 6px solid var(--purple);
 }
 
 .faq-screen-wide img {
