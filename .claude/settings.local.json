@@ -12,7 +12,16 @@
       "Bash(winget list *)",
       "Bash(powershell -Command \"Expand-Archive -Path 'C:/Users/dinno/Downloads/Family Portal \\(1\\).zip' -DestinationPath 'C:/Users/dinno/Downloads/family-portal-unzipped' -Force\")",
       "Read(//c/Users/dinno/Downloads/**)",
-      "Bash(powershell -Command \"Expand-Archive -Path 'C:/Users/dinno/Downloads/Family Portal \\(1\\).zip' -DestinationPath 'C:/Users/dinno/Downloads/fp-unzipped' -Force; Get-ChildItem 'C:/Users/dinno/Downloads/fp-unzipped' -Recurse | Select-Object FullName\")"
+      "Bash(powershell -Command \"Expand-Archive -Path 'C:/Users/dinno/Downloads/Family Portal \\(1\\).zip' -DestinationPath 'C:/Users/dinno/Downloads/fp-unzipped' -Force; Get-ChildItem 'C:/Users/dinno/Downloads/fp-unzipped' -Recurse | Select-Object FullName\")",
+      "Bash(git -C \"C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com\" status)",
+      "Bash(git -C \"C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com\" diff mindmap.html)",
+      "Bash(git -C \"C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com\" restore mindmap.html)",
+      "Bash(git -C \"C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com\" add arbiter.css arbiter.html blogs.html firstPost.html index.css index.html supportMe.css supportMe.html thonFamilyPortal.css thonFamilyPortal.html)",
+      "Bash(git -C \"C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com\" rm --cached index.css.bak index.html.bak portfolio.css portfolio.css.bak portfolio.html portfolio.html.bak supportMe.css.bak supportMe.html.bak)",
+      "Bash(git -C \"C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com\" rm index.css.bak index.html.bak portfolio.css portfolio.css.bak portfolio.html portfolio.html.bak supportMe.css.bak supportMe.html.bak)",
+      "Bash(git -C 'C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com' commit -m ' *)",
+      "Bash(git -C \"C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com\" push)",
+      "Bash(git -C \"C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com\" add index.css)"
     ]
   }
 }
