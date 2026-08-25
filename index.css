@@ -175,7 +175,7 @@ a {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 32px 28px;
     overflow: hidden;
     transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
