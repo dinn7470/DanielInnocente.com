@@ -123,14 +123,12 @@
       .card p,
       .overview-grid p,
       .move p,
-      .concept p,
-      .designer-note p {
+      .concept p {
         color: var(--muted);
       }
 
       .fact-strip,
-      .section,
-      .designer-note {
+      .section {
         width: min(1120px, calc(100% - 40px));
         margin-inline: auto;
       }
@@ -173,8 +171,7 @@
         align-items: start;
       }
 
-      .section h2,
-      .designer-note h2 {
+      .section h2 {
         margin: 0;
         font-size: clamp(1.85rem, 3.7vw, 3rem);
         line-height: 1.08;
@@ -237,8 +234,7 @@
       .overview-grid p,
       .move p,
       .concept p,
-      .metric-list li,
-      .designer-note p {
+      .metric-list li {
         font-size: 1rem;
         line-height: 1.65;
       }
@@ -339,22 +335,25 @@
         opacity: 0.72;
       }
 
-      .designer-note {
-        margin-top: 76px;
+      .reflection {
         margin-bottom: 80px;
-        padding: clamp(28px, 6vw, 56px);
-        background: var(--ink);
-        border-radius: 8px;
       }
 
-      .designer-note .eyebrow,
-      .designer-note p {
-        color: #dce4ec;
+      .reflection-columns {
+        columns: 2;
+        column-gap: clamp(32px, 4vw, 56px);
       }
 
-      .designer-note h2 {
-        max-width: 900px;
-        color: var(--white);
+      .reflection-columns p {
+        margin: 0 0 20px;
+        break-inside: avoid;
+        color: var(--muted);
+        font-size: 1.02rem;
+        line-height: 1.7;
+      }
+
+      .reflection-columns p:last-child {
+        margin-bottom: 0;
       }
 
       @media (max-width: 960px) {
@@ -397,6 +396,10 @@
 
         .move {
           grid-template-columns: 1fr;
+        }
+
+        .reflection-columns {
+          columns: 1;
         }
 
         .split > div:last-child p {

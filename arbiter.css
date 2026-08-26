@@ -174,7 +174,6 @@ a {
 }
 
 .section p,
-.copy-stack p,
 .card p,
 .research-card p,
 .solution-grid p,
@@ -191,14 +190,21 @@ a {
     font-size: 0.98rem;
 }
 
-.copy-stack p:first-child {
-    margin-top: 0;
+.reflection-columns {
+    columns: 2;
+    column-gap: clamp(32px, 4vw, 56px);
 }
 
-.copy-stack p {
-    max-width: 68ch;
-    font-size: clamp(1.12rem, 1.45vw, 1.3rem);
-    line-height: 1.62;
+.reflection-columns p {
+    margin: 0 0 20px;
+    break-inside: avoid;
+    color: var(--muted);
+    font-size: 1.02rem;
+    line-height: 1.7;
+}
+
+.reflection-columns p:last-child {
+    margin-bottom: 0;
 }
 
 .section-head {
@@ -751,8 +757,8 @@ a {
         grid-template-columns: 1fr;
     }
 
-    .copy-stack p {
-        font-size: clamp(1.08rem, 4.8vw, 1.22rem);
+    .reflection-columns {
+        columns: 1;
     }
 
     .ba-header {
