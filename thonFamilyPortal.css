@@ -377,7 +377,7 @@ a {
     object-position: top;
 }
 
-.ba-after-block .image-frame {
+.ba-framed .image-frame {
     max-width: 850px;
     margin: 0 auto;
     padding: 16px;
