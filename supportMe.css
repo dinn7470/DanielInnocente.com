@@ -317,6 +317,28 @@
         font-weight: 650;
       }
 
+      .footer {
+        width: min(1120px, calc(100% - 40px));
+        margin-inline: auto;
+        padding: 0 0 64px;
+        color: var(--muted);
+      }
+
+      .footer p {
+        margin: 0;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+        font-size: 0.98rem;
+      }
+
+      .footer .site-credit {
+        margin-top: 6px;
+        padding-top: 0;
+        border-top: none;
+        font-size: 0.88rem;
+        opacity: 0.72;
+      }
+
       .designer-note {
         margin-top: 76px;
         margin-bottom: 80px;
