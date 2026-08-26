@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -17,31 +17,31 @@
         }
 
         /* NAVBAR */
-        .navbar {
+        .site-nav {
             position: fixed;
-            top: 24px;
-            right: 24px;
-            background: white;
-            border-radius: 999px;
-            padding: 10px 24px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        .nav {
+            top: 18px;
+            right: 22px;
+            z-index: 20;
             display: flex;
-            gap: 20px;
+            gap: 8px;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #dce4ef;
+            border-radius: 999px;
+            backdrop-filter: blur(14px);
         }
 
-        .nav a {
+        .site-nav a {
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            font-weight: 750;
+            color: #0f172a;
             text-decoration: none;
-            color: #374151;
-            font-weight: 500;
-            transition: 0.2s ease;
         }
 
-        .nav a:hover {
-            color: #2563eb;
+        .site-nav a:hover {
+            background: #e8f1ff;
         }
 
         /* ARTICLE HERO — full-width band above the fold */
@@ -229,23 +229,26 @@
             h2 {
                 font-size: 1.3rem;
             }
-            .nav {
-                flex-wrap: wrap;
-                gap: 10px;
+            .site-nav {
+                left: 12px;
+                right: 12px;
+                justify-content: center;
+                overflow-x: auto;
             }
         }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&display=swap" rel="stylesheet" />
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar" aria-label="Primary">
-    <div class="nav">
-        <a href="https://dinn7470.github.io/DanielInnocente.com/">Home</a>
-        <a href="https://drive.google.com/file/d/1mIjQMe1hapJBNTgGexXqbkNC_IF9uPvo/view?usp=sharing">Resume</a>
-        <a href="https://dinn7470.github.io/DanielInnocente.com/blogs">Blog</a>
-    </div>
+<nav class="site-nav" aria-label="Primary navigation">
+    <a href="https://dinn7470.github.io/DanielInnocente.com/">Home</a>
+    <a href="https://drive.google.com/file/d/1ZEITyHWTA9TTwywaYMaTYcnlYxjyxqvR/view?usp=sharing">Resume</a>
+    <a href="https://dinn7470.github.io/DanielInnocente.com/blogs">Blog</a>
 </nav>
 
 <!-- ARTICLE HERO -->

@@ -21,7 +21,18 @@
       "Bash(git -C \"C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com\" rm index.css.bak index.html.bak portfolio.css portfolio.css.bak portfolio.html portfolio.html.bak supportMe.css.bak supportMe.html.bak)",
       "Bash(git -C 'C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com' commit -m ' *)",
       "Bash(git -C \"C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com\" push)",
-      "Bash(git -C \"C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com\" add index.css)"
+      "Bash(git -C \"C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com\" add index.css)",
+      "Bash(git -C \"C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com\" show HEAD~2:portfolio.html)",
+      "Bash(git -C \"C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com\" log --oneline)",
+      "Bash(git -C \"C:\\\\Users\\\\dinno\\\\IdeaProjects\\\\DanielInnocente.com\" add arbiter.css arbiter.html blogs.html index.css index.html supportMe.css supportMe.html thonFamilyPortal.css thonFamilyPortal.html)",
+      "Bash(python -c \"import sys; print\\(sys.version\\)\")",
+      "Bash(python -c \"import pypdf; print\\('pypdf ok'\\)\")",
+      "Bash(python -c ' *)",
+      "Bash(curl -s \"http://localhost:8080/index.html\")",
+      "Bash(curl -s \"http://localhost:8080/arbiter.html\")",
+      "Bash(curl -s \"http://localhost:8080/index.css\")",
+      "Bash(sed -n '/^\\\\.nav {/,/^}/p')",
+      "Bash(sed -n '/^\\\\.nav a {/,/^}/p')"
     ]
   }
 }
