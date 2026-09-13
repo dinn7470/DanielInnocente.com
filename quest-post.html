@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Does Quest Diagnostics help those who need it? | Daniel Innocente</title>
+    <meta name="description" content="A Figma redesign of the Quest Diagnostics home page, and a look at how its search, filters, and FAQs serve patients who need clear answers fast." />
+    <link rel="canonical" href="https://dinn7470.github.io/DanielInnocente.com/quest-post.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://dinn7470.github.io/DanielInnocente.com/quest-post.html" />
+    <meta property="og:title" content="Does Quest Diagnostics help those who need it? | Daniel Innocente" />
+    <meta property="og:description" content="A Figma redesign of the Quest Diagnostics home page, and a look at how its search, filters, and FAQs serve patients who need clear answers fast." />
+    <meta property="og:image" content="https://dinn7470.github.io/DanielInnocente.com/images/blog/quest-review/quest-logo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <style>
+        /* GLOBAL */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            color: #111827;
+            line-height: 1.7;
+        }
+
+        .site-footer {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 24px 56px;
+        }
+
+        .site-footer p {
+            margin: 0;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+            color: #6b7280;
+            font-size: 0.92rem;
+        }
+
+        /* NAVBAR */
+        .site-nav {
+            position: fixed;
+            top: 18px;
+            right: 22px;
+            z-index: 20;
+            display: flex;
+            gap: 8px;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #dce4ef;
+            border-radius: 999px;
+            backdrop-filter: blur(14px);
+        }
+
+        .site-nav a {
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            font-weight: 750;
+            color: #0f172a;
+            text-decoration: none;
+        }
+
+        .site-nav a:hover {
+            background: #e8f1ff;
+        }
+
+        /* ARTICLE HERO */
+        .article-hero {
+            padding: 96px 24px 24px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .article-hero-inner {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        /* ARTICLE BODY */
+        .article-body {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 40px 24px 24px;
+        }
+
+        .article-body > h2:first-child {
+            margin-top: 0;
+        }
+
+        /* HEADINGS */
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 3.1rem);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2.6rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            margin-top: 1.8rem;
+            margin-bottom: 0.4rem;
+            color: #2563eb;
+            letter-spacing: 0.01em;
+        }
+
+        p {
+            margin: 0.5rem 0 1.2rem;
+            font-size: 1.02rem;
+        }
+
+        .meta {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            margin: 0 0 1.2rem;
+            padding-left: 1.3rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* IMAGES THAT BLEND INTO THE PAGE (collages / comparisons) */
+        figure.blend {
+            margin: 1.8rem 0;
+            text-align: center;
+        }
+
+        figure.blend img {
+            width: 100%;
+            max-width: 620px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        figure.blend.wide img {
+            max-width: 100%;
+        }
+
+        /* PRODUCT SCREENSHOTS (framed like evidence) */
+        figure.screenshot {
+            margin: 1.8rem 0;
+            text-align: center;
+        }
+
+        figure.screenshot img {
+            width: 100%;
+            max-width: 620px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(15,23,42,0.07);
+        }
+
+        /* FIGMA PROTOTYPE EMBED */
+        .figma-embed {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            margin: 1.4rem 0 0.6rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            background: #f5f5f7;
+        }
+
+        .figma-embed iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .article-body a {
+            color: #2563eb;
+        }
+
+        /* AI DISCLOSURE FOOTER */
+        .ai-disclosure {
+            margin-top: 2.6rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid #e5e7eb;
+            margin-bottom: 0;
+            font-size: 0.85rem;
+            color: #6b7280;
+            font-style: italic;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+            .article-hero {
+                padding: 88px 20px 20px;
+            }
+            .article-body {
+                padding: 32px 20px 20px;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .site-nav {
+                left: 12px;
+                right: 12px;
+                justify-content: center;
+                overflow-x: auto;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="site-nav" aria-label="Primary navigation">
+    <a href="https://dinn7470.github.io/DanielInnocente.com/">Home</a>
+    <a href="https://drive.google.com/file/d/1px4TPsDX5Njaksx_1Mrg5hu1wDqZYtms/view?usp=sharing">Resume</a>
+    <a href="https://dinn7470.github.io/DanielInnocente.com/blogs">Blog</a>
+</nav>
+
+<!-- ARTICLE HERO -->
+<header class="article-hero">
+    <div class="article-hero-inner">
+        <h1>Does Quest Diagnostics help those who need it?</h1>
+        <div class="meta">By Daniel Innocente · <time datetime="2026-09-13">9/13/26</time></div>
+    </div>
+</header>
+
+<!-- ARTICLE -->
+<main class="article-body">
+
+        <h2>Previous Post Recap:</h2>
+
+        <p>In my previous post, I ended by investigating both the user interface design and user experience of Quest Diagnostics.</p>
+
+        <p><strong>Takeaways:</strong></p>
+
+        <h3>Pros:</h3>
+        <ul>
+            <li>I admired its choice to split up use cases based on who's using the website</li>
+        </ul>
+
+        <h3>Cons:</h3>
+        <ul>
+            <li>I did NOT admire its choice to add another list of use cases at the bottom of the screen that were confusingly different and similar at the same time. The user was also able to view the use cases of one role at the top and a different one at the bottom which felt a bit messy.</li>
+            <li>I thought the size of the giant green dropdown when some use cases are selected could be reduced in size</li>
+        </ul>
+
+        <h3>What I'd do:</h3>
+        <ul>
+            <li>I would make it so that one side automatically changes anytime you switch between a different role (Patients or Healthcare Workers use cases on both the top and bottom etc.) for a less confusing understanding of what choices the user can make</li>
+            <li>I'd like to reduce the size of the dropdown boxes and make all of the information a set of links for the sake of organization and consistency</li>
+        </ul>
+
+        <h2>Constraints:</h2>
+
+        <p>Unfortunately Figma only lets you extract ten web pages a month with the free tier of Figma which is what I currently have and I'll be using at least two during this time. If this blog keeps going like I hope it does, then I'll be making the jump to the Professional Plan. It's important to note that these proposed changes are only for the home screen and this is a site with dozens of different pages (once again why the Professional Plan will likely be the move going forward).</p>
+
+        <h2>Plan:</h2>
+
+        <p>It's time for a re-design. The reason I'm excited to dive into this isn't just because this is the exact kind of work I hope to do professionally one day but also because it's going to be my first time using Figma's new chrome extension which allows you to extract the HTML of a full web page and convert every single piece of text, box, and border into editable Figma elements which is incredibly convenient for redesigns.</p>
+
+        <p>I'll showcase my redesigns so that they're interactive and explain how and why I made the choices that I made. This re-design will be brief and is more of a showcase on how I utilize design thinking in order to make a current process more efficient, something that is crucial to healthcare UX.</p>
+
+        <figure class="blend wide">
+            <img src="images/blog/quest-review/figma-extension-example.png" alt="Collage titled From Web Page to Figma showing the Quest Diagnostics home page, the Figma Chrome extension capturing it, and the page converted into editable Figma layers" />
+        </figure>
+
+        <h2>Quick Re-design example:</h2>
+
+        <div class="figma-embed">
+            <iframe title="Interactive Figma prototype of my Quest Diagnostics home page redesign" src="https://embed.figma.com/proto/A3dtvDeOs3nlClx1JGVxtO/Untitled?node-id=42-1707&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=16%3A37&amp;embed-host=share" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p>In this small re-design, when a user background at the top is changed, the corresponding background at the bottom changes with it. Additionally, when you click "Billing and Coding" under "Healthcare Professionals" you can view a condensed version of the external links pop up.</p>
+
+        <p>Below I'd like to highlight some other positive and negative qualities I found while navigating the site and what I learned from it:</p>
+
+        <figure class="screenshot">
+            <img src="images/blog/quest-review/quest-search.png" alt="Quest Diagnostics home page search bar asking What can we help you find, above a green Making a difference every single day stats bar and a PSA screening promotion" />
+        </figure>
+
+        <h2>Nice Work:</h2>
+
+        <p>The screenshot above is right below the use case part of the home page and gives users the option to search for whatever they might be looking for. I particularly like that it appears in the middle of the page because it allows the users to try and pick things up on their own first.</p>
+
+        <p>This is something that I find to be tricky in UX. It's kind of like a well written movie that uses the "show not tell method", essentially meaning that it trusts its audience based on what's presented to them instead of blatantly saying the themes and ideas out loud. In the case of an interface with a well designed user interface, users shouldn't need to automatically resort to a search bar but there also doesn't need to be large text and buttons that say "CLICK HERE TO FIND THIS". You'd never be able to fit all those buttons for every use case and function. It would also just look clunky and unreadable.</p>
+
+        <p>Hence why Quest's website reminds me of an important cornerstone of UX: Use Case Modeling.</p>
+
+        <p>It's very uncommon for any app, website, or piece of software to have one singular use case or purpose. The more use cases there are, the more important it is that they are cleanly organized. This goes all the way back to the empathize stage at the beginning of your design thinking process. You're designing FOR the user. The users are your stakeholders. The design choices you make impact how easily they can complete certain tasks and solve their problems.</p>
+
+        <p>In the case of Healthcare UX, problems are more common than just simple tasks. There are stakes involved. On the patient side, appointments might need to be made quickly because they are under a time crunch or their condition is worsening. On the provider side, they may be trying to access or upload information in a high stress environment where time is incredibly sacred. They should need to navigate through as few pages as possible and these pages should be filled with terminology that is familiar, not foreign to them.</p>
+
+        <p>Reviewing Quest's website reminded me how important inclusivity is when designing for multiple different audiences. You can think big and expand your scope but you still need to have a clean approach that makes the process as smooth as possible.</p>
+
+        <p>Once the user submits their search, they get access to literally THOUSANDS of different resources. On the side are filters that allow you to take those thousands of resources and narrow it down to exactly what you're looking for, no matter how specific.</p>
+
+        <figure class="screenshot">
+            <img src="images/blog/quest-review/quest-search-results.png" alt="Quest Diagnostics search results showing 5,751 results for Appointment, with a Search and Filter sidebar for specialty, audience, and content type" />
+        </figure>
+
+        <p><strong>Example:</strong> A patient is interested in reading publications on infectious diseases.</p>
+
+        <p>A patient, recently diagnosed with an infectious disease wants to learn more about the testing they may need to undergo. These filters allow them to instantly retrieve the resources from Quest's massive database that are relevant to their specific situation. Suddenly the options have gone from thousands to only four.</p>
+
+        <figure class="screenshot">
+            <img src="images/blog/quest-review/quest-search-filtered.png" alt="Quest Diagnostics search results narrowed to 4 results after filtering by Infectious Disease, Patient audience, and Publication and Webinar content types" />
+        </figure>
+
+        <p>While the patient discussed above might've preferred using professional publications to learn more about their situation, maybe another patient prefers straight instant answers. This isn't just a matter of patience or short attention spans, if you're a patient that's currently suffering in some form, you might not have the mental or physical capacity to wait even a minute to gain some clarity about what you're experiencing.</p>
+
+        <p>If you've just learned that you have the Hantavirus, it might be scary and confusing trying to understand how that could've happened. While most websites have some form of an FAQ page, the questions are often random and generalized. In this case, the patient can get a specific and detailed answer that is only 3 sentences long. Most importantly there are even references right below to back these claims up.</p>
+
+        <figure class="screenshot">
+            <img src="images/blog/quest-review/quest-hantavirus-faq.png" alt="Quest Diagnostics Hantavirus Antibody test FAQ page with an expanded answer on how common hantavirus is and how it spreads, with references listed below" />
+        </figure>
+
+        <p>Health-based content and information should be two things: CLEAR and ACCURATE. When one of these is missed, real harm can be done. It's awesome that Quest is able to inform all of their audiences accurately in a variety of ways that range from detailed and thorough to clear and succinct.</p>
+
+        <h2>Needs work:</h2>
+
+        <p>Lastly, I have one more critique about this site's use case modeling that I think should be improved.</p>
+
+        <p>A big part of my initial discussion and re-design was focused on differentiating these two separate lists of users with different use cases that appear as soon as you open the page. I also noticed that the audiences themselves aren't identical. There's 4 on the top, 5 on the bottom. Some are the same and some are not. A cleaner solution would be to narrow it down to one list and have it so that in the event there isn't enough space to include certain options, they can be featured in the green box that opens up when you pick a use case:</p>
+
+        <figure class="blend">
+            <img src="images/blog/quest-review/quest-audience-lists.png" alt="Comparison of Quest's two audience lists: a top tab bar with four roles, and a lower I am a selector with five roles and action cards" />
+        </figure>
+
+        <h2>Conclusion:</h2>
+
+        <p>That's all I have to say about Quest Diagnostics. While I had some critiques about use case modeling consistencies, I think that overall this is a very well designed site. I could infer that the UX team did a thorough amount of research to ensure that all of the needs of all their stakeholders were treated equally.</p>
+
+        <p>Digging into this portal helped me better understand how important it is to recognize the scope of your project. I'm someone who in most cases believes in a "less is more" approach so that information is communicated clearly so it is important to find a balance of keeping that as much as you can without losing sight of how big the scope might be. Even if you're dealing with a massive audience, a large database, lots of images, and use cases (last time I'll be using those words I promise) it's still possible to craft a user experience that gets the job done smoothly and seamlessly.</p>
+
+        <p>Quest comes out of this report looking pretty clean however next week I'm aiming to find a portal that I think is very poorly designed. This will allow me to dig even deeper into how to improve patient care workflows and create a more complex re-design in Figma. If you have any suggestions that you think are worth looking into, send me an email @<a href="mailto:dinnocente7470@gmail.com">dinnocente7470@gmail.com</a>!</p>
+
+        <p class="ai-disclosure">AI Disclosure: ChatGPT was used to create the photo collages from screenshots used in this article. All research, analysis, writing, and conclusions are my own.</p>
+
+</main>
+
+<footer class="site-footer">
+    <p>Written by Daniel Innocente.</p>
+</footer>
+
+</body>
+</html>
