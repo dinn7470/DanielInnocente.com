@@ -32,7 +32,20 @@
       "Bash(curl -s \"http://localhost:8080/arbiter.html\")",
       "Bash(curl -s \"http://localhost:8080/index.css\")",
       "Bash(sed -n '/^\\\\.nav {/,/^}/p')",
-      "Bash(sed -n '/^\\\\.nav a {/,/^}/p')"
+      "Bash(sed -n '/^\\\\.nav a {/,/^}/p')",
+      "Bash(gh run *)",
+      "Bash(curl -s \"https://dinn7470.github.io/DanielInnocente.com/\")",
+      "Bash(curl -s https://dinn7470.github.io/DanielInnocente.com/)",
+      "Bash(curl -s \"https://api.github.com/repos/dinn7470/DanielInnocente.com/actions/runs?per_page=5\")",
+      "Bash(git commit --allow-empty -m ' *)",
+      "WebFetch(domain:cusdis.com)",
+      "Bash(PYTHONIOENCODING=utf-8 python -c ' *)",
+      "Bash(cp \"/c/Users/dinno/Downloads/Quest_Logo.jpg\" images/blog/quest-review/quest-logo.jpg)",
+      "Bash(cp \"/c/Users/dinno/Downloads/Figma_Extension_Example.png\" images/blog/quest-review/figma-extension-example.png)",
+      "Bash(cp \"/c/Users/dinno/Downloads/Quest_Search.png\" images/blog/quest-review/quest-search.png)",
+      "Bash(cp \"/c/Users/dinno/Downloads/Quest_Search2.png\" images/blog/quest-review/quest-search-results.png)",
+      "Bash(cp \"/c/Users/dinno/Downloads/Quest_Search3.png\" images/blog/quest-review/quest-search-filtered.png)",
+      "Bash(curl -s http://localhost:8080/quest-post.html?cb=__TRACKED_VAR__)"
     ]
   }
 }
