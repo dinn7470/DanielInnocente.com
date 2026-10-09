@@ -45,7 +45,9 @@
       "Bash(cp \"/c/Users/dinno/Downloads/Quest_Search.png\" images/blog/quest-review/quest-search.png)",
       "Bash(cp \"/c/Users/dinno/Downloads/Quest_Search2.png\" images/blog/quest-review/quest-search-results.png)",
       "Bash(cp \"/c/Users/dinno/Downloads/Quest_Search3.png\" images/blog/quest-review/quest-search-filtered.png)",
-      "Bash(curl -s http://localhost:8080/quest-post.html?cb=__TRACKED_VAR__)"
+      "Bash(curl -s http://localhost:8080/quest-post.html?cb=__TRACKED_VAR__)",
+      "Bash(curl -s https://dinn7470.github.io/DanielInnocente.com/?cb=__TRACKED_VAR__)",
+      "Bash(curl -s \"https://api.github.com/repos/dinn7470/DanielInnocente.com/actions/runs?per_page=1\")"
     ]
   }
 }

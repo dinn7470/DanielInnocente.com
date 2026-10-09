@@ -253,8 +253,7 @@ a {
 .overview-grid article,
 .problem-thread article,
 .research-card,
-.solution-grid article,
-.screen-card {
+.solution-grid article {
     background: var(--white);
     border: 1px solid var(--line);
     border-radius: 8px;
@@ -319,13 +318,9 @@ a {
 
 .screen-card {
     margin: 0;
-    overflow: hidden;
-    box-shadow: var(--shadow);
 }
 
 .image-frame {
-    background: #eef2f7;
-    border-bottom: 1px solid var(--line);
     overflow: hidden;
 }
 
@@ -338,7 +333,7 @@ a {
 .screen-card figcaption {
     display: grid;
     gap: 6px;
-    padding: 16px 18px 18px;
+    padding: 12px 2px 0;
 }
 
 .screen-card strong {
@@ -405,10 +400,12 @@ a {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 12px;
 }
 
 .arbiter-comparison .image-frame img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
     max-height: 360px;
     object-fit: contain;
 }
@@ -446,10 +443,12 @@ a {
 .process-callout .image-frame {
     display: flex;
     justify-content: center;
-    padding: 12px;
 }
 
 .process-callout .image-frame img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
     max-height: 270px;
     object-fit: contain;
 }
@@ -491,10 +490,12 @@ a {
 .compact-showcase .image-frame {
     display: flex;
     justify-content: center;
-    padding: 12px;
 }
 
 .compact-showcase .image-frame img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
     max-height: 360px;
     object-fit: contain;
 }
@@ -622,25 +623,21 @@ a {
 }
 
 .faq-screen-card {
-    border-radius: 8px;
     overflow: hidden;
-    border: 1px solid var(--line);
-    box-shadow: var(--shadow);
 }
 
 .faq-screen-card img {
     display: block;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     max-height: 250px;
     height: auto;
+    margin: 0 auto;
     object-fit: contain;
-    background: #eef2f7;
 }
 
 .faq-screen-card figcaption {
-    padding: 12px 16px;
-    background: var(--white);
-    border-top: 1px solid var(--line);
+    padding: 12px 2px 0;
     font-size: 0.9rem;
     color: var(--muted);
 }
@@ -653,25 +650,21 @@ a {
 }
 
 .faq-screen-wide {
-    border-radius: 8px;
     overflow: hidden;
-    border: 1px solid var(--line);
-    box-shadow: var(--shadow);
 }
 
 .faq-screen-wide img {
     display: block;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     max-height: 360px;
     height: auto;
+    margin: 0 auto;
     object-fit: contain;
-    background: #eef2f7;
 }
 
 .faq-screen-wide figcaption {
-    padding: 12px 16px;
-    background: var(--white);
-    border-top: 1px solid var(--line);
+    padding: 12px 2px 0;
     font-size: 0.9rem;
     color: var(--muted);
 }

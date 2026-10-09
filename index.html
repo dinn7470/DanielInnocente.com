@@ -35,7 +35,7 @@
                 <br>Penn State Human-Centered Design and Development, May 2026
             </p>
             <div class="cta-row">
-                <a class="btn btn-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=dinnocente7470@gmail.com" target="_blank" rel="noopener">Email me</a>
+                <a class="btn btn-primary" id="email-btn" href="mailto:dinnocente7470@gmail.com">Email me</a>
                 <a class="btn btn-ghost" href="https://www.linkedin.com/in/danielinnocente/" target="_blank" rel="noopener">LinkedIn</a>
             </div>
             <p class="availability">Open to full-time UX design and research roles. Based in Staten Island, NY, open to remote and relocation.</p>
@@ -112,6 +112,37 @@
         <p>Design and content by Daniel Innocente. Front end built with Claude Code.</p>
     </div>
 </footer>
+
+<script>
+    // The Email me button uses mailto so it opens whatever mail client the
+    // visitor has set up. If nothing opens (common when someone reads mail in
+    // the browser and has no desktop client), fall back to Gmail's compose window.
+    (function () {
+        var link = document.getElementById('email-btn');
+        if (!link) return;
+
+        var address = 'dinnocente7470@gmail.com';
+        var gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + address;
+
+        link.addEventListener('click', function () {
+            var handled = false;
+            var markHandled = function () { handled = true; };
+
+            window.addEventListener('blur', markHandled, { once: true });
+            document.addEventListener('visibilitychange', markHandled, { once: true });
+
+            window.setTimeout(function () {
+                window.removeEventListener('blur', markHandled);
+                document.removeEventListener('visibilitychange', markHandled);
+
+                if (handled || document.hidden) return;
+
+                var tab = window.open(gmail, '_blank', 'noopener');
+                if (!tab) window.location.href = gmail;
+            }, 1200);
+        });
+    })();
+</script>
 
 </body>
 </html>

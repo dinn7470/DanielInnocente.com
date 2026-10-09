@@ -280,13 +280,13 @@
 
       .screen img {
         display: block;
-        width: 100%;
-        aspect-ratio: 9 / 16;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 620px;
+        margin: 0 auto;
         object-fit: contain;
         object-position: top;
-        background: var(--white);
-        border: 1px solid var(--line);
-        border-radius: 8px;
       }
 
       .screen figcaption {

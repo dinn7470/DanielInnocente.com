@@ -33,7 +33,7 @@
         <ul class="hero-stats">
             <li><strong>5</strong>Family Relations Chairs interviewed</li>
             <li><strong>3</strong>core screens designed</li>
-            <li><strong>f</strong>months on the project</li>
+            <li><strong>10</strong>months on the project</li>
         </ul>
     </div>
 </header>
@@ -102,31 +102,81 @@
         </div>
 
         <div class="problem-thread">
-            <article>
-                <span>01</span>
-                <h3>Find the action</h3>
-                <p>
-                    Updating information, registering for events, and managing THON Weekend details
-                    needed to feel like a clear path, not disconnected tasks.
-                </p>
-            </article>
-            <article>
-                <span>02</span>
-                <h3>Understand events</h3>
-                <p>
-                    Families needed to quickly scan event type, timing, relevance, and next steps without
-                    relying on long weekly updates.
-                </p>
-            </article>
-            <article>
-                <span>03</span>
-                <h3>Feel connected</h3>
-                <p>
-                    The interface needed to feel like a community touchpoint, not just a place to submit
-                    sensitive family information.
-                </p>
-            </article>
+            <button class="flip-card" type="button" aria-pressed="false">
+                <span class="flip-inner">
+                    <span class="flip-face flip-front">
+                        <span class="flip-number">01</span>
+                        <span class="flip-title">Tasks lived in separate places</span>
+                        <span class="flip-text">
+                            Updating information, registering for events, and managing THON Weekend details
+                            needed to feel like a clear path, not disconnected tasks.
+                        </span>
+                        <span class="flip-cta">
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9"/><path d="M13.5 2v3.5H10"/></svg>
+                            See the fix
+                        </span>
+                    </span>
+                    <span class="flip-face flip-back">
+                        <span class="flip-number">01</span>
+                        <span class="flip-title">One dashboard for every family action</span>
+                        <span class="flip-cta">
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 8a5.5 5.5 0 1 0 1.6-3.9"/><path d="M2.5 2v3.5H6"/></svg>
+                            Back to problem
+                        </span>
+                    </span>
+                </span>
+            </button>
+            <button class="flip-card" type="button" aria-pressed="false">
+                <span class="flip-inner">
+                    <span class="flip-face flip-front">
+                        <span class="flip-number">02</span>
+                        <span class="flip-title">Event details were buried in long weekly emails</span>
+                        <span class="flip-text">
+                            Families needed to quickly scan event type, timing, relevance, and next steps without
+                            relying on long weekly updates.
+                        </span>
+                        <span class="flip-cta">
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9"/><path d="M13.5 2v3.5H10"/></svg>
+                            See the fix
+                        </span>
+                    </span>
+                    <span class="flip-face flip-back">
+                        <span class="flip-number">02</span>
+                        <span class="flip-title">Event cards showing date, type, and status</span>
+                        <span class="flip-cta">
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 8a5.5 5.5 0 1 0 1.6-3.9"/><path d="M2.5 2v3.5H6"/></svg>
+                            Back to problem
+                        </span>
+                    </span>
+                </span>
+            </button>
+            <button class="flip-card" type="button" aria-pressed="false">
+                <span class="flip-inner">
+                    <span class="flip-face flip-front">
+                        <span class="flip-number">03</span>
+                        <span class="flip-title">After submitting, families had nowhere to go</span>
+                        <span class="flip-text">
+                            The interface needed to feel like a community touchpoint, not just a place to submit
+                            sensitive family information.
+                        </span>
+                        <span class="flip-cta">
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9"/><path d="M13.5 2v3.5H10"/></svg>
+                            See the fix
+                        </span>
+                    </span>
+                    <span class="flip-face flip-back">
+                        <span class="flip-number">03</span>
+                        <span class="flip-title">The dashboard points to events, calendar, and passes</span>
+                        <span class="flip-cta">
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 8a5.5 5.5 0 1 0 1.6-3.9"/><path d="M2.5 2v3.5H6"/></svg>
+                            Back to problem
+                        </span>
+                    </span>
+                </span>
+            </button>
         </div>
+
+        <button class="flip-toggle" type="button" aria-pressed="false">Show all fixes</button>
     </section>
 
     <section class="section" id="research">
@@ -293,5 +343,41 @@
     <p>Designed by Daniel Innocente with Aiden Coleman for THON Technology.</p>
     <p class="site-credit">Site design and writing are my own. Front end built with Claude Code.</p>
 </footer>
+<script>
+    // Problem section flip cards. Each card is a button, so Enter and Space
+    // are handled natively; this only keeps aria-pressed and the toggle label
+    // in sync with what is showing.
+    (function () {
+        var cards = Array.prototype.slice.call(document.querySelectorAll('.flip-card'));
+        var toggle = document.querySelector('.flip-toggle');
+        if (!cards.length || !toggle) return;
+
+        var isFlipped = function (card) {
+            return card.getAttribute('aria-pressed') === 'true';
+        };
+
+        var syncToggle = function () {
+            var allFlipped = cards.every(isFlipped);
+            toggle.textContent = allFlipped ? 'Show all problems' : 'Show all fixes';
+            toggle.setAttribute('aria-pressed', String(allFlipped));
+        };
+
+        cards.forEach(function (card) {
+            card.addEventListener('click', function () {
+                card.setAttribute('aria-pressed', String(!isFlipped(card)));
+                syncToggle();
+            });
+        });
+
+        toggle.addEventListener('click', function () {
+            var showFixes = !cards.every(isFlipped);
+            cards.forEach(function (card) {
+                card.setAttribute('aria-pressed', String(showFixes));
+            });
+            syncToggle();
+        });
+    })();
+</script>
+
 </body>
 </html>
